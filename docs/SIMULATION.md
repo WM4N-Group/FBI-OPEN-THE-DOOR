@@ -49,3 +49,23 @@ fbi-door camera-probe
 ## 工程边界
 
 MuJoCo和逐步IK主要在CPU运行，给PPO指定cuda并不表示4090满载；应按吞吐和独立实验收益使用资源，不能靠无意义负载占卡。
+
+## 双 A800 扩大实验
+
+在独立项目/独立runtime上使用，不改动已有训练目录：
+
+```bash
+python scripts/launch_a800.py --runtime /absolute/path/to/validated/runtime \
+  --batch-name a800_batch_01 --envs-per-run 6 --stage-scale 2 --gate-retries 2 \
+  --camera-scenes 8192 --camera-epochs 160 --camera-batch-scenes 128 --dry-run
+# 确认预算、设备和检查结果后，去掉 --dry-run 才会启动。
+```
+
+- 4个独立高层种子，2组/GPU；24个CPU物理环境。底层腿策略冻结。
+- 每个种子的正常课程预算350万环境步，4组共1400万；失败阶段最多2次、每次原阶段50%的追加预算，总上限约2800万。SB3按rollout批次可能略多。
+- 阶段仍要求30/32验证通过，不能用增加训练量替代门禁；追加预算用完仍失败则保留checkpoint并结束该候选。
+- 反复用于门禁的种子属于验证集，不是最终独立测试成功率。
+- 两个相机训练种子分别使用GPU0/1，第二组等待第一组完成同一场景配对数据生成；8192场景=16384张图，160epoch，128场景/批（256幅图）。相机只训练观察模型，不是视觉闭环机械臂控制。
+- launcher使用脱离SSH会话的worker，保存PID、日志和状态，不终止其他任务。进程退出码0不等于任务成功。
+- 支持受信任checkpoint恢复：`sim-train --resume-zip ... --start-stage press --run-name NEW_NAME`。恢复参数/优化器不保证逐步轨迹可复现；模型/观测契约必须匹配，后续阶段不可从随机策略直接起步。
+- 大型GPU并不会自动加速CPU MuJoCo/IK；这里通过独立实验和相机训练使用双卡，不制造无意义负载，也不声称GPU满载。

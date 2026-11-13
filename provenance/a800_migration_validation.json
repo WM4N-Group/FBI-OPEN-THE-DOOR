@@ -1,0 +1,56 @@
+{
+  "observed_at": "2026-11-13 16:40:39 +0800",
+  "gpu_hardware": "2 x NVIDIA A800-SXM4-80GB",
+  "python": "3.11.16",
+  "offline_tests_passed": 39,
+  "original_leg_policy_restored_frozen": true,
+  "old_high_level_checkpoint_recovered": false,
+  "high_level_initialization": "fresh, NOT a continuation of the old server PPO checkpoint",
+  "teacher_baseline": {
+    "seconds": 20.900000000000027,
+    "full_success": true,
+    "scope": "Single privileged teacher scripted+IK baseline only"
+  },
+  "cuda_gradient_smoke": {
+    "device": "cuda:0",
+    "recorded_steps": 512,
+    "parameter_l1_change": 75.30697132647038
+  },
+  "cross_gpu_resume_smoke": {
+    "device": "cuda:1",
+    "recorded_steps": 1024,
+    "parameter_l1_change": 68.66338445665315
+  },
+  "camera_pipeline_smoke": {
+    "tested_devices": [
+      "cuda:0",
+      "cuda:1"
+    ],
+    "paired_scenes": 1152,
+    "epochs": 1,
+    "batch_scenes": 128,
+    "scope": "Pipeline execution only; one epoch gave zero IoU and is NOT perception acceptance"
+  },
+  "batch": {
+    "ppo_seeds": [
+      42,
+      43,
+      44,
+      45
+    ],
+    "parallel_physics_envs": 24,
+    "normal_requested_ppo_steps": 14000000,
+    "maximum_requested_steps_with_retries": 28000000,
+    "camera_scenes": 8192,
+    "camera_images": 16384,
+    "camera_epochs_each": 160,
+    "camera_seeds": [
+      46,
+      47
+    ]
+  },
+  "hardware_motion": false,
+  "note": "Independent deployment; original checkpoint unavailable. CPU MuJoCo/IK remain the PPO bottleneck; no GPU saturation claim.",
+  "issued_stop_to_old_server": false,
+  "old_server_live_status": "unverified: SSH handshake closed before authentication"
+}

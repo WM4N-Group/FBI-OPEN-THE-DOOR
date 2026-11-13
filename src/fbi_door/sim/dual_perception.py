@@ -418,10 +418,10 @@ def score(net, x, y, depth, fovy, device):
     return results
 
 
-def train(out, epochs, device, seed):
+def train(out, epochs, device, seed, batch_scenes=16, datafile=None):
     torch.manual_seed(seed)
     np.random.seed(seed)
-    data = np.load(out / "dual_rgbd.npz")
+    data = np.load(datafile if datafile is not None else out / "dual_rgbd.npz")
     x = data["rgb"]
     y = data["mask"]
     dep = data["depth"]
@@ -435,7 +435,9 @@ def train(out, epochs, device, seed):
     for epoch in range(epochs):
         net.train()
         losses = []
-        for ids in np.array_split(np.random.permutation(split), (split + 15) // 16):
+        for ids in np.array_split(
+            np.random.permutation(split), (split + batch_scenes - 1) // batch_scenes
+        ):
             xx = batch_input(x[ids], device)
             yy = (
                 torch.from_numpy(y[ids].reshape(-1, *y.shape[-2:]))
@@ -513,10 +515,35 @@ if __name__ == "__main__":
     pa.add_argument("--device", default="cuda:0")
     pa.add_argument("--seed", type=int, default=45)
     pa.add_argument("--skip-data", action="store_true")
+    pa.add_argument("--output", default="dual_perception")
+    pa.add_argument(
+        "--datafile",
+        help="Completed trusted scene-paired dataset; requires --skip-data",
+    )
+    pa.add_argument("--batch-scenes", type=int, default=16)
     a = pa.parse_args()
-    out = ROOT / "runs/dual_perception"
-    out.mkdir(parents=True, exist_ok=True)
+    if a.batch_scenes < 1 or a.epochs < 1 or (not a.skip_data and a.scenes < 1152):
+        pa.error("positive batch/epochs and at least 1152 paired scenes required")
+    if a.datafile and not a.skip_data:
+        pa.error("--datafile requires --skip-data")
+    out = ROOT / "runs" / a.output
+    out.mkdir(parents=True, exist_ok=False)
+    (out / "config.json").write_text(
+        json.dumps(
+            {
+                "seed": a.seed,
+                "device": a.device,
+                "epochs": a.epochs,
+                "batch_scenes": a.batch_scenes,
+                "datafile": a.datafile,
+                "requested_scenes_if_generated": a.scenes,
+                "debug_markers_in_sensor_rgb": False,
+                "visual_closed_loop_control": False,
+            },
+            indent=2,
+        )
+    )
     if not a.skip_data:
         collect_bank(out)
         generate(out, a.scenes)
-    train(out, a.epochs, a.device, a.seed)
+    train(out, a.epochs, a.device, a.seed, a.batch_scenes, a.datafile)
