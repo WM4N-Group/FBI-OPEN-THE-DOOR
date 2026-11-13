@@ -1,0 +1,18 @@
+{
+  "archive_name": "fbi-door-reference-20261113.tgz",
+  "archive_bytes": 13177398,
+  "archive_sha256": "3a25b229fd3b51737df45249d9a0a43ceb5a008f95d545d13ed5db4ced3bc7cb",
+  "required_files_sha256": {
+    "reference/models/policies/arm_moving_clock/model_7999.pt": "408f96e58a3ea544cdf9a2a27ba0e913c7d02c6a4346cc6202e5c1f3351b0556",
+    "reference/models/policies/arm_moving_clock/exported/policy.onnx": "4ad160d24357827db896d1106f643cd89b9657e1ab97c013504e3e3e5af71a48",
+    "reference/models/policies/arm_moving_clock/exported/policy.pt": "283d8d5c9424ee5893c2ce5b7dc2e196c3eef23752fee67b06b6154d9c8b7517",
+    "reference/third_party/locomotion_policy/deploy/mujoco/models/go2_piper_l.xml": "41f2230e541800f4d2918f3c567a1d13d4b35c42d541f4fcc57d7b9d2d795ec9",
+    "reference/third_party/locomotion_policy/deploy/config.py": "da2c2feb12b2b9e7df2108e8302a5d949736d10abed849771e9d11d747b3a4c1",
+    "reference/third_party/locomotion_policy/deploy/locomotion_policy_wrapper.py": "eb42a553ab5538484a78a1d4a46c8efa76ab30fcaf1b5570fae5e2d68ba30b08"
+  },
+  "robot": "legacy Piper L; not standard PiPER",
+  "policy_iteration": 7999,
+  "leg_action_dimension": 12,
+  "asset_distribution": "private/local bundle excluded from Git; import only an authorized copy",
+  "notice": "Artifact checksums do not establish hardware compatibility or redistribute third-party rights."
+}

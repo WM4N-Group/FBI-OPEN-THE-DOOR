@@ -1,0 +1,8 @@
+{
+  "source": "nominal_simulation_example_do_not_use_on_hardware",
+  "evidence": null,
+  "translation_units": "m",
+  "parent_frame": "piper_link6",
+  "child_frame": "wrist_camera_optical",
+  "T_parent_child": [[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]]
+}

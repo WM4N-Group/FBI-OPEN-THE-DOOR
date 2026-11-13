@@ -1,0 +1,63 @@
+{
+  "observed_at": "2026-11-13 15:42:48 +0800",
+  "python": "3.11.16",
+  "hardware_contact_approved": false,
+  "offline_unit_tests": {
+    "passed": 29,
+    "failed": 0
+  },
+  "simulation_checks": {
+    "free_hinge": true,
+    "physical_grasp_contract": true,
+    "wrist_camera_contract": true
+  },
+  "teacher_rollout": {
+    "seed": 111,
+    "seconds": 20.900000000000027,
+    "full_success": true,
+    "grasp_ever_valid": true,
+    "source_sha256": {
+      "core.py": "95e869c111d3fa80258e8886f8615ae79a9f777cb855bcb5f91fd164e6bd702a",
+      "door_env.py": "c390906a67c45d1188df4fac731993af8a993bdbd4aad78ee947f69d03578ec8",
+      "assets/door_scene.xml": "0851b60be63bf6283316c291bdb12b025e6fafb0eb4990b51f47a27f4c06f0ef",
+      "assets/robot.xml": "3f12708a2c4477a1512c43e0489f7c4e0186cfc920904ee5090cca9873081db1"
+    },
+    "scope": "One privileged-geometry scripted+IK baseline; NOT RL/visual/hardware success."
+  },
+  "ppo_gradient_smoke": {
+    "state": "gradient_smoke_passed",
+    "mode": "teacher",
+    "stage": "grasp",
+    "requested_stage_steps": 512,
+    "previous_stage_steps": 0,
+    "started": "2026-11-13 15:40:14 +0800",
+    "physics_version": "door-grasp-wrist-v4-clean",
+    "parameter_l1_change": 75.30697478493676
+  },
+  "editable_package_install": {
+    "passed": true,
+    "dry_run_sent_to_hardware": false
+  },
+  "example_preflight": {
+    "exit_code": 2,
+    "expected_block": true
+  },
+  "inherited_hardware_layer_tests": {
+    "status": "not_run_missing_dependencies",
+    "missing": [
+      "can",
+      "rclpy",
+      "trajectory_msgs",
+      "sensor_msgs",
+      "std_msgs",
+      "std_srvs",
+      "pinned hardware/third_party/piper_sdk_runtime (0.6.2)"
+    ],
+    "hardware_validated": false
+  },
+  "limitations": [
+    "Python3.8 CI configured but not executed in this server validation.",
+    "Real SDK/CAN/ROS behavior and force/hand-eye calibration remain unverified.",
+    "Weights, mesh assets, trained high-level policies, images and videos are not in Git."
+  ]
+}

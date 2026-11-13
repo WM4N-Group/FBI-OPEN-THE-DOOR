@@ -1,0 +1,22 @@
+name: Offline safety tests
+on: [push, pull_request]
+jobs:
+  safety:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ['3.8', '3.11']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: PYTHONPATH=src python -m unittest discover -s tests -v
+      - run: PYTHONPATH=src python -m fbi_door.cli dry-run
+      - name: Example preflight must block
+        shell: bash
+        run: |
+          set +e
+          PYTHONPATH=src python -m fbi_door.cli doctor
+          result=$?
+          test "$result" -eq 2

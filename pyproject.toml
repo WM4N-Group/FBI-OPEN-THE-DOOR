@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fbi-open-the-door"
+version = "0.1.0"
+description = "Go2 + PiPER physical-grasp simulation and fail-closed hardware migration checks"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT; third-party components retain their own licenses"}
+dependencies = []
+
+[project.optional-dependencies]
+sim = ["numpy==1.26.0", "mujoco==3.12.0", "torch==2.7.0", "onnxruntime==1.23.2", "gymnasium==1.2.1", "stable-baselines3==2.7.1", "opencv-python==4.11.0.86", "PyYAML==6.0.2", "scipy==1.15.3", "tqdm>=4.66,<5", "tensorboard==2.21.0"]
+
+[project.scripts]
+fbi-door = "fbi_door.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+fbi_door = ["data/*.json"]
+
+[tool.ruff]
+target-version = "py38"

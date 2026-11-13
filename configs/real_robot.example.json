@@ -1,0 +1,22 @@
+{
+  "mode": "dry_run",
+  "robot": {
+    "variant": "piper_standard",
+    "gripper_force_limit_N": null,
+    "joint_limits_rad": [[-2.61799, 2.61799], [0.0, 3.14159], [-2.96706, 0.0], [-1.74533, 1.74533], [-1.22173, 1.22173], [-2.09439, 2.09439]]
+  },
+  "policy": {"robot_variant": "piper_l_legacy", "output_dimension": 12, "hardware_contact_approved": false},
+  "wrist_camera": {"calibration_file": null, "depth_scale_m_per_unit": null},
+  "checks": {
+    "joint_limits_verified": false,
+    "tcp_calibrated": false,
+    "wrist_camera_calibrated": false,
+    "gripper_command_and_feedback_verified": false,
+    "force_limits_verified": false,
+    "emergency_stop_tested": false,
+    "watchdog_tested": false,
+    "base_stop_interface_verified": false,
+    "camera_time_sync_verified": false,
+    "operator_present": false
+  }
+}
