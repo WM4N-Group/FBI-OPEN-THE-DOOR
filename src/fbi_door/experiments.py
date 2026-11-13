@@ -42,3 +42,23 @@ def curriculum_plan(scale=1.0, start_stage="grasp", retries=0):
 
 def maximum_requested_steps(plan):
     return sum(sum(stage["attempt_steps"]) for stage in plan)
+
+
+def with_initial_stage_steps(plan, steps):
+    """Shorten only the first normal attempt; retain original bounded retry budgets."""
+    import copy
+
+    result = copy.deepcopy(plan)
+    if steps is None:
+        return result
+    if (
+        not result
+        or isinstance(steps, bool)
+        or not isinstance(steps, int)
+        or not 1 <= steps <= result[0]["attempt_steps"][0]
+    ):
+        raise ValueError(
+            "initial stage steps must be positive and no larger than its original budget"
+        )
+    result[0]["attempt_steps"][0] = steps
+    return result

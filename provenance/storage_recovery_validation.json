@@ -1,0 +1,58 @@
+{
+  "observed_at": "2026-11-13 23:13:22 +0800",
+  "offline_tests_passed": 49,
+  "storage_failure_injection_test": "ENOSPC during shared copy leaves local checkpoint intact; next retry succeeds",
+  "physical_contract_unchanged": true,
+  "free_hinge_grasp_camera_regression_passed": true,
+  "resume_smoke": {
+    "start_steps": 1580592,
+    "end_steps": 1581104,
+    "parameter_l1_change": 18.06759351864457,
+    "state": "gradient_smoke_passed"
+  },
+  "recovery_runs": [
+    {
+      "seed": 42,
+      "gpu": 0,
+      "restored_steps": 1580592,
+      "last_logged_steps": 1599792,
+      "process_alive": true,
+      "has_crc_and_shared_sha_verified_checkpoint": true
+    },
+    {
+      "seed": 43,
+      "gpu": 1,
+      "restored_steps": 1630572,
+      "last_logged_steps": 1649772,
+      "process_alive": true,
+      "has_crc_and_shared_sha_verified_checkpoint": true
+    },
+    {
+      "seed": 44,
+      "gpu": 0,
+      "restored_steps": 1550604,
+      "last_logged_steps": 1569036,
+      "process_alive": true,
+      "has_crc_and_shared_sha_verified_checkpoint": true
+    },
+    {
+      "seed": 45,
+      "gpu": 1,
+      "restored_steps": 1600584,
+      "last_logged_steps": 1620552,
+      "process_alive": true,
+      "has_crc_and_shared_sha_verified_checkpoint": true
+    }
+  ],
+  "mirror_observation": {
+    "copied": 32,
+    "pending": 0,
+    "errors": [],
+    "observed_at": "2026-11-13 23:11:33 +0800",
+    "all_current_artifacts_replicated": true
+  },
+  "storage_policy": "Runtime writes buffered on separate local disk; independent checksum-verified atomic shared replication; pending local files are not durable shared backups.",
+  "original_files_deleted": false,
+  "hardware_motion": false,
+  "warning": "This snapshot verifies recovery/save plumbing, not full-task success, permanent filesystem reliability, or hardware readiness."
+}

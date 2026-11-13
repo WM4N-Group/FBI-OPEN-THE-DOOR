@@ -69,3 +69,7 @@ python scripts/launch_a800.py --runtime /absolute/path/to/validated/runtime \
 - launcher使用脱离SSH会话的worker，保存PID、日志和状态，不终止其他任务。进程退出码0不等于任务成功。
 - 支持受信任checkpoint恢复：`sim-train --resume-zip ... --start-stage press --run-name NEW_NAME`。恢复参数/优化器不保证逐步轨迹可复现；模型/观测契约必须匹配，后续阶段不可从随机策略直接起步。
 - 大型GPU并不会自动加速CPU MuJoCo/IK；这里通过独立实验和相机训练使用双卡，不制造无意义负载，也不声称GPU满载。
+
+## 共享存储故障恢复
+
+参见[存储恢复说明](STORAGE_RECOVERY.md)。为避免共享盘的瞬时写入故障同时打断日志、状态和checkpoint，续训可使用独立系统盘runtime缓冲，并由独立镜像进程校验后同步到共享盘。未同步文件不能当作已完成共享备份；停机/迁移前必须检查pending和校验结果。恢复第一阶段支持`--initial-stage-steps`补齐剩余预算，不需要重复从头训练。

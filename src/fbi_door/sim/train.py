@@ -10,12 +10,17 @@ os.environ.setdefault("OPENBLAS_NUM_THREADS", "1")
 import argparse, json, time
 import hashlib
 from pathlib import Path
-from ..experiments import curriculum_plan, maximum_requested_steps
+from ..experiments import (
+    curriculum_plan,
+    maximum_requested_steps,
+    with_initial_stage_steps,
+)
+from ..storage import atomic_save_model, atomic_json
 import torch
 from stable_baselines3 import PPO
 from stable_baselines3.common.vec_env import SubprocVecEnv
 from stable_baselines3.common.monitor import Monitor
-from stable_baselines3.common.callbacks import CheckpointCallback
+from stable_baselines3.common.callbacks import BaseCallback
 from .door_env import DoorEnv
 from ..paths import RUNTIME_ROOT as ROOT
 
@@ -84,6 +89,23 @@ def evaluate(model, mode, stage, n=32):
     }
 
 
+class AtomicCheckpointCallback(BaseCallback):
+    def __init__(self, save_freq, save_path, name_prefix="policy"):
+        super().__init__()
+        self.save_freq = save_freq
+        self.save_path = Path(save_path)
+        self.name_prefix = name_prefix
+
+    def _on_step(self):
+        if self.n_calls % self.save_freq == 0:
+            destination = (
+                self.save_path / f"{self.name_prefix}_{self.num_timesteps}_steps.zip"
+            )
+            atomic_save_model(self.model, destination)
+            print("CHECKPOINT_ATOMIC", str(destination), flush=True)
+        return True
+
+
 def main():
     pa = argparse.ArgumentParser()
     pa.add_argument("--envs", type=int, default=8)
@@ -102,12 +124,22 @@ def main():
         "--resume-zip",
         help="Trusted, compatible PPO checkpoint; never an untrusted downloaded pickle",
     )
+    pa.add_argument(
+        "--initial-stage-steps",
+        type=int,
+        help="Remaining first-stage budget when resuming; does not bypass validation",
+    )
     pa.add_argument("--smoke", action="store_true")
     pa.add_argument("--grasp-only", action="store_true")
     a = pa.parse_args()
     if a.envs < 1:
         pa.error("--envs must be positive")
-    plan = curriculum_plan(a.stage_scale, a.start_stage, a.gate_retries)
+    plan = with_initial_stage_steps(
+        curriculum_plan(a.stage_scale, a.start_stage, a.gate_retries),
+        a.initial_stage_steps,
+    )
+    if a.initial_stage_steps is not None and not a.resume_zip:
+        pa.error("--initial-stage-steps requires a trusted resume checkpoint")
     if a.grasp_only:
         if a.start_stage != "grasp":
             pa.error("--grasp-only requires --start-stage grasp")
@@ -134,6 +166,8 @@ def main():
         "entropy": a.entropy,
         "log_std_init": a.log_std_init,
         "resume_checkpoint": None if resume is None else str(resume),
+        "initial_stage_steps_override": a.initial_stage_steps,
+        "checkpoint_save": "local atomic zip + independently mirrored durable shared storage when configured",
         "resume_sha256": None
         if resume is None
         else hashlib.sha256(resume.read_bytes()).hexdigest(),
@@ -166,13 +200,11 @@ def main():
             ]
         ),
     }
-    (out / "config.json").write_text(json.dumps(cfg, indent=2))
+    atomic_json(out / "config.json", cfg)
 
     def status(record):
         record = dict(record, updated=time.strftime("%Y-%m-%d %H:%M:%S %z"))
-        temp = out / "status.tmp"
-        temp.write_text(json.dumps(record, indent=2))
-        temp.replace(out / "status.json")
+        atomic_json(out / "status.json", record)
         with (out / "events.jsonl").open("a") as stream:
             stream.write(json.dumps(record) + "\n")
 
@@ -249,7 +281,7 @@ def main():
                 model.learn(
                     total_timesteps=steps,
                     reset_num_timesteps=False,
-                    callback=CheckpointCallback(
+                    callback=AtomicCheckpointCallback(
                         save_freq=max(10000 // a.envs, 1),
                         save_path=str(attempt_dir / "checkpoints"),
                         name_prefix="policy",
@@ -261,8 +293,8 @@ def main():
                     for p, b in zip(model.policy.parameters(), before)
                 )
                 assert change > 0
-                model.save(attempt_dir / "policy_final")
-                model.save(run / "policy_latest")
+                atomic_save_model(model, attempt_dir / "policy_final")
+                atomic_save_model(model, run / "policy_latest")
             finally:
                 vec.close()
             requested_total += steps
@@ -277,7 +309,7 @@ def main():
             record["state"] = "evaluating"
             status(record)
             ev = evaluate(model, mode, stage)
-            (attempt_dir / "validation.json").write_text(json.dumps(ev, indent=2))
+            atomic_json(attempt_dir / "validation.json", ev)
             print(
                 "EVAL_STAGE",
                 mode,
