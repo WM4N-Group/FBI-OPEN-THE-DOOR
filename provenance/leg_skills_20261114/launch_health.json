@@ -1,0 +1,82 @@
+{
+  "observed_at": "2026-11-14T23:45:16+0800",
+  "scope": "launch health only, NOT qualified task success",
+  "tasks": {
+    "climb": {
+      "training_code_commit": "01dcba62860689654c6d45bc2da0691f9e1a7580",
+      "runs": [
+        {
+          "run": "a800_climb_s600_20261114",
+          "seed": 600,
+          "state": "training",
+          "steps": 2490368,
+          "budget": 200000000,
+          "actor_parameter_max_change": 0.022922813892364502,
+          "arm_target_max_change_rad": 0.0,
+          "aggregate_sps": 19743.80687244558,
+          "training_successes": 0.0,
+          "solver_limit_env_step_fraction": 0.0,
+          "initial_checkpoint_replicated_sha256_verified": true
+        },
+        {
+          "run": "a800_climb_s601_20261114",
+          "seed": 601,
+          "state": "training",
+          "steps": 2490368,
+          "budget": 200000000,
+          "actor_parameter_max_change": 0.025037456303834915,
+          "arm_target_max_change_rad": 0.0,
+          "aggregate_sps": 19772.749812619833,
+          "training_successes": 0.0,
+          "solver_limit_env_step_fraction": 0.0,
+          "initial_checkpoint_replicated_sha256_verified": true
+        }
+      ],
+      "mirror": {
+        "copied": 8,
+        "pending": 0,
+        "errors": [],
+        "observed_at": "2026-11-14 23:45:13 +0800",
+        "all_current_artifacts_replicated": true
+      }
+    },
+    "down": {
+      "training_code_commit": "cf6121c637767a45a7e2ab006bda931b5d624150",
+      "runs": [
+        {
+          "run": "a800_down_s700_20261114",
+          "seed": 700,
+          "state": "training",
+          "steps": 2949120,
+          "budget": 200000000,
+          "actor_parameter_max_change": 0.027836807072162628,
+          "arm_target_max_change_rad": 0.0,
+          "aggregate_sps": 23310.317586372552,
+          "training_successes": 0.0,
+          "solver_limit_env_step_fraction": 0.0,
+          "initial_checkpoint_replicated_sha256_verified": true
+        },
+        {
+          "run": "a800_down_s701_20261114",
+          "seed": 701,
+          "state": "training",
+          "steps": 2949120,
+          "budget": 200000000,
+          "actor_parameter_max_change": 0.025182515382766724,
+          "arm_target_max_change_rad": 0.0,
+          "aggregate_sps": 23374.678120253564,
+          "training_successes": 0.0,
+          "solver_limit_env_step_fraction": 0.0,
+          "initial_checkpoint_replicated_sha256_verified": true
+        }
+      ],
+      "mirror": {
+        "copied": 6,
+        "pending": 0,
+        "errors": [],
+        "observed_at": "2026-11-14 23:45:13 +0800",
+        "all_current_artifacts_replicated": true
+      }
+    }
+  }
+}
