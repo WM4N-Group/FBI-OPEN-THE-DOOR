@@ -1,5 +1,13 @@
 # Contribution and robot safety rules
 
+## Branch scope
+
+- `push` is the box-pushing development branch. Keep box-specific source, docs, experiments and follow-up fixes on `push`; `main` remains the door task.
+- Before committing, verify the active branch; publish box work explicitly to `push`, not `main`.
+- Preserve shared frozen-leg/model contracts and historical evidence. Do not switch branches or rewrite files in a live server training checkout to organize Git branches.
+
+## Robot and experiment rules
+
 - Read `docs/REAL_ROBOT_MIGRATION.md` and `docs/STATUS.md` first.
 - Simulation defaults to privileged teacher geometry. Never present teacher rollouts or camera overlays as visual/RL task success.
 - Keep original leg policy hashes, observation ordering/history, actuator mapping and provenance. Do not silently replace Piper L assets with standard PiPER.

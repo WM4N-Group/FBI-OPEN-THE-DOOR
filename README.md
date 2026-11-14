@@ -1,73 +1,54 @@
-# FBI OPEN THE DOOR
+# FBI PUSH BOX
 
-Go2＋PiPER **物理夹持开门**研究代码，以及默认拒绝自动动作的真机迁移检查工具。
+Go2＋旧 **Piper L** 推箱任务：冻结原12维腿策略，独立IK控制机械臂，锁臂后由机身推动箱子。
 
-> **当前是仿真研究基线，不是可直接启动的真机自主开门软件。**
-> 已实现规则流程＋6D IK＋双指物理接触＋冻结的12维腿策略。高层残差PPO与双相机识别单独实验；没有完成学习型HRL管理器、可靠视觉闭环或真实接触验收。
+## 分支职责
 
-## 先读这些
+- **`push`：推箱开发分支。** 推箱场景、碰撞修订、残差PPO、训练配置和实验记录都在这里维护。
+- **`main`：开门分支。** 不再合入推箱专属改动。
+- 本分支保留所依赖的共享底座、资产导入和历史开门基础代码，不代表把推箱训练混入开门任务。训练运行目录与模型分别存储；不要在活跃训练源码目录切换分支。
 
-- [当前能力与证据边界](docs/STATUS.md)
-- [最新训练结果与同条件对照](docs/EVALUATION.md)
-- [真机迁移清单与分级测试](docs/REAL_ROBOT_MIGRATION.md)
-- [软件结构与控制接口](docs/ARCHITECTURE.md)
-- [仿真复现与训练](docs/SIMULATION.md)
-- [推箱任务：冻结12维底座＋IK锁臂＋残差训练](docs/BOX_PUSH.md)
-- [推箱碰撞修订：间隙检查、卸力后退、再收臂](docs/BOX_CLEARANCE.md)
-- [相机与标定](docs/CAMERAS.md)
+> 当前默认控制器为 **`clearance_v2`**，仅为仿真研究候选：特权箱体位姿、规则阶段管理、碰撞代理检查、IK和高层残差PPO。不是视觉自主推箱、学习型HRL或真机安全发布版。旧v1曾遗漏自碰门禁，仅保留用于历史复查。
+
+## 当前动作流程
+
+接近箱子 → 停稳 → IK及关节路径检查 → 锁臂低速建立接触 → 机身前推 → 停稳 → 保持臂姿后退脱离 → 再次停稳 → 沿检查路径收臂。
+
+- 底层原策略仍输出12维腿控制，机械臂不混入这12维输出。
+- 箱子为自由刚体，依靠真实仿真接触推动；没有焊接、吸引力、箱体执行器或rollout内位姿修改。
+- v2检查自碰与箱体间隙；推箱结束后先卸力、后退至少20 cm，再收臂。
+- 几何和接触检查只覆盖文档声明的仿真范围，不是连续碰撞或真实机器人安全证明。
+
+## 从这里开始
+
+- [当前推箱控制器、碰撞修订与配对回归](docs/BOX_CLEARANCE.md)
+- [推箱资产准备、训练与历史版本说明](docs/BOX_PUSH.md)
+- [v2原始回归、源码指纹及训练迁移记录](provenance/box_clearance_20261114/README.md)
+- [共享依赖及授权资产导入](docs/SIMULATION.md)
+- [真机迁移阻断项](docs/REAL_ROBOT_MIGRATION.md)
 - [第三方来源](THIRD_PARTY_NOTICES.md)
 
-## 安全的第一步：无需机器人或仿真依赖
-
 ```bash
-git clone https://github.com/WM4N-Group/FBI-OPEN-THE-DOOR.git
+git clone --branch push https://github.com/WM4N-Group/FBI-OPEN-THE-DOOR.git
 cd FBI-OPEN-THE-DOOR
+# 纯标准库测试，无硬件动作，也不需要私有仿真资产。
 PYTHONPATH=src python3 -m unittest discover -s tests -v
-PYTHONPATH=src python3 -m fbi_door.cli dry-run
-PYTHONPATH=src python3 -m fbi_door.cli doctor
 ```
 
-`dry-run` 不导入 CAN、DDS、ROS，也不发送命令。`doctor` 是离线清单检查，不会自动读取机器人；示例配置必须返回**退出码2（阻止真机开门）**，因为模型、实测夹爪力、手眼标定、停止接口等尚未验证。检查项不是安全认证。
-
-## 代码结构
-
-```text
-src/fbi_door/
-  sim/                  # 共享物理仿真、6D IK、夹持门任务、残差训练与相机观察
-  deployment/           # 无硬件副作用的指令检查、标定与坐标变换、dry-run
-  cli.py                # 默认安全入口
-hardware/arm/           # 从原项目保留的ROS2/CAN机械臂执行层；需单独准备环境
-configs/                # 不可直接上机的示例；实测配置使用*.local.json并忽略
-scripts/                # 私有reference资产的校验导入
-provenance/             # 资产哈希、上游来源、阶段评估摘要
-licenses/               # 第三方许可证
-```
-
-## 仿真快速入口
-
-Python 3.11／Linux x86_64 的独立环境；**不要把仿真依赖安装进Jetson/ROS Foxy环境**。
+仿真使用独立Python 3.11环境和独立`FBI_DOOR_RUNTIME`。按上述文档校验导入授权reference并生成场景后：
 
 ```bash
-python3.11 -m venv .venv
-source .venv/bin/activate
-python -m pip install -e '.[sim]'
-# 从项目所有者取得授权的私有reference包；权重和网格不放进Git。
-python scripts/import_reference.py --archive /absolute/path/fbi-door-reference-20261113.tgz
-export MUJOCO_GL=egl
-fbi-door sim-build
-fbi-door check-door
-fbi-door check-grasp
-fbi-door check-camera
-fbi-door sim-probe --record
+export FBI_DOOR_RUNTIME=/absolute/path/to/new-box-clearance-runtime
+export MUJOCO_GL=egl OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1
+python scripts/test_box_clearance_sim.py
+python -m fbi_door.sim.evaluate_box --controller clearance_v2 --count 8 --seed 71000 \
+  --output "$FBI_DOOR_RUNTIME/reports/v2.json" --video "$FBI_DOOR_RUNTIME/reports/v2.mp4"
+python -m fbi_door.sim.train_box --controller clearance_v2 --run-name push_s200 \
+  --seed 200 --envs 6 --device cuda:0 --nominal-steps 200000 --perturbed-steps 800000
 ```
 
-缺少资产时会明确报错，不会自动下载未知权重。私有包名和SHA256在`provenance/reference_bundle.json`中。视频和运行结果写入`.runtime/`，不进入Git；可用`FBI_DOOR_RUNTIME`指定独立运行目录。
+每次使用新的输出/运行名称，保留旧模型。v2与v1的高层观测契约不同，不直接加载v1 PPO；原冻结腿权重继续复用。活跃训练先写系统盘buffer，再独立原子镜像至共享空间，需核查同步错误与待复制数。
 
-## 真机迁移的硬性边界
+## 安全边界
 
-1. 旧腿策略为**Piper L**；标准PiPER模型、关节范围、质量与相机外参必须另行核对。
-2. 仿真夹爪±20 N是实验设置，**不是已核验的真机参数**。
-3. 当前相机网络输出可见表面观察，尚未可靠估计规范抓取点／门轴，也没有控制机械臂。
-4. 仿真中使用的精确模型前馈、关节/物体状态，不能在部署时当成已可获得的测量。
-5. `hardware/arm`仅用于有现场操作员的分级bring-up；没有接入自动抓握开门的夹爪/底盘适配器。
-6. 任何使能、复位、真实接触和底盘接管，必须在现场安全措施、实测限位/标定和独立急停验证后由操作员明确执行。
+不自动使能CAN/DDS、不连接真机执行接触。旧Piper L与实际机械臂、TCP、夹爪力、相机外参、底盘停止与反力稳定性仍需现场核验。权重、网格、视频、环境和凭据不进入Git。
