@@ -21,6 +21,7 @@ Go2＋旧 **Piper L** 推箱任务：冻结原12维腿策略，独立IK控制机
 
 ## 从这里开始
 
+- [长程导航任务的技能接口预留（无导航/管理器实现）](docs/NAVIGATION_SKILL_INTERFACES.md)
 - [当前推箱控制器、碰撞修订与配对回归](docs/BOX_CLEARANCE.md)
 - [推箱资产准备、训练与历史版本说明](docs/BOX_PUSH.md)
 - [v2原始回归、源码指纹及训练迁移记录](provenance/box_clearance_20261114/README.md)
@@ -52,3 +53,13 @@ python -m fbi_door.sim.train_box --controller clearance_v2 --run-name push_s200 
 ## 安全边界
 
 不自动使能CAN/DDS、不连接真机执行接触。旧Piper L与实际机械臂、TCP、夹爪力、相机外参、底盘停止与反力稳定性仍需现场核验。权重、网格、视频、环境和凭据不进入Git。
+
+## 后续长程任务接口
+
+`src/fbi_door/mission/`预留导航目标、路线候选、技能契约/请求、停止交接、来源过滤和变时长训练记录。导航是最终任务，开门/推箱是可选的环境干预，不写死技能顺序。当前只提供接口、协议测试和只读仿真结果桥接；没有实现导航器、共享世界执行器或学习型管理器，也不修改现有残差训练。
+
+```bash
+PYTHONPATH=src python3 scripts/demo_navigation_contract.py
+```
+
+此demo为显式合成协议测试，不是导航或物理技能链演示。

@@ -1,0 +1,32 @@
+{
+  "schema": "navigation-skills/v1",
+  "validation": "protocol + one standalone physical read-only bridge regression",
+  "unit_tests_passed": 98,
+  "new_protocol_tests": 34,
+  "sim_controller_source_unchanged": true,
+  "controller_source_sha256": "60f3011458bd2f60d6b02a104caa9ceecd299eb35550ed254f6f83b4b303ce28",
+  "source_sha256": {
+    "src/fbi_door/mission/__init__.py": "a24e792a8034792cc43ea7d17547f7b195e72cf0a6db30f10616a81d9d35353b",
+    "src/fbi_door/mission/boundaries.py": "ddc18b5ad980d7908d318a9cdb5f41d06aa53f2864c6440bb2d9e61c11186e72",
+    "src/fbi_door/mission/contracts.py": "82a2d0707e6487f0ab40b40460e006061b170653b29393428ff10944d0dcd957",
+    "src/fbi_door/mission/runtime.py": "7ca695b952f7f3ec4de54355a313900fb4a0afeb8b9d7b2712e8dc44f9ed2761",
+    "src/fbi_door/mission/catalogue.py": "11ae7618710536e1440ffbfe90146fbf3aa8c1c658828904eada96c4c57ea7d7",
+    "src/fbi_door/mission/interfaces.py": "8adb63dc3327c252a7aedd4c75d223a1e0b0db09c4a2ac552b0dd1dabac9e38a",
+    "src/fbi_door/mission/evaluation.py": "d77220a0474c77cf65ba2f894c6f31c5ed095dac42f1c81e67859b55c5c41e80",
+    "scripts/demo_navigation_contract.py": "7e1955f4cdef68df66132c5649024d3b9153abf73e9af74cfc4e79f8a88d2ae9",
+    "scripts/test_mission_sim_bridge.py": "72e7c0711bf02c46760fb26f842eb8564820bc83b8094f91851648e8635364f4",
+    "tests/test_mission_interfaces.py": "bf6e46ab6371be47ba74dbe238644293ff3f5e900927b5fa7a8c42f063215015"
+  },
+  "physical_navigation_implemented": false,
+  "shared_world_skill_executor_implemented": false,
+  "learned_manager_implemented": false,
+  "hardware_transport_implemented": false,
+  "synthetic_demo_is_not_physical_navigation": true,
+  "limitations": [
+    "No long-horizon mission rollout performed",
+    "Standalone legacy Gym worlds must not reset per skill in future chains",
+    "Observed-only views depend on honest external source labels and audited proposal generation",
+    "SMDP records are not a replacement for an implemented high-level learner",
+    "Safety predicates/counters are not hardware certification"
+  ]
+}

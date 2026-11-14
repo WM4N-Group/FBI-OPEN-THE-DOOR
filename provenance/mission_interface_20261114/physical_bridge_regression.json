@@ -1,0 +1,77 @@
+{
+  "passed": true,
+  "controller_source_sha256": "60f3011458bd2f60d6b02a104caa9ceecd299eb35550ed254f6f83b4b303ce28",
+  "standalone_box_task_completed": true,
+  "navigation_task_completed": false,
+  "shared_world_execution_backend_implemented": false,
+  "learned_manager_implemented": false,
+  "physical_state_unchanged_by_adapter": true,
+  "bridge_fact_keys": [
+    "request/box-report/standalone_box_task_completed",
+    "request/box-report/proxy_clearance_passed",
+    "robot/arm_stowed"
+  ],
+  "bridge_source": "sim_truth",
+  "navigation_goal_rejection_reasons": [
+    "destination_not_reached"
+  ],
+  "box_rollout": {
+    "is_success": true,
+    "failure": "",
+    "phase": "success",
+    "phase_history": [
+      "approach",
+      "settle",
+      "reach",
+      "touch",
+      "push",
+      "stop",
+      "retreat",
+      "withdraw_settle",
+      "retract",
+      "success"
+    ],
+    "elapsed_s": 39.84000000000063,
+    "box_displacement_m": 0.5412480559442321,
+    "arm_box_contact_s": 10.00600000000001,
+    "non_arm_box_impulse_Ns": 0.0,
+    "peak_arm_box_normal_N": 13.034234997087374,
+    "peak_commanded_arm_torque_Nm": [
+      2.1738991353991084,
+      14.528505825267807,
+      8.275583996414632,
+      0.5428709398522777,
+      2.3912358906234923,
+      0.18120562363581788
+    ],
+    "push_lock_max_target_delta_rad": 0.0,
+    "retract_joint_error_rad": 0.03692056116375937,
+    "ik_error_m": 9.631060383737136e-05,
+    "minimum_clearance_m": {
+      "self": 0.030179108875868478,
+      "body_box": 0.22314419693676402,
+      "protected_box": 0.027982512054944692,
+      "pad_box": 3.684207018065117e-05,
+      "arm_floor": 0.2721107916349469
+    },
+    "nearest_self_pair": [
+      69,
+      77
+    ],
+    "self_contact_peak_N": 0.0,
+    "non_pad_box_contact_peak_N": 0.0,
+    "arm_path_guard_rejections": 0,
+    "withdrawal_before_retract": {
+      "base_retreat_m": 0.21614694887513797,
+      "pad_gap_m": 0.1910350280682774,
+      "force_N": 0.0,
+      "quiet_s": 4.14
+    },
+    "minimum_retract_pad_box_gap_m": 0.19041589980518658,
+    "max_arm_target_speed_rad_s": 0.30000000000000027,
+    "max_base_vx_command_accel_m_s2": 0.06000000000000033,
+    "controller": "clearance_v2",
+    "scope": "privileged geometry; proxy/sampled collision guards; simulation only, NOT safety certification"
+  },
+  "scope": "One standalone physical regression only, NOT long-horizon navigation/skill-chain execution or hardware acceptance"
+}

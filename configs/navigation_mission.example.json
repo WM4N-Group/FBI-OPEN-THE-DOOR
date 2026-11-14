@@ -1,0 +1,117 @@
+{
+  "schema": "navigation-skills/v1",
+  "scope": "contract examples only; no navigation, shared-world executor or learned manager implemented",
+  "note": "Candidates are alternatives, not a required sequence. Revisions and thresholds are illustrative, not hardware calibration. No backend is registered.",
+  "goal": {
+    "mission_id": "mission-example",
+    "world_id": "world-example",
+    "clock": "mission-clock",
+    "destination": {
+      "frame": "map",
+      "x_m": 20,
+      "y_m": 5,
+      "yaw_rad": 0
+    },
+    "position_tolerance_m": 0.3,
+    "heading_tolerance_rad": 0.3,
+    "completion_requirements": [
+      {
+        "key": "robot/base_stopped",
+        "expected": true,
+        "max_age_s": 0.5,
+        "min_confidence": 0.9
+      },
+      {
+        "key": "robot/arm_stowed",
+        "expected": true,
+        "max_age_s": 0.5,
+        "min_confidence": 0.9
+      },
+      {
+        "key": "robot/contact_released",
+        "expected": true,
+        "max_age_s": 0.5,
+        "min_confidence": 0.9
+      }
+    ],
+    "max_pose_age_s": 0.5,
+    "min_pose_confidence": 0.9,
+    "deadline_s": 600
+  },
+  "candidate_requests": [
+    {
+      "request_id": "nav-clear",
+      "mission_id": "mission-example",
+      "world_id": "world-example",
+      "skill_id": "navigation.move_to",
+      "skill_version": 1,
+      "observation_revision": 0,
+      "map_revision": 0,
+      "entity_id": null,
+      "target_pose": {
+        "frame": "map",
+        "x_m": 20,
+        "y_m": 5,
+        "yaw_rad": 0
+      },
+      "parameters": {},
+      "parent_request_id": null,
+      "intent": "normal",
+      "route_candidate_id": "clear-detour",
+      "schema": "navigation-skills/v1"
+    },
+    {
+      "request_id": "door-candidate",
+      "mission_id": "mission-example",
+      "world_id": "world-example",
+      "skill_id": "manipulation.open_door",
+      "skill_version": 1,
+      "observation_revision": 0,
+      "map_revision": 0,
+      "entity_id": "door1",
+      "target_pose": null,
+      "parameters": {
+        "opening_angle_rad": 1.1
+      },
+      "parent_request_id": null,
+      "intent": "normal",
+      "route_candidate_id": "short-door-route",
+      "schema": "navigation-skills/v1"
+    },
+    {
+      "request_id": "box-candidate",
+      "mission_id": "mission-example",
+      "world_id": "world-example",
+      "skill_id": "manipulation.push_box",
+      "skill_version": 1,
+      "observation_revision": 0,
+      "map_revision": 0,
+      "entity_id": "box1",
+      "target_pose": null,
+      "parameters": {
+        "distance_m": 0.5,
+        "direction_rad": 0.0
+      },
+      "parent_request_id": null,
+      "intent": "normal",
+      "route_candidate_id": "blocked-corridor",
+      "schema": "navigation-skills/v1"
+    },
+    {
+      "request_id": "observe-candidate",
+      "mission_id": "mission-example",
+      "world_id": "world-example",
+      "skill_id": "perception.reobserve",
+      "skill_version": 1,
+      "observation_revision": 0,
+      "map_revision": 0,
+      "entity_id": null,
+      "target_pose": null,
+      "parameters": {},
+      "parent_request_id": null,
+      "intent": "normal",
+      "route_candidate_id": null,
+      "schema": "navigation-skills/v1"
+    }
+  ]
+}
