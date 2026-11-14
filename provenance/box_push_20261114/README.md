@@ -8,3 +8,7 @@
 - `media.json`: hashes/provenance of a separate side-view reenactment of baseline seed71000. The video itself and weights are intentionally not committed.
 
 See `docs/BOX_PUSH.md` for exact scope, stage budgets, resource allocation and reproduction. No hardware was commanded.
+
+## Superseded collision scope
+
+A subsequent 50Hz geometry/2ms force audit found v1 self-collisions omitted by these historical task-only acceptance criteria. Do not interpret the original 8/8 or `simulation_regression.json` as a collision-safety pass. See `provenance/box_clearance_20261114/` and `docs/BOX_CLEARANCE.md` for the paired correction. Original records are preserved, not rewritten.

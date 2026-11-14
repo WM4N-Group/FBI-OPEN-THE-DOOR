@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""Asset-dependent simulation regression; fails rather than silently skipping missing assets."""
+"""Legacy v1 task-only regression, NOT self-collision acceptance.
+
+Use test_box_clearance_sim.py for the current controller. Missing assets fail.
+"""
 
 import json
 import hashlib
@@ -14,6 +17,7 @@ from fbi_door.sim.core import _original, ort
 
 
 def main():
+    print("WARNING: legacy v1 task-only check; self-collision is NOT accepted here")
     env = BoxPushEnv(randomization=0)
     try:
         check_env(env, skip_render_check=True)

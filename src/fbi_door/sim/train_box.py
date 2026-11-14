@@ -10,8 +10,7 @@ from stable_baselines3 import PPO
 from stable_baselines3.common.callbacks import BaseCallback
 from stable_baselines3.common.monitor import Monitor
 from stable_baselines3.common.vec_env import SubprocVecEnv
-from .box_env import BoxPushEnv
-from .evaluate_box import evaluate
+from .evaluate_box import evaluate, environment_class
 from ..paths import RUNTIME_ROOT as ROOT
 from ..storage import atomic_json, atomic_save_model
 from ..box_task import LEG_CHECKPOINT_SHA256
@@ -66,6 +65,9 @@ class Progress(BaseCallback):
 
 def main():
     pa = argparse.ArgumentParser(description=__doc__)
+    pa.add_argument(
+        "--controller", choices=["legacy", "clearance_v2"], default="clearance_v2"
+    )
     pa.add_argument("--run-name", required=True)
     pa.add_argument("--envs", type=int, default=6)
     pa.add_argument("--device", default="cuda:0")
@@ -95,6 +97,7 @@ def main():
         pa.error("resume checkpoint does not exist")
     if a.start_stage != "nominal" and not a.resume_zip:
         pa.error("Later stage requires a compatible box checkpoint")
+    env_class = environment_class(a.controller)
     torch.set_num_threads(1)
     out = ROOT / "runs" / a.run_name
     out.mkdir(parents=True, exist_ok=False)
@@ -111,8 +114,13 @@ def main():
             "core.py",
             "build_box_scene.py",
             "evaluate_box.py",
+            "box_collision.py",
+            "box_clearance_env.py",
         )
     }
+    hashes["box_clearance.py"] = hashlib.sha256(
+        (source.parent / "box_clearance.py").read_bytes()
+    ).hexdigest()
     hashes["box_task.py"] = hashlib.sha256(
         (source.parent / "box_task.py").read_bytes()
     ).hexdigest()
@@ -159,7 +167,7 @@ def main():
         for stage, randomization, budget in plan:
             env = SubprocVecEnv(
                 [
-                    lambda r=randomization: Monitor(BoxPushEnv(randomization=r))
+                    lambda r=randomization: Monitor(env_class(randomization=r))
                     for _ in range(a.envs)
                 ]
             )
@@ -256,6 +264,7 @@ def main():
                         count=8,
                         seed=810000 + int(randomization) * 1000,
                         randomization=randomization,
+                        controller=a.controller,
                     )
                     atomic_json(out / f"gate_{stage}_attempt{attempt}.json", gate)
                     passed = gate["passed"] >= 7
@@ -275,7 +284,9 @@ def main():
                 atomic_json(out / "status.json", state)
                 return
         if not a.smoke and not gate_failed:
-            final = evaluate(model, count=32, seed=910000, randomization=1.0)
+            final = evaluate(
+                model, count=32, seed=910000, randomization=1.0, controller=a.controller
+            )
             atomic_json(out / "final_evaluation.json", final)
             state.update(
                 state="completed_budget",

@@ -1,6 +1,12 @@
 # 推箱任务：冻结12维腿策略＋IK位置保持＋残差PPO
 
-2026-11-14新增的独立仿真任务。**不是视觉推箱、学习型HRL管理器或真机发布版**，不替换原开门场景、权重和实验。
+2026-11-14新增的独立仿真任务。
+
+> **碰撞修订：默认控制器现为 `clearance_v2`。** 后续50 Hz几何/2 ms接触审计发现旧v1伸臂和收臂存在自碰，历史“8/8”仅表示旧任务判据完成，不是路径安全通过。不要继续用v1做部署候选。修订视频、同初态对照与训练迁移见[碰撞修订](BOX_CLEARANCE.md)。
+
+以下控制分工、16秒结果和原始A800配置保留为 **v1历史记录**；重现旧控制器须明确加`--controller legacy`。当前默认v2约40秒，额外包含停稳、低速接触、卸力后退和再次停稳。
+
+**不是视觉推箱、学习型HRL管理器或真机发布版**，不替换原开门场景、权重和实验。
 
 ## 控制分工
 
@@ -57,13 +63,13 @@ ln -s "$DOOR_RUNTIME/reference" "$BOX_RUNTIME/reference"
 export FBI_DOOR_RUNTIME="$BOX_RUNTIME" MUJOCO_GL=egl
 export OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1
 python -m fbi_door.sim.build_box_scene --robot-source "$DOOR_RUNTIME/assets/robot.xml"
-python scripts/test_box_sim.py
+python scripts/test_box_clearance_sim.py
 python -m fbi_door.sim.evaluate_box --count 8 --seed 71000 --randomization 1 \
   --output "$BOX_RUNTIME/reports/baseline.json" \
   --video "$BOX_RUNTIME/reports/baseline.mp4"
 python -m fbi_door.sim.train_box --run-name smoke --envs 2 --device cuda:0 --smoke
 python -m fbi_door.sim.train_box --run-name box_s100 --envs 6 --device cuda:0 --seed 100 \
-  --nominal-steps 200000 --perturbed-steps 800000 --gate-retry-steps 200000
+  --controller clearance_v2 --nominal-steps 200000 --perturbed-steps 800000 --gate-retry-steps 200000
 ```
 
 - 场景生成器拒绝覆盖已有场景；训练器拒绝覆盖已有运行目录。参考策略SHA256必须匹配，生成manifest和训练配置记录源文件/模型哈希。

@@ -8,10 +8,26 @@ from .box_env import BoxPushEnv
 from ..storage import atomic_json
 
 
+def environment_class(controller):
+    if controller == "legacy":
+        return BoxPushEnv
+    if controller == "clearance_v2":
+        from .box_clearance_env import ClearanceBoxPushEnv
+
+        return ClearanceBoxPushEnv
+    raise ValueError("Unknown box controller")
+
+
 def evaluate(
-    policy=None, count=8, seed=70000, randomization=1.0, video=None, trace=None
+    policy=None,
+    count=8,
+    seed=70000,
+    randomization=1.0,
+    video=None,
+    trace=None,
+    controller="clearance_v2",
 ):
-    env = BoxPushEnv(randomization=randomization)
+    env = environment_class(controller)(randomization=randomization)
     results = []
     writer = None
     stream = None
@@ -71,7 +87,9 @@ def evaluate(
                     frame = cv2.cvtColor(env.render(), cv2.COLOR_RGB2BGR)
                     cv2.putText(
                         frame,
-                        "SIM | privileged pose | "
+                        "SIM | "
+                        + controller
+                        + " | privileged pose | "
                         + ("IK baseline" if policy is None else "residual PPO + IK"),
                         (20, 32),
                         cv2.FONT_HERSHEY_SIMPLEX,
@@ -98,6 +116,7 @@ def evaluate(
             stream.close()
         env.close()
     return {
+        "controller": controller,
         "passed": sum(r["is_success"] for r in results),
         "total": count,
         "results": results,
@@ -111,6 +130,9 @@ def evaluate(
 
 def main():
     pa = argparse.ArgumentParser(description=__doc__)
+    pa.add_argument(
+        "--controller", choices=["legacy", "clearance_v2"], default="clearance_v2"
+    )
     pa.add_argument("--checkpoint", type=Path)
     pa.add_argument("--count", type=int, default=8)
     pa.add_argument("--seed", type=int, default=70000)
@@ -131,7 +153,9 @@ def main():
         from stable_baselines3 import PPO
 
         policy = PPO.load(a.checkpoint, device="cpu")
-    result = evaluate(policy, a.count, a.seed, a.randomization, a.video, a.trace)
+    result = evaluate(
+        policy, a.count, a.seed, a.randomization, a.video, a.trace, a.controller
+    )
     atomic_json(a.output, result)
     print("BOX_SUMMARY", result["passed"], "/", result["total"], flush=True)
 
