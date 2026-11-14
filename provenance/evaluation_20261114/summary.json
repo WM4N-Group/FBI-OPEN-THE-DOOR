@@ -1,0 +1,27 @@
+{
+  "observed_at": "2026-11-14 11:17:24 +0800",
+  "controllers": {
+    "rule_ik": {
+      "episodes": 32,
+      "full_successes": 28,
+      "mean_seconds_success_only": 20.667857142857144,
+      "min_max_seconds_success_only": [
+        20.4,
+        21.4
+      ],
+      "external_contact_diagnostic_episodes": 0
+    },
+    "rl_residual": {
+      "episodes": 32,
+      "full_successes": 32,
+      "mean_seconds_success_only": 16.34375,
+      "min_max_seconds_success_only": [
+        16.2,
+        16.6
+      ],
+      "external_contact_diagnostic_episodes": 0
+    }
+  },
+  "scope": "same single door/handle and limited reset pose distribution only; not randomized door physics, force safety or hardware acceptance",
+  "perception": "privileged simulated handle pose/axes; NOT visual closed-loop"
+}

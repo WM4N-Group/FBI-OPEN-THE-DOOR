@@ -73,3 +73,7 @@ python scripts/launch_a800.py --runtime /absolute/path/to/validated/runtime \
 ## 共享存储故障恢复
 
 参见[存储恢复说明](STORAGE_RECOVERY.md)。为避免共享盘的瞬时写入故障同时打断日志、状态和checkpoint，续训可使用独立系统盘runtime缓冲，并由独立镜像进程校验后同步到共享盘。未同步文件不能当作已完成共享备份；停机/迁移前必须检查pending和校验结果。恢复第一阶段支持`--initial-stage-steps`补齐剩余预算，不需要重复从头训练。
+
+## 训练后对照评估
+
+使用`fbi-door evaluate-paired --checkpoint <受信任PPO ZIP> --episodes 32 --record`；运行范围、数据划分、输出与证据边界见[评估说明](EVALUATION.md)。不会追加训练、改动旧模型或连接硬件。

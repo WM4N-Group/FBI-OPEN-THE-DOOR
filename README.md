@@ -8,6 +8,7 @@ Go2＋PiPER **物理夹持开门**研究代码，以及默认拒绝自动动作�
 ## 先读这些
 
 - [当前能力与证据边界](docs/STATUS.md)
+- [最新训练结果与同条件对照](docs/EVALUATION.md)
 - [真机迁移清单与分级测试](docs/REAL_ROBOT_MIGRATION.md)
 - [软件结构与控制接口](docs/ARCHITECTURE.md)
 - [仿真复现与训练](docs/SIMULATION.md)

@@ -1,0 +1,47 @@
+{
+  "observed_at": "2026-11-14 12:37:06 +0800",
+  "offline_unit_tests_passed": 55,
+  "portable_cli_regression": {
+    "controllers": {
+      "rule_ik": {
+        "episodes": 2,
+        "full_successes": 2,
+        "mean_seconds_success_only": 20.799999999999997,
+        "min_max_seconds_success_only": [
+          20.7,
+          20.9
+        ],
+        "failure_counts": {},
+        "external_contact_diagnostic_episodes": 0
+      },
+      "rl_residual": {
+        "episodes": 2,
+        "full_successes": 2,
+        "mean_seconds_success_only": 16.35,
+        "min_max_seconds_success_only": [
+          16.3,
+          16.4
+        ],
+        "failure_counts": {},
+        "external_contact_diagnostic_episodes": 0
+      }
+    },
+    "matched_success_pairs": {
+      "episodes": 2,
+      "rule_ik_mean_seconds": 20.799999999999997,
+      "rl_residual_mean_seconds": 16.35
+    },
+    "interpretation": "Per-controller means condition on that controller succeeding; matched-success means use identical successful seed pairs. Small same-asset tests are not universal reliability or hardware evidence.",
+    "observed_at": "2026-11-14 12:37:06 +0800",
+    "scope": "same single door/handle, limited reset-pose distribution; not randomized door physics, force safety, or hardware acceptance",
+    "perception": "privileged simulated handle pose/axes; NOT visual closed-loop"
+  },
+  "candidate_checkpoint_sha256": "6a9459cace463f8469e6a376f6d2fdecaf61e7d7334ede31e6d0c8c00a844059",
+  "source_sha256": {
+    "src/fbi_door/evaluation.py": "7a9da71e43b2434df1442d40401b588f8fa51bed6059691368b20802b734d834",
+    "src/fbi_door/sim/evaluate_paired.py": "85a7382a332c1f43a4b3bc6adf4224faef439677d4b479eacb4c8dc0218437a0"
+  },
+  "scope": "Four-episode portable CLI regression; not an additional held-out performance experiment. Original 32-pair evidence remains separate.",
+  "hardware_commands_sent": false,
+  "private_weights_or_videos_in_git": false
+}

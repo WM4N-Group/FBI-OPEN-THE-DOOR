@@ -30,6 +30,7 @@ def main():
         "sim-train": "train",
         "camera-train": "dual_perception",
         "camera-probe": "camera_probe",
+        "evaluate-paired": "evaluate_paired",
         "check-door": "check_freehinge",
         "check-grasp": "test_grasp_contract",
         "check-camera": "check_wrist_camera",

@@ -1,0 +1,194 @@
+{
+  "observed_at": "2026-11-14 11:11:03 +0800",
+  "ppo_runs": [
+    {
+      "seed": 42,
+      "gpu": 0,
+      "status": {
+        "state": "finished_candidate_curriculum",
+        "requested_steps_completed_this_launch": 1919408,
+        "recorded_model_steps": 3500592,
+        "hardware_approved": false,
+        "requires": "independent visual full-task contact and robustness acceptance",
+        "updated": "2026-11-14 04:56:07 +0800"
+      },
+      "stages": {
+        "push": {
+          "passed": 32,
+          "total": 32,
+          "mean_seconds": 8.9375,
+          "time_range": [
+            8.700000000000001,
+            9.3
+          ]
+        },
+        "full": {
+          "passed": 32,
+          "total": 32,
+          "mean_seconds": 16.928125,
+          "time_range": [
+            16.7,
+            17.1
+          ]
+        }
+      },
+      "final_sha256": "46f396130c5495273aeaa4bd448fbed38ca9594fcd93ca4a7e2f2ddc590e97b8",
+      "shared_final_verified": true
+    },
+    {
+      "seed": 43,
+      "gpu": 1,
+      "status": {
+        "state": "finished_candidate_curriculum",
+        "requested_steps_completed_this_launch": 1869428,
+        "recorded_model_steps": 3500652,
+        "hardware_approved": false,
+        "requires": "independent visual full-task contact and robustness acceptance",
+        "updated": "2026-11-14 04:29:10 +0800"
+      },
+      "stages": {
+        "push": {
+          "passed": 32,
+          "total": 32,
+          "mean_seconds": 9.109375,
+          "time_range": [
+            8.9,
+            9.700000000000001
+          ]
+        },
+        "full": {
+          "passed": 32,
+          "total": 32,
+          "mean_seconds": 17.39375,
+          "time_range": [
+            17.3,
+            17.400000000000002
+          ]
+        }
+      },
+      "final_sha256": "fd88fb764cee255d9c985e188c997eab744e544424307c6ee952907d010c00ef",
+      "shared_final_verified": true
+    },
+    {
+      "seed": 44,
+      "gpu": 0,
+      "status": {
+        "state": "finished_candidate_curriculum",
+        "requested_steps_completed_this_launch": 1949396,
+        "recorded_model_steps": 3500556,
+        "hardware_approved": false,
+        "requires": "independent visual full-task contact and robustness acceptance",
+        "updated": "2026-11-14 05:11:30 +0800"
+      },
+      "stages": {
+        "push": {
+          "passed": 32,
+          "total": 32,
+          "mean_seconds": 9.125,
+          "time_range": [
+            8.9,
+            9.3
+          ]
+        },
+        "full": {
+          "passed": 32,
+          "total": 32,
+          "mean_seconds": 16.375,
+          "time_range": [
+            16.2,
+            16.6
+          ]
+        }
+      },
+      "final_sha256": "6a9459cace463f8469e6a376f6d2fdecaf61e7d7334ede31e6d0c8c00a844059",
+      "shared_final_verified": true
+    },
+    {
+      "seed": 45,
+      "gpu": 1,
+      "status": {
+        "state": "finished_candidate_curriculum",
+        "requested_steps_completed_this_launch": 1899416,
+        "recorded_model_steps": 3500616,
+        "hardware_approved": false,
+        "requires": "independent visual full-task contact and robustness acceptance",
+        "updated": "2026-11-14 04:29:34 +0800"
+      },
+      "stages": {
+        "push": {
+          "passed": 32,
+          "total": 32,
+          "mean_seconds": 9.534375,
+          "time_range": [
+            9.5,
+            9.600000000000001
+          ]
+        },
+        "full": {
+          "passed": 32,
+          "total": 32,
+          "mean_seconds": 17.553125,
+          "time_range": [
+            17.2,
+            18.1
+          ]
+        }
+      },
+      "final_sha256": "9855f583d98d0fb312c6293e9e87de6595704bfae51420e8b4d00ca3db7fa627",
+      "shared_final_verified": true
+    }
+  ],
+  "mirror": {
+    "copied": 2,
+    "pending": 0,
+    "errors": [],
+    "observed_at": "2026-11-14 11:10:36 +0800",
+    "all_current_artifacts_replicated": true
+  },
+  "camera_results": {
+    "46": {
+      "heldout_scene_count": 512,
+      "results": {
+        "head_rgbd": {
+          "iou": 0.8655937954435289,
+          "presence_precision": 0.991304347826087,
+          "presence_recall": 0.9771428571428571,
+          "visible_center_error_median_m": 0.0027293426226548834,
+          "visible_center_error_p95_m": 0.018918928015134506,
+          "visible_matches": 342
+        },
+        "wrist_rgbd": {
+          "iou": 0.7343392964117501,
+          "presence_precision": 0.9292307692307692,
+          "presence_recall": 0.9710610932475884,
+          "visible_center_error_median_m": 0.001833382298713476,
+          "visible_center_error_p95_m": 0.059395003199932676,
+          "visible_matches": 302
+        }
+      },
+      "scope": "synthetic visible handle surface only, NOT grasp/rotation/slip/full-task success or sim2real acceptance"
+    },
+    "47": {
+      "heldout_scene_count": 512,
+      "results": {
+        "head_rgbd": {
+          "iou": 0.8620262453184413,
+          "presence_precision": 0.985632183908046,
+          "presence_recall": 0.98,
+          "visible_center_error_median_m": 0.0027537123090601674,
+          "visible_center_error_p95_m": 0.026432187957821887,
+          "visible_matches": 343
+        },
+        "wrist_rgbd": {
+          "iou": 0.7632514738462693,
+          "presence_precision": 0.9439252336448598,
+          "presence_recall": 0.9742765273311897,
+          "visible_center_error_median_m": 0.001595210945292566,
+          "visible_center_error_p95_m": 0.033568283887441805,
+          "visible_matches": 303
+        }
+      },
+      "scope": "synthetic visible handle surface only, NOT grasp/rotation/slip/full-task success or sim2real acceptance"
+    }
+  }
+}
