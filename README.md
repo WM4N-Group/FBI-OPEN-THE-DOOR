@@ -1,3 +1,7 @@
+# `climb` 技能训练分支
+
+本分支新增直接微调12维腿策略的登箱技能；机械臂保持固定关节目标。当前是训练开发状态，尚未宣布技能验收成功。`down`另见独立分支，`push`与`main`不改动。配置见 `configs/leg_skills/climb.json`，完整范围与复现见[技能训练说明](docs/LEG_SKILLS.md)。
+
 # FBI PUSH BOX
 
 Go2＋旧 **Piper L** 推箱任务：冻结原12维腿策略，独立IK控制机械臂，锁臂后由机身推动箱子。

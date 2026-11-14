@@ -1,0 +1,41 @@
+{
+  "state": "smoke_complete",
+  "task": "down",
+  "seed": 703,
+  "steps": 131072,
+  "budget": 131072,
+  "update": 2,
+  "elapsed_s": 5.602294415235519,
+  "aggregate_sps": 45021.01362613157,
+  "rollout_s": 1.0929296910762787,
+  "update_loss": 0.06477563083171844,
+  "recent_success_rate": 0.0,
+  "recent_episodes": 0.0,
+  "solver_limit_env_step_fraction": 0.0,
+  "recent_failure_reasons_nonexclusive": {
+    "nonfinite": 0.0,
+    "fall": 0.0,
+    "arm_drift": 0.0,
+    "forbidden_contact": 0.0,
+    "self_contact": 0.0,
+    "box_state": 0.0,
+    "bounds": 0.0
+  },
+  "recent_base_x_max": 0.332419216632843,
+  "recent_stable_dwell_max_s": 0.0,
+  "under_seen_env_step_fraction": 0.0,
+  "cumulative": {
+    "episodes": 0.0,
+    "successes": 0.0,
+    "failures": 0.0,
+    "timeouts": 0.0,
+    "return_sum": 0.0,
+    "duration_sum": 0.0,
+    "arm_error_max": 0.05796413868665695
+  },
+  "actor_parameter_max_change": 0.004360921680927277,
+  "arm_target_max_change_rad": 0.0,
+  "initial_checkpoint_sha256": "d468bc999c4d12a651b51559696a563ad10c8a8969e3f23854c05f3674d5a7ca",
+  "timestamp": "2026-11-14T23:40:34+0800",
+  "latest_checkpoint_sha256": "b820502172f5ae3563149da4afa6b6bd9ee9333a371dc19e5507220c26d546d4"
+}

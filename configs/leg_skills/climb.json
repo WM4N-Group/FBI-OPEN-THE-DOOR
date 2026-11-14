@@ -1,0 +1,15 @@
+{
+  "schema": "leg-skills/v1",
+  "task": "climb",
+  "seeds": [600, 601],
+  "gpu": 0,
+  "envs_per_seed": 2048,
+  "aggregate_steps_per_seed": 200000000,
+  "horizon": 32,
+  "epochs": 4,
+  "batch_size": 8192,
+  "action": "12 leg joint targets, full actor fine-tuning from original; six arm targets fixed",
+  "training_geometry": "mixed difficulty: 3.5-24cm free support boxes, 85-125 x 70-105cm, 25-60kg",
+  "qualification": "all four feet on actual box top and supporting, upright and slow, box stable, dwell >=2s",
+  "scope": "privileged geometry simulation; not original small 2kg push box, vision, hardware, or shared-world chain"
+}

@@ -2,8 +2,8 @@
 
 ## Branch scope
 
-- `push` is the box-pushing development branch. Keep box-specific source, docs, experiments and follow-up fixes on `push`; `main` remains the door task.
-- Before committing, verify the active branch; publish box work explicitly to `push`, not `main`.
+- `climb` and `down` are separate leg-skill branches authorized by the user. Keep new task changes on the corresponding branch; `push` remains box pushing and `main` remains door. Shared leg-skill infrastructure may be copied between `climb` and `down` with provenance.
+- Before committing, verify the active skill branch; never publish leg-skill work to `main` or `push`.
 - Preserve shared frozen-leg/model contracts and historical evidence. Do not switch branches or rewrite files in a live server training checkout to organize Git branches.
 
 ## Robot and experiment rules

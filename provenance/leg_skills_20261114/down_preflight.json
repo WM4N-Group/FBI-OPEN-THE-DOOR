@@ -1,0 +1,35 @@
+{
+  "task": "down",
+  "worlds": 16,
+  "original_checkpoint_sha256": "408f96e58a3ea544cdf9a2a27ba0e913c7d02c6a4346cc6202e5c1f3351b0556",
+  "onnx_initial_actor_max_error": 9.5367431640625e-06,
+  "cpu_gpu_same_action_qpos_max_errors_rad_or_m": [
+    2.1942899504396804e-05,
+    5.3893516976374206e-05,
+    5.724508196000219e-05,
+    5.680354015583436e-05,
+    5.737907750013975e-05
+  ],
+  "physics_flags": [
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "negative_test_forbidden_contact_peak_n": 23.59022331237793,
+  "negative_test_failure_detected": true,
+  "arm_target_max_change_rad": 0.0,
+  "purpose": "preflight ONLY, no successful climb/down claim; collision pose is an explicit negative-test reset",
+  "source_sha256": {
+    "__init__.py": "5dcbd1bac29a58fa11d10a147e0c826cfa28efd958b02f5031660bf14a86e270",
+    "kernels.py": "269c9f1301d01953d74c9c0616576cd3ab62794bcb4d15548e210f7befce0c96",
+    "build_scene.py": "aa6644f87aa8e613d80fc29103d3b6e0780c4787c27b50eb57197c1c88fbcb5e",
+    "contracts.py": "ab374add4273998efe45d479badd0e76ddcabc39703fef3da111db89e38b6ae5",
+    "gpu_env.py": "1f74b38a2ecbf6056e1f6bc3e514a562dd348c09fe02764280e338c690e94061",
+    "validate.py": "626e84002338a5d174b08d2c109c8abd3adef26fa2f0b584b24efd4afbe74f96",
+    "train.py": "99651d2aabc25258b2b827c21a6ed5b00336482b3195b6026642e32238385ed1",
+    "policy.py": "88aa8da5ba1c1bbbf2801c9e03ba368006dbf9f11f277f23a1d41806b445cb14"
+  },
+  "hardware_validated": false
+}
