@@ -1,0 +1,1759 @@
+{
+  "height_manifest": {
+    "ablation": "box height only; no retraining",
+    "box_size_m": [
+      0.4,
+      0.5,
+      0.15
+    ],
+    "box_mass_kg": 2.0,
+    "box_friction": [
+      0.35,
+      0.005,
+      0.0001
+    ],
+    "box_free_joint": true,
+    "box_actuator_added": false,
+    "robot_collision_geometries_modified": false,
+    "reset_box_center_z_m": 0.076,
+    "changed_fields": [
+      "box.geom.size.z",
+      "box.body.pos.z",
+      "box keyframe qpos z"
+    ],
+    "source_xml_sha256": {
+      "box_scene.xml": "e0fd072900443192ec0dc408a048606ae6f8b69db6f3a4e50ed5db11a48f1e47",
+      "box_robot.xml": "157c86a3b1a48ab8908a01c3309262b6a7e47ae488212ab0d67dd6e61dcaebff"
+    },
+    "scope": "fixed footprint/mass/friction, flat floor; NOT load-bearing or stepping/climbing validation"
+  },
+  "height_m": 0.15,
+  "top_margin_m": 0.04,
+  "pose_top_margin_m": 0.02,
+  "pose_standoff_m": 0.7,
+  "pose_tool_tilt_deg": 45.0,
+  "frozen_leg_checkpoint_sha256": "408f96e58a3ea544cdf9a2a27ba0e913c7d02c6a4346cc6202e5c1f3351b0556",
+  "checkpoint_sha256": "6f9240c2dff10d2b61ad4a767c58c53aca2e29b865acc12eb6d2a8a9c55144eb",
+  "policy_parameters_before": "a08bb21a88be935b10f54a4e20adccaa36b29e6406d0ec43014478b61f8ed5be",
+  "policy_parameters_after": "a08bb21a88be935b10f54a4e20adccaa36b29e6406d0ec43014478b61f8ed5be",
+  "training_steps_before": 1004544,
+  "training_steps_after": 1004544,
+  "learning_performed": false,
+  "summary": {
+    "strict_ppo": {
+      "task_passed": 0,
+      "front_push_passed": 0,
+      "total": 8
+    },
+    "pose_ppo": {
+      "task_passed": 0,
+      "front_push_passed": 0,
+      "total": 8
+    },
+    "pose_ik": {
+      "task_passed": 0,
+      "front_push_passed": 0,
+      "total": 8
+    }
+  },
+  "results": [
+    {
+      "mode": "strict_ppo",
+      "seed": 920100,
+      "is_success": false,
+      "failure": "base_box_clearance",
+      "phase": "touch",
+      "phase_history": [
+        "approach",
+        "settle",
+        "reach",
+        "touch"
+      ],
+      "elapsed_s": 19.59999999999967,
+      "box_displacement_m": 0.0,
+      "arm_box_contact_s": 0.0,
+      "non_arm_box_impulse_Ns": 0.0,
+      "peak_arm_box_normal_N": 0.0,
+      "peak_commanded_arm_torque_Nm": [
+        1.915869227821155,
+        13.301178296032365,
+        8.26075249862285,
+        0.3323609401167757,
+        1.9917491858617016,
+        0.2779328967920737
+      ],
+      "push_lock_max_target_delta_rad": 0.0,
+      "retract_joint_error_rad": 0.0,
+      "ik_error_m": 0.0012929514731801432,
+      "minimum_clearance_m": {
+        "self": 0.03022549605218528,
+        "body_box": 0.15809678362296686,
+        "protected_box": 0.1923256549523352,
+        "pad_box": 0.15598524292392385,
+        "arm_floor": 0.27183690861181264
+      },
+      "nearest_self_pair": [
+        69,
+        77
+      ],
+      "self_contact_peak_N": 0.0,
+      "non_pad_box_contact_peak_N": 0.0,
+      "arm_path_guard_rejections": 0,
+      "withdrawal_before_retract": null,
+      "minimum_retract_pad_box_gap_m": 1.0,
+      "max_arm_target_speed_rad_s": 0.30000000000000027,
+      "max_base_vx_command_accel_m_s2": 0.06000000000000033,
+      "controller": "clearance_v2",
+      "scope": "privileged geometry; proxy/sampled collision guards; simulation only, NOT safety certification",
+      "pad_impulse_Ns_by_face": {
+        "front": 0.0,
+        "top": 0.0,
+        "other": 0.0
+      },
+      "pad_contact_s_by_face": {
+        "front": 0.0,
+        "top": 0.0,
+        "other": 0.0
+      },
+      "front_impulse_fraction": 0.0,
+      "classification": "dominant box-local contact-normal axis + contact-point side, per2ms; edges approximate",
+      "front_push_accepted": false,
+      "nominal_ik_contact_height_m": 0.34,
+      "geometric_tool_tilt_deg": 30.0,
+      "geometric_approach_standoff_m": 0.63,
+      "final_reach_offset_m": [
+        2.8024096973240376e-05,
+        0.0025714406371116637,
+        0.0015579308569431305
+      ]
+    },
+    {
+      "mode": "strict_ppo",
+      "seed": 920101,
+      "is_success": false,
+      "failure": "base_box_clearance",
+      "phase": "touch",
+      "phase_history": [
+        "approach",
+        "settle",
+        "reach",
+        "touch"
+      ],
+      "elapsed_s": 19.59999999999967,
+      "box_displacement_m": 0.0,
+      "arm_box_contact_s": 0.0,
+      "non_arm_box_impulse_Ns": 0.0,
+      "peak_arm_box_normal_N": 0.0,
+      "peak_commanded_arm_torque_Nm": [
+        1.920172906510238,
+        13.31083210112841,
+        8.395486309953005,
+        0.3478083753673689,
+        2.1027438189696483,
+        0.20302169682097515
+      ],
+      "push_lock_max_target_delta_rad": 0.0,
+      "retract_joint_error_rad": 0.0,
+      "ik_error_m": 0.0012528656102331883,
+      "minimum_clearance_m": {
+        "self": 0.030097457925918954,
+        "body_box": 0.15801717817793393,
+        "protected_box": 0.1920846768195027,
+        "pad_box": 0.15549171652009836,
+        "arm_floor": 0.2711385118187176
+      },
+      "nearest_self_pair": [
+        69,
+        77
+      ],
+      "self_contact_peak_N": 0.0,
+      "non_pad_box_contact_peak_N": 0.0,
+      "arm_path_guard_rejections": 0,
+      "withdrawal_before_retract": null,
+      "minimum_retract_pad_box_gap_m": 1.0,
+      "max_arm_target_speed_rad_s": 0.30000000000000027,
+      "max_base_vx_command_accel_m_s2": 0.06000000000000033,
+      "controller": "clearance_v2",
+      "scope": "privileged geometry; proxy/sampled collision guards; simulation only, NOT safety certification",
+      "pad_impulse_Ns_by_face": {
+        "front": 0.0,
+        "top": 0.0,
+        "other": 0.0
+      },
+      "pad_contact_s_by_face": {
+        "front": 0.0,
+        "top": 0.0,
+        "other": 0.0
+      },
+      "front_impulse_fraction": 0.0,
+      "classification": "dominant box-local contact-normal axis + contact-point side, per2ms; edges approximate",
+      "front_push_accepted": false,
+      "nominal_ik_contact_height_m": 0.34,
+      "geometric_tool_tilt_deg": 30.0,
+      "geometric_approach_standoff_m": 0.63,
+      "final_reach_offset_m": [
+        2.9548895545303823e-05,
+        0.002571755349636078,
+        0.0015614329278469086
+      ]
+    },
+    {
+      "mode": "strict_ppo",
+      "seed": 920102,
+      "is_success": false,
+      "failure": "base_box_clearance",
+      "phase": "touch",
+      "phase_history": [
+        "approach",
+        "settle",
+        "reach",
+        "touch"
+      ],
+      "elapsed_s": 19.23999999999968,
+      "box_displacement_m": 0.0,
+      "arm_box_contact_s": 0.0,
+      "non_arm_box_impulse_Ns": 0.0,
+      "peak_arm_box_normal_N": 0.0,
+      "peak_commanded_arm_torque_Nm": [
+        2.026361987078852,
+        13.12930426356282,
+        8.161119169946527,
+        0.35412050425255226,
+        1.9927952741137431,
+        0.23978748076906922
+      ],
+      "push_lock_max_target_delta_rad": 0.0,
+      "retract_joint_error_rad": 0.0,
+      "ik_error_m": 0.00012425319064106064,
+      "minimum_clearance_m": {
+        "self": 0.03023255034040353,
+        "body_box": 0.1575418526659666,
+        "protected_box": 0.1922267523340694,
+        "pad_box": 0.15599663186568957,
+        "arm_floor": 0.27238286850122573
+      },
+      "nearest_self_pair": [
+        69,
+        77
+      ],
+      "self_contact_peak_N": 0.0,
+      "non_pad_box_contact_peak_N": 0.0,
+      "arm_path_guard_rejections": 0,
+      "withdrawal_before_retract": null,
+      "minimum_retract_pad_box_gap_m": 1.0,
+      "max_arm_target_speed_rad_s": 0.30000000000000027,
+      "max_base_vx_command_accel_m_s2": 0.06000000000000033,
+      "controller": "clearance_v2",
+      "scope": "privileged geometry; proxy/sampled collision guards; simulation only, NOT safety certification",
+      "pad_impulse_Ns_by_face": {
+        "front": 0.0,
+        "top": 0.0,
+        "other": 0.0
+      },
+      "pad_contact_s_by_face": {
+        "front": 0.0,
+        "top": 0.0,
+        "other": 0.0
+      },
+      "front_impulse_fraction": 0.0,
+      "classification": "dominant box-local contact-normal axis + contact-point side, per2ms; edges approximate",
+      "front_push_accepted": false,
+      "nominal_ik_contact_height_m": 0.34,
+      "geometric_tool_tilt_deg": 30.0,
+      "geometric_approach_standoff_m": 0.63,
+      "final_reach_offset_m": [
+        2.1876355167478322e-05,
+        0.002574268579483032,
+        0.001544199138879776
+      ]
+    },
+    {
+      "mode": "strict_ppo",
+      "seed": 920103,
+      "is_success": false,
+      "failure": "base_box_clearance",
+      "phase": "touch",
+      "phase_history": [
+        "approach",
+        "settle",
+        "reach",
+        "touch"
+      ],
+      "elapsed_s": 19.359999999999676,
+      "box_displacement_m": 0.0,
+      "arm_box_contact_s": 0.0,
+      "non_arm_box_impulse_Ns": 0.0,
+      "peak_arm_box_normal_N": 0.0,
+      "peak_commanded_arm_torque_Nm": [
+        2.0242075898302745,
+        13.191406473002395,
+        8.253995001319893,
+        0.3511364428151573,
+        1.991749185861698,
+        0.25630243620296284
+      ],
+      "push_lock_max_target_delta_rad": 0.0,
+      "retract_joint_error_rad": 0.0,
+      "ik_error_m": 7.868951421806241e-05,
+      "minimum_clearance_m": {
+        "self": 0.030210581463843485,
+        "body_box": 0.15992098559684148,
+        "protected_box": 0.19191316876154907,
+        "pad_box": 0.15556253311326368,
+        "arm_floor": 0.2709402460020196
+      },
+      "nearest_self_pair": [
+        69,
+        77
+      ],
+      "self_contact_peak_N": 0.0,
+      "non_pad_box_contact_peak_N": 0.0,
+      "arm_path_guard_rejections": 0,
+      "withdrawal_before_retract": null,
+      "minimum_retract_pad_box_gap_m": 1.0,
+      "max_arm_target_speed_rad_s": 0.30000000000000027,
+      "max_base_vx_command_accel_m_s2": 0.06000000000000033,
+      "controller": "clearance_v2",
+      "scope": "privileged geometry; proxy/sampled collision guards; simulation only, NOT safety certification",
+      "pad_impulse_Ns_by_face": {
+        "front": 0.0,
+        "top": 0.0,
+        "other": 0.0
+      },
+      "pad_contact_s_by_face": {
+        "front": 0.0,
+        "top": 0.0,
+        "other": 0.0
+      },
+      "front_impulse_fraction": 0.0,
+      "classification": "dominant box-local contact-normal axis + contact-point side, per2ms; edges approximate",
+      "front_push_accepted": false,
+      "nominal_ik_contact_height_m": 0.34,
+      "geometric_tool_tilt_deg": 30.0,
+      "geometric_approach_standoff_m": 0.63,
+      "final_reach_offset_m": [
+        2.7129745576530694e-05,
+        0.0025704291462898257,
+        0.0015566082298755647
+      ]
+    },
+    {
+      "mode": "strict_ppo",
+      "seed": 920104,
+      "is_success": false,
+      "failure": "base_box_clearance",
+      "phase": "touch",
+      "phase_history": [
+        "approach",
+        "settle",
+        "reach",
+        "touch"
+      ],
+      "elapsed_s": 19.23999999999968,
+      "box_displacement_m": 0.0,
+      "arm_box_contact_s": 0.0,
+      "non_arm_box_impulse_Ns": 0.0,
+      "peak_arm_box_normal_N": 0.0,
+      "peak_commanded_arm_torque_Nm": [
+        1.9233728771862686,
+        13.058127783851702,
+        8.289791916645802,
+        0.35333965755803015,
+        1.9927952741137456,
+        0.275457277422735
+      ],
+      "push_lock_max_target_delta_rad": 0.0,
+      "retract_joint_error_rad": 0.0,
+      "ik_error_m": 0.00015993911879872094,
+      "minimum_clearance_m": {
+        "self": 0.03020667712558641,
+        "body_box": 0.15679198788577853,
+        "protected_box": 0.192402522063697,
+        "pad_box": 0.15599105372751976,
+        "arm_floor": 0.27347361725152947
+      },
+      "nearest_self_pair": [
+        69,
+        77
+      ],
+      "self_contact_peak_N": 0.0,
+      "non_pad_box_contact_peak_N": 0.0,
+      "arm_path_guard_rejections": 0,
+      "withdrawal_before_retract": null,
+      "minimum_retract_pad_box_gap_m": 1.0,
+      "max_arm_target_speed_rad_s": 0.30000000000000027,
+      "max_base_vx_command_accel_m_s2": 0.06000000000000033,
+      "controller": "clearance_v2",
+      "scope": "privileged geometry; proxy/sampled collision guards; simulation only, NOT safety certification",
+      "pad_impulse_Ns_by_face": {
+        "front": 0.0,
+        "top": 0.0,
+        "other": 0.0
+      },
+      "pad_contact_s_by_face": {
+        "front": 0.0,
+        "top": 0.0,
+        "other": 0.0
+      },
+      "front_impulse_fraction": 0.0,
+      "classification": "dominant box-local contact-normal axis + contact-point side, per2ms; edges approximate",
+      "front_push_accepted": false,
+      "nominal_ik_contact_height_m": 0.34,
+      "geometric_tool_tilt_deg": 30.0,
+      "geometric_approach_standoff_m": 0.63,
+      "final_reach_offset_m": [
+        1.8247556872665883e-05,
+        0.002575882077217102,
+        0.0015321068465709686
+      ]
+    },
+    {
+      "mode": "strict_ppo",
+      "seed": 920105,
+      "is_success": false,
+      "failure": "base_box_clearance",
+      "phase": "touch",
+      "phase_history": [
+        "approach",
+        "settle",
+        "reach",
+        "touch"
+      ],
+      "elapsed_s": 19.479999999999674,
+      "box_displacement_m": 0.0,
+      "arm_box_contact_s": 0.0,
+      "non_arm_box_impulse_Ns": 0.0,
+      "peak_arm_box_normal_N": 0.0,
+      "peak_commanded_arm_torque_Nm": [
+        1.8939965646690045,
+        13.807065074580432,
+        8.097975384041415,
+        0.39921780025667725,
+        1.9924487478825266,
+        0.3454776371590837
+      ],
+      "push_lock_max_target_delta_rad": 0.0,
+      "retract_joint_error_rad": 0.0,
+      "ik_error_m": 9.141661765068931e-05,
+      "minimum_clearance_m": {
+        "self": 0.030266290953362716,
+        "body_box": 0.15901222737014575,
+        "protected_box": 0.1886675299087375,
+        "pad_box": 0.15185464656806513,
+        "arm_floor": 0.2670448661140012
+      },
+      "nearest_self_pair": [
+        69,
+        77
+      ],
+      "self_contact_peak_N": 0.0,
+      "non_pad_box_contact_peak_N": 0.0,
+      "arm_path_guard_rejections": 0,
+      "withdrawal_before_retract": null,
+      "minimum_retract_pad_box_gap_m": 1.0,
+      "max_arm_target_speed_rad_s": 0.30000000000000027,
+      "max_base_vx_command_accel_m_s2": 0.06000000000000033,
+      "controller": "clearance_v2",
+      "scope": "privileged geometry; proxy/sampled collision guards; simulation only, NOT safety certification",
+      "pad_impulse_Ns_by_face": {
+        "front": 0.0,
+        "top": 0.0,
+        "other": 0.0
+      },
+      "pad_contact_s_by_face": {
+        "front": 0.0,
+        "top": 0.0,
+        "other": 0.0
+      },
+      "front_impulse_fraction": 0.0,
+      "classification": "dominant box-local contact-normal axis + contact-point side, per2ms; edges approximate",
+      "front_push_accepted": false,
+      "nominal_ik_contact_height_m": 0.34,
+      "geometric_tool_tilt_deg": 30.0,
+      "geometric_approach_standoff_m": 0.63,
+      "final_reach_offset_m": [
+        2.209921134635806e-05,
+        0.0025736266374588013,
+        0.0015624341368675233
+      ]
+    },
+    {
+      "mode": "strict_ppo",
+      "seed": 920106,
+      "is_success": false,
+      "failure": "base_box_clearance",
+      "phase": "touch",
+      "phase_history": [
+        "approach",
+        "settle",
+        "reach",
+        "touch"
+      ],
+      "elapsed_s": 19.359999999999676,
+      "box_displacement_m": 0.0,
+      "arm_box_contact_s": 0.0,
+      "non_arm_box_impulse_Ns": 0.0,
+      "peak_arm_box_normal_N": 0.0,
+      "peak_commanded_arm_torque_Nm": [
+        1.9143953276628463,
+        13.107259766162088,
+        8.114042048742027,
+        0.35838291480278905,
+        1.992626464715053,
+        0.3608368367478704
+      ],
+      "push_lock_max_target_delta_rad": 0.0,
+      "retract_joint_error_rad": 0.0,
+      "ik_error_m": 0.000276544850527475,
+      "minimum_clearance_m": {
+        "self": 0.030266662345565166,
+        "body_box": 0.15942810719696787,
+        "protected_box": 0.18987457715022046,
+        "pad_box": 0.15338852173549056,
+        "arm_floor": 0.26867603110235977
+      },
+      "nearest_self_pair": [
+        69,
+        77
+      ],
+      "self_contact_peak_N": 0.0,
+      "non_pad_box_contact_peak_N": 0.0,
+      "arm_path_guard_rejections": 0,
+      "withdrawal_before_retract": null,
+      "minimum_retract_pad_box_gap_m": 1.0,
+      "max_arm_target_speed_rad_s": 0.30000000000000027,
+      "max_base_vx_command_accel_m_s2": 0.06000000000000033,
+      "controller": "clearance_v2",
+      "scope": "privileged geometry; proxy/sampled collision guards; simulation only, NOT safety certification",
+      "pad_impulse_Ns_by_face": {
+        "front": 0.0,
+        "top": 0.0,
+        "other": 0.0
+      },
+      "pad_contact_s_by_face": {
+        "front": 0.0,
+        "top": 0.0,
+        "other": 0.0
+      },
+      "front_impulse_fraction": 0.0,
+      "classification": "dominant box-local contact-normal axis + contact-point side, per2ms; edges approximate",
+      "front_push_accepted": false,
+      "nominal_ik_contact_height_m": 0.34,
+      "geometric_tool_tilt_deg": 30.0,
+      "geometric_approach_standoff_m": 0.63,
+      "final_reach_offset_m": [
+        2.5039108004420998e-05,
+        0.0025664395093917846,
+        0.0015661203861236572
+      ]
+    },
+    {
+      "mode": "strict_ppo",
+      "seed": 920107,
+      "is_success": false,
+      "failure": "base_box_clearance",
+      "phase": "touch",
+      "phase_history": [
+        "approach",
+        "settle",
+        "reach",
+        "touch"
+      ],
+      "elapsed_s": 19.279999999999678,
+      "box_displacement_m": 0.0,
+      "arm_box_contact_s": 0.0,
+      "non_arm_box_impulse_Ns": 0.0,
+      "peak_arm_box_normal_N": 0.0,
+      "peak_commanded_arm_torque_Nm": [
+        1.9278573980940734,
+        13.16187758109724,
+        8.31625960713416,
+        0.35518923688674525,
+        2.0183255446760127,
+        0.21299943415795278
+      ],
+      "push_lock_max_target_delta_rad": 0.0,
+      "retract_joint_error_rad": 0.0,
+      "ik_error_m": 8.070890808632373e-05,
+      "minimum_clearance_m": {
+        "self": 0.030145908558679983,
+        "body_box": 0.15877239797516746,
+        "protected_box": 0.19174031665255428,
+        "pad_box": 0.15535424532170272,
+        "arm_floor": 0.272051396779492
+      },
+      "nearest_self_pair": [
+        69,
+        77
+      ],
+      "self_contact_peak_N": 0.0,
+      "non_pad_box_contact_peak_N": 0.0,
+      "arm_path_guard_rejections": 0,
+      "withdrawal_before_retract": null,
+      "minimum_retract_pad_box_gap_m": 1.0,
+      "max_arm_target_speed_rad_s": 0.30000000000000027,
+      "max_base_vx_command_accel_m_s2": 0.06000000000000033,
+      "controller": "clearance_v2",
+      "scope": "privileged geometry; proxy/sampled collision guards; simulation only, NOT safety certification",
+      "pad_impulse_Ns_by_face": {
+        "front": 0.0,
+        "top": 0.0,
+        "other": 0.0
+      },
+      "pad_contact_s_by_face": {
+        "front": 0.0,
+        "top": 0.0,
+        "other": 0.0
+      },
+      "front_impulse_fraction": 0.0,
+      "classification": "dominant box-local contact-normal axis + contact-point side, per2ms; edges approximate",
+      "front_push_accepted": false,
+      "nominal_ik_contact_height_m": 0.34,
+      "geometric_tool_tilt_deg": 30.0,
+      "geometric_approach_standoff_m": 0.63,
+      "final_reach_offset_m": [
+        2.3101598490029574e-05,
+        0.0025747492909431458,
+        0.0015470600128173828
+      ]
+    },
+    {
+      "mode": "pose_ppo",
+      "seed": 920100,
+      "is_success": false,
+      "failure": "arm_floor_clearance_stop",
+      "phase": "push",
+      "phase_history": [
+        "approach",
+        "settle",
+        "reach",
+        "touch",
+        "push"
+      ],
+      "elapsed_s": 18.499999999999694,
+      "box_displacement_m": 0.017188924615813894,
+      "arm_box_contact_s": 1.312000000000001,
+      "non_arm_box_impulse_Ns": 0.0,
+      "peak_arm_box_normal_N": 11.150474835309273,
+      "peak_commanded_arm_torque_Nm": [
+        1.259049490600832,
+        16.688922879089773,
+        8.460476287818882,
+        0.3938592776673635,
+        2.3001632851506573,
+        0.38651830222543987
+      ],
+      "push_lock_max_target_delta_rad": 0.0,
+      "retract_joint_error_rad": 0.0,
+      "ik_error_m": 0.0006282470518276903,
+      "minimum_clearance_m": {
+        "self": 0.030218124035922285,
+        "body_box": 0.2563337791864122,
+        "protected_box": 0.022232984086142438,
+        "pad_box": 5.294089813255321e-05,
+        "arm_floor": 0.04964652358507053
+      },
+      "nearest_self_pair": [
+        69,
+        77
+      ],
+      "self_contact_peak_N": 0.0,
+      "non_pad_box_contact_peak_N": 0.0,
+      "arm_path_guard_rejections": 0,
+      "withdrawal_before_retract": null,
+      "minimum_retract_pad_box_gap_m": 1.0,
+      "max_arm_target_speed_rad_s": 0.30000000000000027,
+      "max_base_vx_command_accel_m_s2": 0.06000000000000033,
+      "controller": "clearance_v2",
+      "scope": "privileged geometry; proxy/sampled collision guards; simulation only, NOT safety certification",
+      "pad_impulse_Ns_by_face": {
+        "front": 8.287413722354485,
+        "top": 0.0,
+        "other": 0.0
+      },
+      "pad_contact_s_by_face": {
+        "front": 1.312000000000001,
+        "top": 0.0,
+        "other": 0.0
+      },
+      "front_impulse_fraction": 1.0,
+      "classification": "dominant box-local contact-normal axis + contact-point side, per2ms; edges approximate",
+      "front_push_accepted": false,
+      "nominal_ik_contact_height_m": 0.13,
+      "geometric_tool_tilt_deg": 45.0,
+      "geometric_approach_standoff_m": 0.7,
+      "final_reach_offset_m": [
+        -1.0396703146398068e-06,
+        0.002630676031112671,
+        0.0015176221728324891
+      ]
+    },
+    {
+      "mode": "pose_ppo",
+      "seed": 920101,
+      "is_success": false,
+      "failure": "arm_floor_clearance_stop",
+      "phase": "push",
+      "phase_history": [
+        "approach",
+        "settle",
+        "reach",
+        "touch",
+        "push"
+      ],
+      "elapsed_s": 18.859999999999687,
+      "box_displacement_m": 0.04344998941696243,
+      "arm_box_contact_s": 1.5740000000000012,
+      "non_arm_box_impulse_Ns": 0.0,
+      "peak_arm_box_normal_N": 12.195667386930012,
+      "peak_commanded_arm_torque_Nm": [
+        1.3079614688260646,
+        16.795912952921274,
+        8.395486309953005,
+        0.28402639740022784,
+        2.3290228372018444,
+        0.2819126416085906
+      ],
+      "push_lock_max_target_delta_rad": 0.0,
+      "retract_joint_error_rad": 0.0,
+      "ik_error_m": 0.00025514161744793996,
+      "minimum_clearance_m": {
+        "self": 0.030097457925918954,
+        "body_box": 0.24647992849100675,
+        "protected_box": 0.022882515473168615,
+        "pad_box": -7.516220553207265e-07,
+        "arm_floor": 0.04978241055851168
+      },
+      "nearest_self_pair": [
+        69,
+        77
+      ],
+      "self_contact_peak_N": 0.0,
+      "non_pad_box_contact_peak_N": 0.0,
+      "arm_path_guard_rejections": 0,
+      "withdrawal_before_retract": null,
+      "minimum_retract_pad_box_gap_m": 1.0,
+      "max_arm_target_speed_rad_s": 0.30000000000000027,
+      "max_base_vx_command_accel_m_s2": 0.06000000000000033,
+      "controller": "clearance_v2",
+      "scope": "privileged geometry; proxy/sampled collision guards; simulation only, NOT safety certification",
+      "pad_impulse_Ns_by_face": {
+        "front": 9.96611810497257,
+        "top": 0.0,
+        "other": 0.0
+      },
+      "pad_contact_s_by_face": {
+        "front": 1.5740000000000012,
+        "top": 0.0,
+        "other": 0.0
+      },
+      "front_impulse_fraction": 1.0,
+      "classification": "dominant box-local contact-normal axis + contact-point side, per2ms; edges approximate",
+      "front_push_accepted": false,
+      "nominal_ik_contact_height_m": 0.13,
+      "geometric_tool_tilt_deg": 45.0,
+      "geometric_approach_standoff_m": 0.7,
+      "final_reach_offset_m": [
+        -6.373991258442402e-05,
+        0.0026683270931243896,
+        0.0011878082156181336
+      ]
+    },
+    {
+      "mode": "pose_ppo",
+      "seed": 920102,
+      "is_success": false,
+      "failure": "arm_floor_clearance_stop",
+      "phase": "push",
+      "phase_history": [
+        "approach",
+        "settle",
+        "reach",
+        "touch",
+        "push"
+      ],
+      "elapsed_s": 18.1799999999997,
+      "box_displacement_m": 0.013914671244481314,
+      "arm_box_contact_s": 1.1320000000000008,
+      "non_arm_box_impulse_Ns": 0.0,
+      "peak_arm_box_normal_N": 11.273094731716448,
+      "peak_commanded_arm_torque_Nm": [
+        1.310380251402577,
+        16.432072539306596,
+        8.456663204332036,
+        0.34240254366796546,
+        2.3115668669568485,
+        0.3249390390174801
+      ],
+      "push_lock_max_target_delta_rad": 0.0,
+      "retract_joint_error_rad": 0.0,
+      "ik_error_m": 0.00033954284983504286,
+      "minimum_clearance_m": {
+        "self": 0.03023255034040353,
+        "body_box": 0.24832169537954824,
+        "protected_box": 0.022758322150958025,
+        "pad_box": 0.00018505580214512422,
+        "arm_floor": 0.049563716102059646
+      },
+      "nearest_self_pair": [
+        69,
+        77
+      ],
+      "self_contact_peak_N": 0.0,
+      "non_pad_box_contact_peak_N": 0.0,
+      "arm_path_guard_rejections": 0,
+      "withdrawal_before_retract": null,
+      "minimum_retract_pad_box_gap_m": 1.0,
+      "max_arm_target_speed_rad_s": 0.30000000000000027,
+      "max_base_vx_command_accel_m_s2": 0.06000000000000033,
+      "controller": "clearance_v2",
+      "scope": "privileged geometry; proxy/sampled collision guards; simulation only, NOT safety certification",
+      "pad_impulse_Ns_by_face": {
+        "front": 6.815557648382495,
+        "top": 0.0,
+        "other": 0.0
+      },
+      "pad_contact_s_by_face": {
+        "front": 1.1320000000000008,
+        "top": 0.0,
+        "other": 0.0
+      },
+      "front_impulse_fraction": 1.0,
+      "classification": "dominant box-local contact-normal axis + contact-point side, per2ms; edges approximate",
+      "front_push_accepted": false,
+      "nominal_ik_contact_height_m": 0.13,
+      "geometric_tool_tilt_deg": 45.0,
+      "geometric_approach_standoff_m": 0.7,
+      "final_reach_offset_m": [
+        -3.301519900560379e-06,
+        0.0026293662190437317,
+        0.0015117153525352478
+      ]
+    },
+    {
+      "mode": "pose_ppo",
+      "seed": 920103,
+      "is_success": false,
+      "failure": "arm_floor_clearance_stop",
+      "phase": "push",
+      "phase_history": [
+        "approach",
+        "settle",
+        "reach",
+        "touch",
+        "push"
+      ],
+      "elapsed_s": 18.859999999999687,
+      "box_displacement_m": 0.04066775468082162,
+      "arm_box_contact_s": 1.5440000000000011,
+      "non_arm_box_impulse_Ns": 0.0,
+      "peak_arm_box_normal_N": 11.872189031480856,
+      "peak_commanded_arm_torque_Nm": [
+        1.2590494906008236,
+        16.707145817550284,
+        8.253995001319893,
+        0.3350347554692625,
+        2.3162415834743832,
+        0.3399972683017857
+      ],
+      "push_lock_max_target_delta_rad": 0.0,
+      "retract_joint_error_rad": 0.0,
+      "ik_error_m": 0.00024988103215157353,
+      "minimum_clearance_m": {
+        "self": 0.030210581463843485,
+        "body_box": 0.2422821775392972,
+        "protected_box": 0.02278193056681404,
+        "pad_box": 5.8583060741592675e-05,
+        "arm_floor": 0.04972108797054448
+      },
+      "nearest_self_pair": [
+        69,
+        77
+      ],
+      "self_contact_peak_N": 0.0,
+      "non_pad_box_contact_peak_N": 0.0,
+      "arm_path_guard_rejections": 0,
+      "withdrawal_before_retract": null,
+      "minimum_retract_pad_box_gap_m": 1.0,
+      "max_arm_target_speed_rad_s": 0.30000000000000027,
+      "max_base_vx_command_accel_m_s2": 0.06000000000000033,
+      "controller": "clearance_v2",
+      "scope": "privileged geometry; proxy/sampled collision guards; simulation only, NOT safety certification",
+      "pad_impulse_Ns_by_face": {
+        "front": 9.773918402294933,
+        "top": 0.0,
+        "other": 0.0
+      },
+      "pad_contact_s_by_face": {
+        "front": 1.5440000000000011,
+        "top": 0.0,
+        "other": 0.0
+      },
+      "front_impulse_fraction": 1.0,
+      "classification": "dominant box-local contact-normal axis + contact-point side, per2ms; edges approximate",
+      "front_push_accepted": false,
+      "nominal_ik_contact_height_m": 0.13,
+      "geometric_tool_tilt_deg": 45.0,
+      "geometric_approach_standoff_m": 0.7,
+      "final_reach_offset_m": [
+        -6.971471011638642e-05,
+        0.0026679861545562743,
+        0.0011762966960668563
+      ]
+    },
+    {
+      "mode": "pose_ppo",
+      "seed": 920104,
+      "is_success": false,
+      "failure": "arm_floor_clearance_stop",
+      "phase": "push",
+      "phase_history": [
+        "approach",
+        "settle",
+        "reach",
+        "touch",
+        "push"
+      ],
+      "elapsed_s": 18.499999999999694,
+      "box_displacement_m": 0.04107462017850061,
+      "arm_box_contact_s": 1.5100000000000011,
+      "non_arm_box_impulse_Ns": 0.0,
+      "peak_arm_box_normal_N": 15.617038058966783,
+      "peak_commanded_arm_torque_Nm": [
+        1.2791366012565124,
+        17.387665790941423,
+        8.289791916645802,
+        0.38243379709509684,
+        2.3724062131249912,
+        0.37621155186028643
+      ],
+      "push_lock_max_target_delta_rad": 0.0,
+      "retract_joint_error_rad": 0.0,
+      "ik_error_m": 0.0017597829876438665,
+      "minimum_clearance_m": {
+        "self": 0.03020667712558641,
+        "body_box": 0.28833598600836047,
+        "protected_box": 0.022542688652538837,
+        "pad_box": -2.085528175921095e-05,
+        "arm_floor": 0.04963830231678654
+      },
+      "nearest_self_pair": [
+        69,
+        77
+      ],
+      "self_contact_peak_N": 0.0,
+      "non_pad_box_contact_peak_N": 0.0,
+      "arm_path_guard_rejections": 0,
+      "withdrawal_before_retract": null,
+      "minimum_retract_pad_box_gap_m": 1.0,
+      "max_arm_target_speed_rad_s": 0.30000000000000027,
+      "max_base_vx_command_accel_m_s2": 0.06000000000000033,
+      "controller": "clearance_v2",
+      "scope": "privileged geometry; proxy/sampled collision guards; simulation only, NOT safety certification",
+      "pad_impulse_Ns_by_face": {
+        "front": 10.045607975661662,
+        "top": 0.0,
+        "other": 0.0
+      },
+      "pad_contact_s_by_face": {
+        "front": 1.5100000000000011,
+        "top": 0.0,
+        "other": 0.0
+      },
+      "front_impulse_fraction": 1.0,
+      "classification": "dominant box-local contact-normal axis + contact-point side, per2ms; edges approximate",
+      "front_push_accepted": false,
+      "nominal_ik_contact_height_m": 0.13,
+      "geometric_tool_tilt_deg": 45.0,
+      "geometric_approach_standoff_m": 0.7,
+      "final_reach_offset_m": [
+        -9.427603799849749e-06,
+        0.002642093896865845,
+        0.0013928957283496858
+      ]
+    },
+    {
+      "mode": "pose_ppo",
+      "seed": 920105,
+      "is_success": false,
+      "failure": "arm_floor_clearance_stop",
+      "phase": "push",
+      "phase_history": [
+        "approach",
+        "settle",
+        "reach",
+        "touch",
+        "push"
+      ],
+      "elapsed_s": 18.879999999999686,
+      "box_displacement_m": 0.031673565703022266,
+      "arm_box_contact_s": 1.464000000000001,
+      "non_arm_box_impulse_Ns": 0.0,
+      "peak_arm_box_normal_N": 11.690781198852264,
+      "peak_commanded_arm_torque_Nm": [
+        1.2093814604919273,
+        16.820314419459603,
+        8.097975384041415,
+        0.3162414882778466,
+        2.351377000193373,
+        0.28854449669882676
+      ],
+      "push_lock_max_target_delta_rad": 0.0,
+      "retract_joint_error_rad": 0.0,
+      "ik_error_m": 0.0004029858020942566,
+      "minimum_clearance_m": {
+        "self": 0.030267028542254652,
+        "body_box": 0.2596856157605988,
+        "protected_box": 0.022791528990245433,
+        "pad_box": 6.315237022504212e-05,
+        "arm_floor": 0.04950388652631059
+      },
+      "nearest_self_pair": [
+        69,
+        77
+      ],
+      "self_contact_peak_N": 0.0,
+      "non_pad_box_contact_peak_N": 0.0,
+      "arm_path_guard_rejections": 0,
+      "withdrawal_before_retract": null,
+      "minimum_retract_pad_box_gap_m": 1.0,
+      "max_arm_target_speed_rad_s": 0.30000000000000027,
+      "max_base_vx_command_accel_m_s2": 0.06000000000000033,
+      "controller": "clearance_v2",
+      "scope": "privileged geometry; proxy/sampled collision guards; simulation only, NOT safety certification",
+      "pad_impulse_Ns_by_face": {
+        "front": 9.016709828733893,
+        "top": 0.0,
+        "other": 0.0
+      },
+      "pad_contact_s_by_face": {
+        "front": 1.464000000000001,
+        "top": 0.0,
+        "other": 0.0
+      },
+      "front_impulse_fraction": 1.0,
+      "classification": "dominant box-local contact-normal axis + contact-point side, per2ms; edges approximate",
+      "front_push_accepted": false,
+      "nominal_ik_contact_height_m": 0.13,
+      "geometric_tool_tilt_deg": 45.0,
+      "geometric_approach_standoff_m": 0.7,
+      "final_reach_offset_m": [
+        -6.018470972776413e-05,
+        0.0026698288321495055,
+        0.001197068989276886
+      ]
+    },
+    {
+      "mode": "pose_ppo",
+      "seed": 920106,
+      "is_success": false,
+      "failure": "arm_floor_clearance_stop",
+      "phase": "push",
+      "phase_history": [
+        "approach",
+        "settle",
+        "reach",
+        "touch",
+        "push"
+      ],
+      "elapsed_s": 18.899999999999686,
+      "box_displacement_m": 0.025117029235550037,
+      "arm_box_contact_s": 1.306000000000001,
+      "non_arm_box_impulse_Ns": 0.0,
+      "peak_arm_box_normal_N": 12.106097823887648,
+      "peak_commanded_arm_torque_Nm": [
+        1.2229023096516904,
+        16.778032301730775,
+        8.114042048742027,
+        0.2794051938417157,
+        2.325571494509753,
+        0.18262093518917888
+      ],
+      "push_lock_max_target_delta_rad": 0.0,
+      "retract_joint_error_rad": 0.0,
+      "ik_error_m": 0.0005527922381149472,
+      "minimum_clearance_m": {
+        "self": 0.030244254920558857,
+        "body_box": 0.2649663440991935,
+        "protected_box": 0.023435032222406,
+        "pad_box": 4.201110993391099e-05,
+        "arm_floor": 0.049932348619233125
+      },
+      "nearest_self_pair": [
+        69,
+        77
+      ],
+      "self_contact_peak_N": 0.0,
+      "non_pad_box_contact_peak_N": 0.0,
+      "arm_path_guard_rejections": 0,
+      "withdrawal_before_retract": null,
+      "minimum_retract_pad_box_gap_m": 1.0,
+      "max_arm_target_speed_rad_s": 0.30000000000000027,
+      "max_base_vx_command_accel_m_s2": 0.06000000000000033,
+      "controller": "clearance_v2",
+      "scope": "privileged geometry; proxy/sampled collision guards; simulation only, NOT safety certification",
+      "pad_impulse_Ns_by_face": {
+        "front": 8.222394517964243,
+        "top": 0.0,
+        "other": 0.0
+      },
+      "pad_contact_s_by_face": {
+        "front": 1.306000000000001,
+        "top": 0.0,
+        "other": 0.0
+      },
+      "front_impulse_fraction": 1.0,
+      "classification": "dominant box-local contact-normal axis + contact-point side, per2ms; edges approximate",
+      "front_push_accepted": false,
+      "nominal_ik_contact_height_m": 0.13,
+      "geometric_tool_tilt_deg": 45.0,
+      "geometric_approach_standoff_m": 0.7,
+      "final_reach_offset_m": [
+        5.917567759752274e-06,
+        0.0026214611530303955,
+        0.0014895725250244141
+      ]
+    },
+    {
+      "mode": "pose_ppo",
+      "seed": 920107,
+      "is_success": false,
+      "failure": "arm_floor_clearance_stop",
+      "phase": "push",
+      "phase_history": [
+        "approach",
+        "settle",
+        "reach",
+        "touch",
+        "push"
+      ],
+      "elapsed_s": 18.519999999999694,
+      "box_displacement_m": 0.01907504841632157,
+      "arm_box_contact_s": 1.332000000000001,
+      "non_arm_box_impulse_Ns": 0.0,
+      "peak_arm_box_normal_N": 11.05587259442063,
+      "peak_commanded_arm_torque_Nm": [
+        1.2445394514367296,
+        16.482741068035793,
+        8.458839318633654,
+        0.30124818179838364,
+        2.3384148088716605,
+        0.2919685738317016
+      ],
+      "push_lock_max_target_delta_rad": 0.0,
+      "retract_joint_error_rad": 0.0,
+      "ik_error_m": 0.0004225039923191921,
+      "minimum_clearance_m": {
+        "self": 0.030145908558679983,
+        "body_box": 0.2474146977778528,
+        "protected_box": 0.02134927566332561,
+        "pad_box": 7.6964223383935e-05,
+        "arm_floor": 0.04894884360102644
+      },
+      "nearest_self_pair": [
+        69,
+        77
+      ],
+      "self_contact_peak_N": 0.0,
+      "non_pad_box_contact_peak_N": 0.0,
+      "arm_path_guard_rejections": 0,
+      "withdrawal_before_retract": null,
+      "minimum_retract_pad_box_gap_m": 1.0,
+      "max_arm_target_speed_rad_s": 0.30000000000000027,
+      "max_base_vx_command_accel_m_s2": 0.06000000000000033,
+      "controller": "clearance_v2",
+      "scope": "privileged geometry; proxy/sampled collision guards; simulation only, NOT safety certification",
+      "pad_impulse_Ns_by_face": {
+        "front": 8.439541642230472,
+        "top": 0.0,
+        "other": 0.0
+      },
+      "pad_contact_s_by_face": {
+        "front": 1.332000000000001,
+        "top": 0.0,
+        "other": 0.0
+      },
+      "front_impulse_fraction": 1.0,
+      "classification": "dominant box-local contact-normal axis + contact-point side, per2ms; edges approximate",
+      "front_push_accepted": false,
+      "nominal_ik_contact_height_m": 0.13,
+      "geometric_tool_tilt_deg": 45.0,
+      "geometric_approach_standoff_m": 0.7,
+      "final_reach_offset_m": [
+        -4.5177759602665904e-07,
+        0.0026304137706756594,
+        0.0015174798667430879
+      ]
+    },
+    {
+      "mode": "pose_ik",
+      "seed": 920100,
+      "is_success": false,
+      "failure": "arm_floor_clearance_stop",
+      "phase": "push",
+      "phase_history": [
+        "approach",
+        "settle",
+        "reach",
+        "touch",
+        "push"
+      ],
+      "elapsed_s": 19.25999999999968,
+      "box_displacement_m": 0.038632462543259916,
+      "arm_box_contact_s": 1.6120000000000012,
+      "non_arm_box_impulse_Ns": 0.0,
+      "peak_arm_box_normal_N": 14.259591382000607,
+      "peak_commanded_arm_torque_Nm": [
+        1.259049490600832,
+        16.455625368207805,
+        8.258846444937232,
+        0.3486718475931595,
+        2.3860611137029504,
+        0.3517608706900371
+      ],
+      "push_lock_max_target_delta_rad": 0.0,
+      "retract_joint_error_rad": 0.0,
+      "ik_error_m": 0.00026345850948611546,
+      "minimum_clearance_m": {
+        "self": 0.03018941270060215,
+        "body_box": 0.23954882700453972,
+        "protected_box": 0.0225275964513568,
+        "pad_box": 0.00019611272119783878,
+        "arm_floor": 0.04980498590467679
+      },
+      "nearest_self_pair": [
+        69,
+        77
+      ],
+      "self_contact_peak_N": 0.0,
+      "non_pad_box_contact_peak_N": 0.0,
+      "arm_path_guard_rejections": 0,
+      "withdrawal_before_retract": null,
+      "minimum_retract_pad_box_gap_m": 1.0,
+      "max_arm_target_speed_rad_s": 0.30000000000000027,
+      "max_base_vx_command_accel_m_s2": 0.06000000000000033,
+      "controller": "clearance_v2",
+      "scope": "privileged geometry; proxy/sampled collision guards; simulation only, NOT safety certification",
+      "pad_impulse_Ns_by_face": {
+        "front": 10.411309898541964,
+        "top": 0.0,
+        "other": 0.0
+      },
+      "pad_contact_s_by_face": {
+        "front": 1.6120000000000012,
+        "top": 0.0,
+        "other": 0.0
+      },
+      "front_impulse_fraction": 1.0,
+      "classification": "dominant box-local contact-normal axis + contact-point side, per2ms; edges approximate",
+      "front_push_accepted": false,
+      "nominal_ik_contact_height_m": 0.13,
+      "geometric_tool_tilt_deg": 45.0,
+      "geometric_approach_standoff_m": 0.7,
+      "final_reach_offset_m": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "mode": "pose_ik",
+      "seed": 920101,
+      "is_success": false,
+      "failure": "arm_floor_clearance_stop",
+      "phase": "push",
+      "phase_history": [
+        "approach",
+        "settle",
+        "reach",
+        "touch",
+        "push"
+      ],
+      "elapsed_s": 19.25999999999968,
+      "box_displacement_m": 0.03510871177335084,
+      "arm_box_contact_s": 1.5300000000000011,
+      "non_arm_box_impulse_Ns": 0.0,
+      "peak_arm_box_normal_N": 12.086556735111138,
+      "peak_commanded_arm_torque_Nm": [
+        1.3086707926522176,
+        16.57981210655261,
+        8.36378780720157,
+        0.2877756128362963,
+        2.3762421203475723,
+        0.22947370348944435
+      ],
+      "push_lock_max_target_delta_rad": 0.0,
+      "retract_joint_error_rad": 0.0,
+      "ik_error_m": 0.0003248005505123713,
+      "minimum_clearance_m": {
+        "self": 0.030125173191437406,
+        "body_box": 0.24917033365248187,
+        "protected_box": 0.02187188811345589,
+        "pad_box": 0.00013242442956983174,
+        "arm_floor": 0.049108391473715235
+      },
+      "nearest_self_pair": [
+        69,
+        77
+      ],
+      "self_contact_peak_N": 0.0,
+      "non_pad_box_contact_peak_N": 0.0,
+      "arm_path_guard_rejections": 0,
+      "withdrawal_before_retract": null,
+      "minimum_retract_pad_box_gap_m": 1.0,
+      "max_arm_target_speed_rad_s": 0.30000000000000027,
+      "max_base_vx_command_accel_m_s2": 0.06000000000000033,
+      "controller": "clearance_v2",
+      "scope": "privileged geometry; proxy/sampled collision guards; simulation only, NOT safety certification",
+      "pad_impulse_Ns_by_face": {
+        "front": 9.943232072640996,
+        "top": 0.0,
+        "other": 0.0
+      },
+      "pad_contact_s_by_face": {
+        "front": 1.5300000000000011,
+        "top": 0.0,
+        "other": 0.0
+      },
+      "front_impulse_fraction": 1.0,
+      "classification": "dominant box-local contact-normal axis + contact-point side, per2ms; edges approximate",
+      "front_push_accepted": false,
+      "nominal_ik_contact_height_m": 0.13,
+      "geometric_tool_tilt_deg": 45.0,
+      "geometric_approach_standoff_m": 0.7,
+      "final_reach_offset_m": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "mode": "pose_ik",
+      "seed": 920102,
+      "is_success": false,
+      "failure": "arm_floor_clearance_stop",
+      "phase": "push",
+      "phase_history": [
+        "approach",
+        "settle",
+        "reach",
+        "touch",
+        "push"
+      ],
+      "elapsed_s": 18.139999999999702,
+      "box_displacement_m": 0.011633990852666143,
+      "arm_box_contact_s": 1.0960000000000008,
+      "non_arm_box_impulse_Ns": 0.0,
+      "peak_arm_box_normal_N": 10.778567618848598,
+      "peak_commanded_arm_torque_Nm": [
+        1.226233384370185,
+        16.52756469779473,
+        8.159014593143187,
+        0.29286171048705945,
+        2.2678639211076024,
+        0.2914504753618441
+      ],
+      "push_lock_max_target_delta_rad": 0.0,
+      "retract_joint_error_rad": 0.0,
+      "ik_error_m": 0.0005346802532237204,
+      "minimum_clearance_m": {
+        "self": 0.030241127991244517,
+        "body_box": 0.2545781862399127,
+        "protected_box": 0.022221230016721452,
+        "pad_box": 0.00012756323261758887,
+        "arm_floor": 0.048929072263126774
+      },
+      "nearest_self_pair": [
+        69,
+        77
+      ],
+      "self_contact_peak_N": 0.0,
+      "non_pad_box_contact_peak_N": 0.0,
+      "arm_path_guard_rejections": 0,
+      "withdrawal_before_retract": null,
+      "minimum_retract_pad_box_gap_m": 1.0,
+      "max_arm_target_speed_rad_s": 0.30000000000000027,
+      "max_base_vx_command_accel_m_s2": 0.06000000000000033,
+      "controller": "clearance_v2",
+      "scope": "privileged geometry; proxy/sampled collision guards; simulation only, NOT safety certification",
+      "pad_impulse_Ns_by_face": {
+        "front": 6.688091405153647,
+        "top": 0.0,
+        "other": 0.0
+      },
+      "pad_contact_s_by_face": {
+        "front": 1.0960000000000008,
+        "top": 0.0,
+        "other": 0.0
+      },
+      "front_impulse_fraction": 1.0,
+      "classification": "dominant box-local contact-normal axis + contact-point side, per2ms; edges approximate",
+      "front_push_accepted": false,
+      "nominal_ik_contact_height_m": 0.13,
+      "geometric_tool_tilt_deg": 45.0,
+      "geometric_approach_standoff_m": 0.7,
+      "final_reach_offset_m": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "mode": "pose_ik",
+      "seed": 920103,
+      "is_success": false,
+      "failure": "arm_floor_clearance_stop",
+      "phase": "push",
+      "phase_history": [
+        "approach",
+        "settle",
+        "reach",
+        "touch",
+        "push"
+      ],
+      "elapsed_s": 19.25999999999968,
+      "box_displacement_m": 0.03689248099287212,
+      "arm_box_contact_s": 1.5720000000000012,
+      "non_arm_box_impulse_Ns": 0.0,
+      "peak_arm_box_normal_N": 12.851871343995104,
+      "peak_commanded_arm_torque_Nm": [
+        1.2590494906008236,
+        16.53705350834734,
+        8.251341140075187,
+        0.28826766524260794,
+        2.3948722934653155,
+        0.2915034397424181
+      ],
+      "push_lock_max_target_delta_rad": 0.0,
+      "retract_joint_error_rad": 0.0,
+      "ik_error_m": 0.0002832808486247293,
+      "minimum_clearance_m": {
+        "self": 0.030216024447318184,
+        "body_box": 0.24519409105663864,
+        "protected_box": 0.02140590537644188,
+        "pad_box": 3.7545457847478985e-05,
+        "arm_floor": 0.048680015178541376
+      },
+      "nearest_self_pair": [
+        69,
+        77
+      ],
+      "self_contact_peak_N": 0.0,
+      "non_pad_box_contact_peak_N": 0.0,
+      "arm_path_guard_rejections": 0,
+      "withdrawal_before_retract": null,
+      "minimum_retract_pad_box_gap_m": 1.0,
+      "max_arm_target_speed_rad_s": 0.30000000000000027,
+      "max_base_vx_command_accel_m_s2": 0.06000000000000033,
+      "controller": "clearance_v2",
+      "scope": "privileged geometry; proxy/sampled collision guards; simulation only, NOT safety certification",
+      "pad_impulse_Ns_by_face": {
+        "front": 10.167714931973336,
+        "top": 0.0,
+        "other": 0.0
+      },
+      "pad_contact_s_by_face": {
+        "front": 1.5720000000000012,
+        "top": 0.0,
+        "other": 0.0
+      },
+      "front_impulse_fraction": 1.0,
+      "classification": "dominant box-local contact-normal axis + contact-point side, per2ms; edges approximate",
+      "front_push_accepted": false,
+      "nominal_ik_contact_height_m": 0.13,
+      "geometric_tool_tilt_deg": 45.0,
+      "geometric_approach_standoff_m": 0.7,
+      "final_reach_offset_m": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "mode": "pose_ik",
+      "seed": 920104,
+      "is_success": false,
+      "failure": "arm_floor_clearance_stop",
+      "phase": "push",
+      "phase_history": [
+        "approach",
+        "settle",
+        "reach",
+        "touch",
+        "push"
+      ],
+      "elapsed_s": 18.139999999999702,
+      "box_displacement_m": 0.02051002376116573,
+      "arm_box_contact_s": 1.1640000000000008,
+      "non_arm_box_impulse_Ns": 0.0,
+      "peak_arm_box_normal_N": 14.281545478330491,
+      "peak_commanded_arm_torque_Nm": [
+        1.282049199186416,
+        17.277624917279518,
+        8.287218891507893,
+        0.35893512993247534,
+        2.2707066566294856,
+        0.3537435705800068
+      ],
+      "push_lock_max_target_delta_rad": 0.0,
+      "retract_joint_error_rad": 0.0,
+      "ik_error_m": 0.0002546396367814313,
+      "minimum_clearance_m": {
+        "self": 0.030210197646887253,
+        "body_box": 0.29696146691730063,
+        "protected_box": 0.023864472363218397,
+        "pad_box": 2.2681041224084918e-05,
+        "arm_floor": 0.04987628579274292
+      },
+      "nearest_self_pair": [
+        69,
+        77
+      ],
+      "self_contact_peak_N": 0.0,
+      "non_pad_box_contact_peak_N": 0.0,
+      "arm_path_guard_rejections": 0,
+      "withdrawal_before_retract": null,
+      "minimum_retract_pad_box_gap_m": 1.0,
+      "max_arm_target_speed_rad_s": 0.30000000000000027,
+      "max_base_vx_command_accel_m_s2": 0.06000000000000033,
+      "controller": "clearance_v2",
+      "scope": "privileged geometry; proxy/sampled collision guards; simulation only, NOT safety certification",
+      "pad_impulse_Ns_by_face": {
+        "front": 7.487969657425484,
+        "top": 0.0,
+        "other": 0.0
+      },
+      "pad_contact_s_by_face": {
+        "front": 1.1640000000000008,
+        "top": 0.0,
+        "other": 0.0
+      },
+      "front_impulse_fraction": 1.0,
+      "classification": "dominant box-local contact-normal axis + contact-point side, per2ms; edges approximate",
+      "front_push_accepted": false,
+      "nominal_ik_contact_height_m": 0.13,
+      "geometric_tool_tilt_deg": 45.0,
+      "geometric_approach_standoff_m": 0.7,
+      "final_reach_offset_m": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "mode": "pose_ik",
+      "seed": 920105,
+      "is_success": false,
+      "failure": "arm_floor_clearance_stop",
+      "phase": "push",
+      "phase_history": [
+        "approach",
+        "settle",
+        "reach",
+        "touch",
+        "push"
+      ],
+      "elapsed_s": 18.859999999999687,
+      "box_displacement_m": 0.026250392779129994,
+      "arm_box_contact_s": 1.452000000000001,
+      "non_arm_box_impulse_Ns": 0.0,
+      "peak_arm_box_normal_N": 11.21068761124804,
+      "peak_commanded_arm_torque_Nm": [
+        1.2080068155010497,
+        16.75068980605034,
+        8.106167168501527,
+        0.27559024093544526,
+        2.304517941015501,
+        0.2517024148240535
+      ],
+      "push_lock_max_target_delta_rad": 0.0,
+      "retract_joint_error_rad": 0.0,
+      "ik_error_m": 0.0003713460675306125,
+      "minimum_clearance_m": {
+        "self": 0.030238604126235476,
+        "body_box": 0.25501870017752265,
+        "protected_box": 0.022586484811399556,
+        "pad_box": 3.6017587657443355e-05,
+        "arm_floor": 0.04925696405119538
+      },
+      "nearest_self_pair": [
+        69,
+        77
+      ],
+      "self_contact_peak_N": 0.0,
+      "non_pad_box_contact_peak_N": 0.0,
+      "arm_path_guard_rejections": 0,
+      "withdrawal_before_retract": null,
+      "minimum_retract_pad_box_gap_m": 1.0,
+      "max_arm_target_speed_rad_s": 0.30000000000000027,
+      "max_base_vx_command_accel_m_s2": 0.06000000000000033,
+      "controller": "clearance_v2",
+      "scope": "privileged geometry; proxy/sampled collision guards; simulation only, NOT safety certification",
+      "pad_impulse_Ns_by_face": {
+        "front": 8.79598397132749,
+        "top": 0.0,
+        "other": 0.0
+      },
+      "pad_contact_s_by_face": {
+        "front": 1.452000000000001,
+        "top": 0.0,
+        "other": 0.0
+      },
+      "front_impulse_fraction": 1.0,
+      "classification": "dominant box-local contact-normal axis + contact-point side, per2ms; edges approximate",
+      "front_push_accepted": false,
+      "nominal_ik_contact_height_m": 0.13,
+      "geometric_tool_tilt_deg": 45.0,
+      "geometric_approach_standoff_m": 0.7,
+      "final_reach_offset_m": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "mode": "pose_ik",
+      "seed": 920106,
+      "is_success": false,
+      "failure": "arm_floor_clearance_stop",
+      "phase": "push",
+      "phase_history": [
+        "approach",
+        "settle",
+        "reach",
+        "touch",
+        "push"
+      ],
+      "elapsed_s": 18.839999999999687,
+      "box_displacement_m": 0.028496899462573166,
+      "arm_box_contact_s": 1.476000000000001,
+      "non_arm_box_impulse_Ns": 0.0,
+      "peak_arm_box_normal_N": 11.532514466176558,
+      "peak_commanded_arm_torque_Nm": [
+        1.2357835001280288,
+        17.0109447497872,
+        8.131366911029314,
+        0.27323467872541307,
+        2.2801969566755202,
+        0.17801033722828635
+      ],
+      "push_lock_max_target_delta_rad": 0.0,
+      "retract_joint_error_rad": 0.0,
+      "ik_error_m": 0.0007287029883995651,
+      "minimum_clearance_m": {
+        "self": 0.0302358285497338,
+        "body_box": 0.27000623029774085,
+        "protected_box": 0.02326284204230058,
+        "pad_box": 2.5728920708266578e-06,
+        "arm_floor": 0.04988986474720815
+      },
+      "nearest_self_pair": [
+        69,
+        77
+      ],
+      "self_contact_peak_N": 0.0,
+      "non_pad_box_contact_peak_N": 0.0,
+      "arm_path_guard_rejections": 0,
+      "withdrawal_before_retract": null,
+      "minimum_retract_pad_box_gap_m": 1.0,
+      "max_arm_target_speed_rad_s": 0.30000000000000027,
+      "max_base_vx_command_accel_m_s2": 0.06000000000000033,
+      "controller": "clearance_v2",
+      "scope": "privileged geometry; proxy/sampled collision guards; simulation only, NOT safety certification",
+      "pad_impulse_Ns_by_face": {
+        "front": 9.071590702447365,
+        "top": 0.0,
+        "other": 0.0
+      },
+      "pad_contact_s_by_face": {
+        "front": 1.476000000000001,
+        "top": 0.0,
+        "other": 0.0
+      },
+      "front_impulse_fraction": 1.0,
+      "classification": "dominant box-local contact-normal axis + contact-point side, per2ms; edges approximate",
+      "front_push_accepted": false,
+      "nominal_ik_contact_height_m": 0.13,
+      "geometric_tool_tilt_deg": 45.0,
+      "geometric_approach_standoff_m": 0.7,
+      "final_reach_offset_m": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "mode": "pose_ik",
+      "seed": 920107,
+      "is_success": false,
+      "failure": "arm_floor_clearance_stop",
+      "phase": "push",
+      "phase_history": [
+        "approach",
+        "settle",
+        "reach",
+        "touch",
+        "push"
+      ],
+      "elapsed_s": 18.1599999999997,
+      "box_displacement_m": 0.012418076781838483,
+      "arm_box_contact_s": 1.0800000000000007,
+      "non_arm_box_impulse_Ns": 0.0,
+      "peak_arm_box_normal_N": 11.103024216803956,
+      "peak_commanded_arm_torque_Nm": [
+        1.2368163177080354,
+        16.57904954789122,
+        8.311214906186672,
+        0.2865350533926709,
+        2.264414807029861,
+        0.28698189971538257
+      ],
+      "push_lock_max_target_delta_rad": 0.0,
+      "retract_joint_error_rad": 0.0,
+      "ik_error_m": 0.0005896182706674286,
+      "minimum_clearance_m": {
+        "self": 0.030155711531302552,
+        "body_box": 0.25860150240560503,
+        "protected_box": 0.02262002792326259,
+        "pad_box": 0.00013381920559059473,
+        "arm_floor": 0.04912187185360513
+      },
+      "nearest_self_pair": [
+        69,
+        77
+      ],
+      "self_contact_peak_N": 0.0,
+      "non_pad_box_contact_peak_N": 0.0,
+      "arm_path_guard_rejections": 0,
+      "withdrawal_before_retract": null,
+      "minimum_retract_pad_box_gap_m": 1.0,
+      "max_arm_target_speed_rad_s": 0.30000000000000027,
+      "max_base_vx_command_accel_m_s2": 0.06000000000000033,
+      "controller": "clearance_v2",
+      "scope": "privileged geometry; proxy/sampled collision guards; simulation only, NOT safety certification",
+      "pad_impulse_Ns_by_face": {
+        "front": 6.598322513961906,
+        "top": 0.0,
+        "other": 0.0
+      },
+      "pad_contact_s_by_face": {
+        "front": 1.0800000000000007,
+        "top": 0.0,
+        "other": 0.0
+      },
+      "front_impulse_fraction": 1.0,
+      "classification": "dominant box-local contact-normal axis + contact-point side, per2ms; edges approximate",
+      "front_push_accepted": false,
+      "nominal_ik_contact_height_m": 0.13,
+      "geometric_tool_tilt_deg": 45.0,
+      "geometric_approach_standoff_m": 0.7,
+      "final_reach_offset_m": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "scope": "Height-only, fixed footprint2kg/friction .35, same small initial-pose perturbations; NOT vision or stepping/load-bearing validation",
+  "adaptation_note": "strict_ppo leaves controller/weights unchanged; height modes retarget only low IK height; pose modes additionally request earlier stand-off and tool-pitch targets; no v2 safety gate is weakened"
+}

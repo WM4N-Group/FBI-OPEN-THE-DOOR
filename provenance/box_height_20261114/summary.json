@@ -1,0 +1,198 @@
+{
+  "comparisons": {
+    "h030": {
+      "height_m": 0.3,
+      "checkpoint_sha256": "6f9240c2dff10d2b61ad4a767c58c53aca2e29b865acc12eb6d2a8a9c55144eb",
+      "learning_performed": false,
+      "policy_tensors_unchanged": true,
+      "training_steps_before": 1004544,
+      "training_steps_after": 1004544,
+      "modes": {
+        "strict_ppo": {
+          "task_passed": 0,
+          "front_push_passed": 0,
+          "total": 8,
+          "failures": {
+            "base_box_clearance": 8
+          },
+          "mean_elapsed_s": 18.984999999999683,
+          "displacement_range_m": [
+            0.0,
+            0.0
+          ],
+          "min_self_proxy_clearance_m": 0.03009733114101234,
+          "min_arm_floor_proxy_clearance_m": 0.26704181724207804,
+          "max_self_contact_N": 0.0,
+          "max_non_pad_box_contact_N": 0.0,
+          "min_front_pad_impulse_fraction": 0.0
+        },
+        "pose_ppo": {
+          "task_passed": 8,
+          "front_push_passed": 8,
+          "total": 8,
+          "failures": {},
+          "mean_elapsed_s": 39.42750000000056,
+          "displacement_range_m": [
+            0.5593502814533864,
+            0.570069012685922
+          ],
+          "min_self_proxy_clearance_m": 0.03009733114101234,
+          "min_arm_floor_proxy_clearance_m": 0.20390076329045967,
+          "max_self_contact_N": 0.0,
+          "max_non_pad_box_contact_N": 0.0,
+          "min_front_pad_impulse_fraction": 1.0
+        },
+        "pose_ik": {
+          "task_passed": 8,
+          "front_push_passed": 8,
+          "total": 8,
+          "failures": {},
+          "mean_elapsed_s": 41.12000000000083,
+          "displacement_range_m": [
+            0.54149264436323,
+            0.545476513388252
+          ],
+          "min_self_proxy_clearance_m": 0.030125173191437406,
+          "min_arm_floor_proxy_clearance_m": 0.20271674167904033,
+          "max_self_contact_N": 0.0,
+          "max_non_pad_box_contact_N": 0.0,
+          "min_front_pad_impulse_fraction": 1.0
+        }
+      }
+    },
+    "h020": {
+      "height_m": 0.2,
+      "checkpoint_sha256": "6f9240c2dff10d2b61ad4a767c58c53aca2e29b865acc12eb6d2a8a9c55144eb",
+      "learning_performed": false,
+      "policy_tensors_unchanged": true,
+      "training_steps_before": 1004544,
+      "training_steps_after": 1004544,
+      "modes": {
+        "strict_ppo": {
+          "task_passed": 0,
+          "front_push_passed": 0,
+          "total": 8,
+          "failures": {
+            "base_box_clearance": 8
+          },
+          "mean_elapsed_s": 19.047499999999683,
+          "displacement_range_m": [
+            0.0,
+            0.0
+          ],
+          "min_self_proxy_clearance_m": 0.03009741532761768,
+          "min_arm_floor_proxy_clearance_m": 0.267044146406688,
+          "max_self_contact_N": 0.0,
+          "max_non_pad_box_contact_N": 0.0,
+          "min_front_pad_impulse_fraction": 0.0
+        },
+        "pose_ppo": {
+          "task_passed": 8,
+          "front_push_passed": 8,
+          "total": 8,
+          "failures": {},
+          "mean_elapsed_s": 40.63500000000075,
+          "displacement_range_m": [
+            0.5546732165598012,
+            0.5688632046197359
+          ],
+          "min_self_proxy_clearance_m": 0.03009741532761768,
+          "min_arm_floor_proxy_clearance_m": 0.09705793500312146,
+          "max_self_contact_N": 0.0,
+          "max_non_pad_box_contact_N": 0.0,
+          "min_front_pad_impulse_fraction": 1.0
+        },
+        "pose_ik": {
+          "task_passed": 8,
+          "front_push_passed": 8,
+          "total": 8,
+          "failures": {},
+          "mean_elapsed_s": 42.46500000000104,
+          "displacement_range_m": [
+            0.538755114588443,
+            0.5445586354212995
+          ],
+          "min_self_proxy_clearance_m": 0.030125173191437406,
+          "min_arm_floor_proxy_clearance_m": 0.09510652101269079,
+          "max_self_contact_N": 0.0,
+          "max_non_pad_box_contact_N": 0.0,
+          "min_front_pad_impulse_fraction": 1.0
+        }
+      }
+    },
+    "h015": {
+      "height_m": 0.15,
+      "checkpoint_sha256": "6f9240c2dff10d2b61ad4a767c58c53aca2e29b865acc12eb6d2a8a9c55144eb",
+      "learning_performed": false,
+      "policy_tensors_unchanged": true,
+      "training_steps_before": 1004544,
+      "training_steps_after": 1004544,
+      "modes": {
+        "strict_ppo": {
+          "task_passed": 0,
+          "front_push_passed": 0,
+          "total": 8,
+          "failures": {
+            "base_box_clearance": 8
+          },
+          "mean_elapsed_s": 19.394999999999676,
+          "displacement_range_m": [
+            0.0,
+            0.0
+          ],
+          "min_self_proxy_clearance_m": 0.030097457925918954,
+          "min_arm_floor_proxy_clearance_m": 0.2670448661140012,
+          "max_self_contact_N": 0.0,
+          "max_non_pad_box_contact_N": 0.0,
+          "min_front_pad_impulse_fraction": 0.0
+        },
+        "pose_ppo": {
+          "task_passed": 0,
+          "front_push_passed": 0,
+          "total": 8,
+          "failures": {
+            "arm_floor_clearance_stop": 8
+          },
+          "mean_elapsed_s": 18.649999999999693,
+          "displacement_range_m": [
+            0.013914671244481314,
+            0.04344998941696243
+          ],
+          "min_self_proxy_clearance_m": 0.030097457925918954,
+          "min_arm_floor_proxy_clearance_m": 0.04894884360102644,
+          "max_self_contact_N": 0.0,
+          "max_non_pad_box_contact_N": 0.0,
+          "min_front_pad_impulse_fraction": 1.0
+        },
+        "pose_ik": {
+          "task_passed": 0,
+          "front_push_passed": 0,
+          "total": 8,
+          "failures": {
+            "arm_floor_clearance_stop": 8
+          },
+          "mean_elapsed_s": 18.73999999999969,
+          "displacement_range_m": [
+            0.011633990852666143,
+            0.038632462543259916
+          ],
+          "min_self_proxy_clearance_m": 0.030125173191437406,
+          "min_arm_floor_proxy_clearance_m": 0.048680015178541376,
+          "max_self_contact_N": 0.0,
+          "max_non_pad_box_contact_N": 0.0,
+          "min_front_pad_impulse_fraction": 1.0
+        }
+      }
+    }
+  },
+  "interpretation": "No retraining, but successful cases require geometric controller changes. Not unchanged-controller zero-shot success.",
+  "scope": "One checkpoint, fixed footprint2kg/friction0.35, flat floor and aligned box, eight new small initial-pose perturbations per mode/height",
+  "not_tested": [
+    "load bearing",
+    "stepping/climbing",
+    "heavier boxes",
+    "box yaw randomization",
+    "visual closed-loop",
+    "hardware"
+  ]
+}

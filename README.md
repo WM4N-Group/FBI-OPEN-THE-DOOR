@@ -23,6 +23,7 @@ Go2＋旧 **Piper L** 推箱任务：冻结原12维腿策略，独立IK控制机
 
 - [长程导航任务的技能接口预留（无导航/管理器实现）](docs/NAVIGATION_SKILL_INTERFACES.md)
 - [当前推箱控制器、碰撞修订与配对回归](docs/BOX_CLEARANCE.md)
+- [低箱无需重训测试及15 cm适用边界](docs/LOW_BOX_TRANSFER.md)
 - [推箱资产准备、训练与历史版本说明](docs/BOX_PUSH.md)
 - [v2原始回归、源码指纹及训练迁移记录](provenance/box_clearance_20261114/README.md)
 - [共享依赖及授权资产导入](docs/SIMULATION.md)

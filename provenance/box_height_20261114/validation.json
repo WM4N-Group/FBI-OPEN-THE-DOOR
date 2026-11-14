@@ -1,0 +1,34 @@
+{
+  "unit_tests_passed": 101,
+  "paired_regression_episodes": 72,
+  "development_seed": 920000,
+  "regression_seeds": [
+    920100,
+    920101,
+    920102,
+    920103,
+    920104,
+    920105,
+    920106,
+    920107
+  ],
+  "frozen_checkpoint_sha256": "6f9240c2dff10d2b61ad4a767c58c53aca2e29b865acc12eb6d2a8a9c55144eb",
+  "original_controller_and_safety_guard_source_unchanged": true,
+  "source_sha256": {
+    "src/fbi_door/box_height.py": "daf877c78890d553117a0183b266d8f440d0a8a225dce0904749d620da4e29c1",
+    "src/fbi_door/sim/evaluate_box_height.py": "9770809eb2ee30c6c354257c00e727c7ae58e7e1c803eaab922a96d17eff506e",
+    "src/fbi_door/sim/box_clearance_env.py": "60f3011458bd2f60d6b02a104caa9ceecd299eb35550ed254f6f83b4b303ce28",
+    "src/fbi_door/sim/box_collision.py": "f06103c004098756bd557c639b35700f900116055fa86b0004e45877fc873308",
+    "src/fbi_door/sim/core.py": "95e869c111d3fa80258e8886f8615ae79a9f777cb855bcb5f91fd164e6bd702a",
+    "tests/test_box_height.py": "69dcf76fbfb41b78b49df88b448f6c05ee4e6562b356a513bbccd6a6f767d161"
+  },
+  "video": {
+    "seed": 920100,
+    "mode": "pose_ppo",
+    "height_m": 0.2,
+    "playback": "1x,10fps",
+    "sha256": "89b8f91cf6abdba5ba771461b1c93bc51e6898e239018fa647dd3ef577c28841",
+    "note": "Repeat of first regression seed, not an extra independent trial; frozen weights with geometric target/stance/pitch adaptation"
+  },
+  "hardware_or_climbing_validation": false
+}
