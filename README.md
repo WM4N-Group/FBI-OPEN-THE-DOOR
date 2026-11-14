@@ -12,8 +12,6 @@ Go2＋PiPER **物理夹持开门**研究代码，以及默认拒绝自动动作�
 - [真机迁移清单与分级测试](docs/REAL_ROBOT_MIGRATION.md)
 - [软件结构与控制接口](docs/ARCHITECTURE.md)
 - [仿真复现与训练](docs/SIMULATION.md)
-- [推箱任务：冻结12维底座＋IK锁臂＋残差训练](docs/BOX_PUSH.md)
-- [推箱碰撞修订：间隙检查、卸力后退、再收臂](docs/BOX_CLEARANCE.md)
 - [相机与标定](docs/CAMERAS.md)
 - [第三方来源](THIRD_PARTY_NOTICES.md)
 
