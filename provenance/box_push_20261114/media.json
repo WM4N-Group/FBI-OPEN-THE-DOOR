@@ -1,0 +1,16 @@
+{
+  "controller": "zero residual rules + IK + frozen leg12, NOT newly trained PPO",
+  "perception": "privileged simulated box pose, NOT camera recognition",
+  "seed": 71000,
+  "note": "Separate side-view reenactment of one baseline seed; not an additional independent test",
+  "files": {
+    "box_push_ik_side.mp4": {
+      "sha256": "5f0ad5a0dc6f2d6b50b8864e7400f0c2ae21a08b3ffc062096ac5afe6580972a",
+      "bytes": 507404
+    },
+    "box_push_side.png": {
+      "sha256": "a25000f143d0e8402839ff53e531c0f96fee03ef7c280153d8735118aaa6e927",
+      "bytes": 85113
+    }
+  }
+}

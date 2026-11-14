@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Detached training worker. Only executes the two explicit research modules."""
+"""Detached training worker. Only executes explicit simulation/research modules."""
 
 import argparse
 import json
@@ -15,7 +15,11 @@ def main():
     args = pa.parse_args()
     specfile = Path(args.spec).resolve()
     spec = json.loads(specfile.read_text())
-    if spec["module"] not in ("fbi_door.sim.train", "fbi_door.sim.dual_perception"):
+    if spec["module"] not in (
+        "fbi_door.sim.train",
+        "fbi_door.sim.dual_perception",
+        "fbi_door.sim.train_box",
+    ):
         raise ValueError("Unsupported experiment module")
     statusfile = specfile.with_suffix(".status.json")
 

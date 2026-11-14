@@ -1,0 +1,62 @@
+[
+  {
+    "controller": "rule_ik",
+    "seed": 990000,
+    "seconds": 20.9,
+    "full_success": true,
+    "failure": null,
+    "last_phase": "success",
+    "phase_times": {
+      "approach": 0.0,
+      "pregrasp": 2.8,
+      "insert": 4.8,
+      "grasp": 6.8,
+      "press": 7.6,
+      "push": 9.8,
+      "release": 12.6,
+      "retract": 13.4,
+      "traverse": 17.5,
+      "success": 20.9
+    },
+    "grasp_ever_valid": true,
+    "max_door_angle_rad": 1.6503137962378818,
+    "diagnostic_external_nonfinger_contacts_over5N_sampled10Hz": {},
+    "diagnostic_max_contact_force_N_sampled10Hz": 156.52962723240125,
+    "diagnostic_peak_finger_forces_N_sampled10Hz": [
+      7.965027178803295,
+      5.430111899863792
+    ],
+    "diagnostic_peak_arm_command_torque_Nm_sampled10Hz": 18.124160198883438,
+    "episode_reward_not_acceptance": 177.42721929823023
+  },
+  {
+    "controller": "rl_residual",
+    "seed": 990000,
+    "seconds": 16.4,
+    "full_success": true,
+    "failure": null,
+    "last_phase": "success",
+    "phase_times": {
+      "approach": 0.0,
+      "pregrasp": 2.2,
+      "insert": 3.7,
+      "grasp": 5.7,
+      "press": 6.5,
+      "push": 6.6,
+      "release": 8.9,
+      "retract": 9.7,
+      "traverse": 13.2,
+      "success": 16.4
+    },
+    "grasp_ever_valid": true,
+    "max_door_angle_rad": 1.6513214073748619,
+    "diagnostic_external_nonfinger_contacts_over5N_sampled10Hz": {},
+    "diagnostic_max_contact_force_N_sampled10Hz": 185.22707582014456,
+    "diagnostic_peak_finger_forces_N_sampled10Hz": [
+      9.412716612256164,
+      6.517675887117139
+    ],
+    "diagnostic_peak_arm_command_torque_Nm_sampled10Hz": 19.980467162348244,
+    "episode_reward_not_acceptance": 175.439434376957
+  }
+]
