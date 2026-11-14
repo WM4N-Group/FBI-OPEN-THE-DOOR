@@ -1,0 +1,41 @@
+{
+  "state": "smoke_complete",
+  "task": "climb",
+  "seed": 603,
+  "steps": 131072,
+  "budget": 131072,
+  "update": 2,
+  "elapsed_s": 6.530716381967068,
+  "aggregate_sps": 37726.53851851929,
+  "rollout_s": 1.4343899935483932,
+  "update_loss": 0.2180030643939972,
+  "recent_success_rate": 0.0,
+  "recent_episodes": 129.0,
+  "solver_limit_env_step_fraction": 0.0,
+  "recent_failure_reasons_nonexclusive": {
+    "nonfinite": 0.0,
+    "fall": 0.0,
+    "arm_drift": 0.0,
+    "forbidden_contact": 129.0,
+    "self_contact": 0.0,
+    "box_state": 0.0,
+    "bounds": 0.0
+  },
+  "recent_base_x_max": 0.3259691298007965,
+  "recent_stable_dwell_max_s": 0.0,
+  "under_seen_env_step_fraction": 0.0,
+  "cumulative": {
+    "episodes": 149.0,
+    "successes": 0.0,
+    "failures": 149.0,
+    "timeouts": 0.0,
+    "return_sum": -576.5461502075195,
+    "duration_sum": 125.23995971679688,
+    "arm_error_max": 0.05830095335841179
+  },
+  "actor_parameter_max_change": 0.004208683967590332,
+  "arm_target_max_change_rad": 0.0,
+  "initial_checkpoint_sha256": "3e9a39e23c23731c66b431185065803d0d05356498284a684d436fee0b243e4b",
+  "timestamp": "2026-11-14T23:40:35+0800",
+  "latest_checkpoint_sha256": "81c34900abe22f2b4564d5ba74b6e4f66ba97658c0944840c0ad01b8016c3264"
+}

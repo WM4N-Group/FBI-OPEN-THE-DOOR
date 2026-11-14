@@ -1,0 +1,18 @@
+{
+  "schema": "leg-skills/v1",
+  "task": "down",
+  "seeds": [
+    700,
+    701
+  ],
+  "gpu": 1,
+  "envs_per_seed": 2048,
+  "aggregate_steps_per_seed": 200000000,
+  "horizon": 32,
+  "epochs": 4,
+  "batch_size": 8192,
+  "action": "12 leg joint targets, full actor fine-tuning from original; six arm targets fixed",
+  "training_geometry": "physical horizontal rail plus posts; clearance varies relative to locked-arm robot top, opening 95-130cm, thickness 7-16cm",
+  "qualification": "crouch >=4cm, witnessed passage BELOW rail inside posts, whole robot clears, recover normal height and stable >=1s, no rail collision",
+  "scope": "privileged geometry simulation; down means crawl/crouch under rail, NOT platform descent, hardware, vision, or shared-world chain"
+}
