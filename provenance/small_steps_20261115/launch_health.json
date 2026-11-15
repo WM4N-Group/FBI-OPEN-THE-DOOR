@@ -1,0 +1,138 @@
+{
+  "observed_at": "2026-11-15T13:26:10+0800",
+  "scope": "new run launch health, NOT trained skill qualification",
+  "schema": "leg-skills/small-step-v2",
+  "unit_tests_passed": 111,
+  "tasks": {
+    "climb": {
+      "training_code_commit": "4fda2390e2f052fc989b00d5fdc56e121acc9270",
+      "preflight_source_matches_deployed_code": true,
+      "initial_checkpoint_local_shared_sha256_verified": true,
+      "old_warm_start_checkpoint_unchanged": true,
+      "runs": [
+        {
+          "task": "climb",
+          "seed": 800,
+          "state": "training",
+          "steps": 2228224,
+          "budget": 200000000,
+          "aggregate_sps": 16315.735936426052,
+          "actor_parameter_max_change": 0.019384652376174927,
+          "arm_target_max_change_rad": 0.0,
+          "style_metrics": {
+            "max_stride_m": 0.3938468396663666,
+            "max_foreaft_m": 0.32428908348083496,
+            "max_lateral_m": 0.1853121817111969,
+            "max_speed_m_s": 1.2313315868377686,
+            "phase_failures": 0.0,
+            "style_failures": 4701.0,
+            "crouch_achieved_fraction": 0.0,
+            "style_clean_fraction": 0.24396514892578125,
+            "max_target_rate_rad_s": 6.0,
+            "max_foot_force_n": 483.0734558105469,
+            "mean_limb_lift_stride_cost": 0.015967441722750664,
+            "max_vertical_speed_m_s": 1.130608081817627
+          }
+        },
+        {
+          "task": "climb",
+          "seed": 801,
+          "state": "training",
+          "steps": 2228224,
+          "budget": 200000000,
+          "aggregate_sps": 16306.742678554914,
+          "actor_parameter_max_change": 0.01941812038421631,
+          "arm_target_max_change_rad": 0.0,
+          "style_metrics": {
+            "max_stride_m": 0.38122084736824036,
+            "max_foreaft_m": 0.32260066270828247,
+            "max_lateral_m": 0.19338974356651306,
+            "max_speed_m_s": 1.015279769897461,
+            "phase_failures": 0.0,
+            "style_failures": 4822.0,
+            "crouch_achieved_fraction": 0.0,
+            "style_clean_fraction": 0.24648284912109375,
+            "max_target_rate_rad_s": 6.0,
+            "max_foot_force_n": 275.1728515625,
+            "mean_limb_lift_stride_cost": 0.01549354288727045,
+            "max_vertical_speed_m_s": 1.125616192817688
+          }
+        }
+      ],
+      "mirror": {
+        "copied": 6,
+        "pending": 0,
+        "errors": [],
+        "observed_at": "2026-11-15 13:25:41 +0800",
+        "all_current_artifacts_replicated": true
+      }
+    },
+    "down": {
+      "training_code_commit": "2a9a34adab2ff3b7cb2a1febe83dd8c0781c6b5a",
+      "preflight_source_matches_deployed_code": true,
+      "initial_checkpoint_local_shared_sha256_verified": true,
+      "old_warm_start_checkpoint_unchanged": true,
+      "runs": [
+        {
+          "task": "down",
+          "seed": 900,
+          "state": "training",
+          "steps": 3276800,
+          "budget": 200000000,
+          "aggregate_sps": 23321.14952560131,
+          "actor_parameter_max_change": 0.01911238580942154,
+          "arm_target_max_change_rad": 0.0,
+          "style_metrics": {
+            "max_stride_m": 0.15562283992767334,
+            "max_foreaft_m": 0.1887923926115036,
+            "max_lateral_m": 0.15637385845184326,
+            "max_speed_m_s": 0.2917499244213104,
+            "phase_failures": 0.0,
+            "style_failures": 4.0,
+            "crouch_achieved_fraction": 0.0,
+            "style_clean_fraction": 0.15637969970703125,
+            "max_target_rate_rad_s": 1.2000024318695068,
+            "max_foot_force_n": 121.15372467041016,
+            "mean_limb_lift_stride_cost": 0.01863817311823368,
+            "max_vertical_speed_m_s": 0.2767079174518585
+          }
+        },
+        {
+          "task": "down",
+          "seed": 901,
+          "state": "training",
+          "steps": 3276800,
+          "budget": 200000000,
+          "aggregate_sps": 23319.000947558114,
+          "actor_parameter_max_change": 0.018629664555191994,
+          "arm_target_max_change_rad": 0.0,
+          "style_metrics": {
+            "max_stride_m": 0.14610981941223145,
+            "max_foreaft_m": 0.26299595832824707,
+            "max_lateral_m": 0.155948668718338,
+            "max_speed_m_s": 0.2663685083389282,
+            "phase_failures": 0.0,
+            "style_failures": 4.0,
+            "crouch_achieved_fraction": 0.00022125244140625,
+            "style_clean_fraction": 0.15190887451171875,
+            "max_target_rate_rad_s": 1.2000024318695068,
+            "max_foot_force_n": 117.62730407714844,
+            "mean_limb_lift_stride_cost": 0.017005302011966705,
+            "max_vertical_speed_m_s": 0.26313674449920654
+          }
+        }
+      ],
+      "mirror": {
+        "copied": 8,
+        "pending": 0,
+        "errors": [],
+        "observed_at": "2026-11-15 13:25:41 +0800",
+        "all_current_artifacts_replicated": true
+      }
+    }
+  },
+  "gpu_snapshot": [
+    "0, 100 %, 2263 MiB",
+    "1, 100 %, 2259 MiB"
+  ]
+}
