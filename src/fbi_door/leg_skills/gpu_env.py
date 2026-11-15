@@ -489,6 +489,9 @@ class LegSkillEnv:
         targets = self.home[7:19] + 0.5 * filtered[:, POLICY_TO_MJ]
         return torch.maximum(torch.minimum(targets, self.upper), self.lower)
 
+    def executed_history_action(self, action):
+        return action.clamp(-6, 6).detach().clone()
+
     def step(self, action, auto_reset=True):
         old_position = self.q[:, :2].clone()
         self.target[:, :12] = self.leg_targets(action)
@@ -625,7 +628,7 @@ class LegSkillEnv:
         reward += 10 * success.float() - 5 * failure.float()
         reward = torch.nan_to_num(reward, nan=-5.0, posinf=-5.0, neginf=-5.0)
         self.return_ += reward
-        self.last = action.clamp(-6, 6).detach().clone()
+        self.last = self.executed_history_action(action)
         done = success | failure | timeout
         terminal_obs = self.observe()
         info = {

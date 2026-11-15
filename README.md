@@ -72,3 +72,7 @@ PYTHONPATH=src python3 scripts/demo_navigation_contract.py
 ## Small-step v2（2026-11-15）
 
 按视频反馈新增小步、紧凑站姿与下蹲先行训练约束；从对应首轮actor开始重新微调，不覆盖旧模型。当前是重训开发，不宣布新技能已验收。范围、风格指标和复现见[小步修订](docs/SMALL_STEP_V2.md)。
+
+## Protected curriculum v3（2026-11-15）
+
+V2四组完整测试均0/64，不能当作成功技能。新一轮保留冻结v1运动基线＋显式静力姿态参考，训练有界12维腿关节残差，并对箱上站稳/下蹲/短距离低姿态移动设置阶段门禁和停滞上限。它不再是全量actor微调；阶段reset成功不算完整登箱/穿杆。详见[分阶段修订](docs/CURRICULUM_V3.md)。
