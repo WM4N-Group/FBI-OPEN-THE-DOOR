@@ -1,0 +1,126 @@
+{
+  "observed_at": "2026-11-16T00:36:23+0800",
+  "schema": "leg-skills/shallow-upright-v4",
+  "scope": "launch and early training health, NOT full skill success or proof of RL gains",
+  "unit_tests_passed": 119,
+  "tasks": {
+    "climb": {
+      "training_code_commit": "05026cd802bb3183b835b206131e3e58c1811f00",
+      "source_matches_preflight": true,
+      "initial_checkpoint_shared_sha256_verified": true,
+      "v1_and_v3_reference_snapshots_unchanged": true,
+      "runs": [
+        {
+          "task": "climb",
+          "seed": 1200,
+          "state": "training",
+          "stage": "settle",
+          "partial_goal": true,
+          "steps": 3407872,
+          "budget": 150000000,
+          "aggregate_sps": 20734.058685969372,
+          "arm_target_max_change_rad": 0.0,
+          "posture_metrics": {
+            "mean_support_relative_height_m": 0.29226160049438477,
+            "mean_desired_height_m": 0.2953866422176361,
+            "mean_abs_roll_deg": 0.41159965905013796,
+            "mean_abs_pitch_deg": 0.3719632708928108,
+            "mean_top_clearance_m": -0.13807594776153564
+          },
+          "actor_parameter_max_change_vs_initial": 0.0578552708029747,
+          "continued_actor_sha256": "2573df7a31a85cde3caff3488e71ba18a01d9bcd7910b5872fbc9ec5e11751e1",
+          "gates": []
+        },
+        {
+          "task": "climb",
+          "seed": 1201,
+          "state": "training",
+          "stage": "settle",
+          "partial_goal": true,
+          "steps": 3407872,
+          "budget": 150000000,
+          "aggregate_sps": 20742.39673180951,
+          "arm_target_max_change_rad": 0.0,
+          "posture_metrics": {
+            "mean_support_relative_height_m": 0.29185497760772705,
+            "mean_desired_height_m": 0.2945084273815155,
+            "mean_abs_roll_deg": 0.3811081738178558,
+            "mean_abs_pitch_deg": 0.35049948147222587,
+            "mean_top_clearance_m": -0.13675270974636078
+          },
+          "actor_parameter_max_change_vs_initial": 0.038819991052150726,
+          "continued_actor_sha256": "f638cd15c4546d5e7b2955825fdc746bec9429662fbfaa0df91722c7eb6ca840",
+          "gates": []
+        }
+      ],
+      "mirror": {
+        "copied": 6,
+        "pending": 0,
+        "errors": [],
+        "observed_at": "2026-11-16 00:36:02 +0800",
+        "all_current_artifacts_replicated": true
+      }
+    },
+    "down": {
+      "training_code_commit": "31c5c212172a548428860c682bbabce5b46dc75e",
+      "source_matches_preflight": true,
+      "initial_checkpoint_shared_sha256_verified": true,
+      "v1_and_v3_reference_snapshots_unchanged": true,
+      "runs": [
+        {
+          "task": "down",
+          "seed": 1300,
+          "state": "training",
+          "stage": "crouch",
+          "partial_goal": true,
+          "steps": 3407872,
+          "budget": 150000000,
+          "aggregate_sps": 21013.990247799848,
+          "arm_target_max_change_rad": 0.0,
+          "posture_metrics": {
+            "mean_support_relative_height_m": 0.24098838865756989,
+            "mean_desired_height_m": 0.24066703021526337,
+            "mean_abs_roll_deg": 0.17698304797995335,
+            "mean_abs_pitch_deg": 0.22047287678769115,
+            "mean_top_clearance_m": 0.0034722532145678997
+          },
+          "actor_parameter_max_change_vs_initial": 0.047152310609817505,
+          "continued_actor_sha256": "6b6cdb17d00e26ec64c3f4e0823dec7e68e7a6961d13d822ce2f36820c2eedb4",
+          "gates": []
+        },
+        {
+          "task": "down",
+          "seed": 1301,
+          "state": "training",
+          "stage": "crouch",
+          "partial_goal": true,
+          "steps": 3407872,
+          "budget": 150000000,
+          "aggregate_sps": 21010.97579075303,
+          "arm_target_max_change_rad": 0.0,
+          "posture_metrics": {
+            "mean_support_relative_height_m": 0.2411283403635025,
+            "mean_desired_height_m": 0.24061287939548492,
+            "mean_abs_roll_deg": 0.19582227051149403,
+            "mean_abs_pitch_deg": 0.18330436137493036,
+            "mean_top_clearance_m": 0.0033075562678277493
+          },
+          "actor_parameter_max_change_vs_initial": 0.05126802623271942,
+          "continued_actor_sha256": "8f039dd048782d29856e72ae30e3d18bd49c0467fe58cde5cd80f360f1af0ef5",
+          "gates": []
+        }
+      ],
+      "mirror": {
+        "copied": 6,
+        "pending": 0,
+        "errors": [],
+        "observed_at": "2026-11-16 00:36:02 +0800",
+        "all_current_artifacts_replicated": true
+      }
+    }
+  },
+  "gpu_snapshot": [
+    "0, 100 %, 2283 MiB",
+    "1, 100 %, 2283 MiB"
+  ]
+}
