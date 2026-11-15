@@ -72,3 +72,7 @@ PYTHONPATH=src python3 scripts/demo_navigation_contract.py
 ## Small-step v2（2026-11-15）
 
 按视频反馈新增先下蹲再小步慢速穿杆的训练约束；从对应首轮actor重新微调，不覆盖旧模型。当前为重训开发，不宣布新技能已验收。范围、风格指标和复现见[小步修订](docs/SMALL_STEP_V2.md)。
+
+## Protected curriculum v3（2026-11-15）
+
+V2完整测试四组均0/64。新一轮冻结v1任务基线，结合显式静力平衡/低步态参考训练有界12维腿关节残差，先练原地下蹲、25cm低姿态移动，再过完整穿杆门禁。阶段失败/长期零完整成功会保存诊断并停止该组，不再盲目跑满。部分目标成功不等于完整技能，详见[分阶段修订](docs/CURRICULUM_V3.md)。

@@ -1,31 +1,38 @@
 {
-  "schema": "leg-skills/small-step-v2",
+  "schema": "leg-skills/protected-curriculum-v3",
   "task": "down",
   "seeds": [
-    900,
-    901
+    1120,
+    1121
   ],
   "gpu": 1,
   "envs_per_seed": 2048,
-  "aggregate_steps_per_seed": 200000000,
+  "aggregate_steps_per_seed": 150000000,
   "horizon": 64,
   "epochs": 4,
   "batch_size": 8192,
-  "action": "12 leg joint targets, full actor fine-tuning from original; six arm targets fixed",
+  "action": "12 bounded low-pass-filtered LEG JOINT residuals; v1 actor frozen, explicit static-load balance + nominal low crawl controller",
   "training_geometry": "physical horizontal rail plus posts; clearance varies relative to locked-arm robot top, opening 95-130cm, thickness 7-16cm",
   "qualification": "crouch >=4cm, witnessed passage BELOW rail inside posts, whole robot clears, recover normal height and stable >=1s, no rail collision",
   "scope": "privileged geometry simulation; down means crawl/crouch under rail, NOT platform descent, hardware, vision, or shared-world chain",
-  "gamma": 0.997,
-  "gae_lambda": 0.97,
-  "warm_start": "read-only v1 down seed701 actor; new critic/optimizer/noise",
+  "gamma": 0.995,
+  "gae_lambda": 0.95,
+  "warm_start": "v1 seed701 actor frozen, not copied into new residual actor",
   "warm_start_sha256": "56371e65cd3587badfcf957bd4b74a5c5f67eda8eeb355d43c74a6ef9b1c6417",
-  "style": "crouch physically for .30s before crawl, small slow steps, recover only after whole robot clears",
-  "command_speed_range_m_s": [
-    0.065,
-    0.1
+  "style": "crouch before movement, short low movement gate, full upright-start rail passage still requires original strict small-step acceptance",
+  "episode_timeout_s": 60,
+  "observation_dim": 384,
+  "success_includes_style_limits": true,
+  "initialization": "zero residual actor, fresh critic/optimizer; v1 seed701 actor only used as frozen reference",
+  "stages": [
+    "crouch",
+    "crawl",
+    "full"
   ],
-  "target_rate_limit_rad_s": 1.2,
-  "episode_timeout_s": 45,
-  "observation_dim": 360,
-  "success_includes_style_limits": true
+  "partial_stage_max_steps": 12000000,
+  "full_zero_success_watchdog_steps": 30000000,
+  "stage_gate": "minimum1M steps and >=75% of32 heldout partial-goal episodes; low-reset25cm goal is NOT under-rail task completion",
+  "nominal_crawl_velocity_feedback_target_m_s": 0.055,
+  "moving_joint_residual_bound_rad": 0.3,
+  "stationary_joint_residual_bound_rad": 0.08
 }
