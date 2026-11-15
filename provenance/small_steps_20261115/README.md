@@ -1,0 +1,9 @@
+# Small-step v2 preflight, 2026-11-15
+
+This directory holds **engineering validation**, not a claim of trained-skill success. Final-source reports check 320→360 actor transfer, CPU/GPU fixed-action integration, actual foot-ground contact, commanded target slew, unchanged six arm targets, original forbidden-collision failure and down's premature-crawl negative test. Explicit collision/premature-motion qpos writes are negative-test RESET fixtures only, never accepted training rollouts.
+
+The first 8.1M-step development pilots (before final reward/contact/slew revisions) achieved **0/64** full style-qualified heldout episodes for BOTH tasks. They remain on the server, are not overwritten, and do not establish improvement. A development slew comparison showed old climb behavior needs balance-control freedom: low slew mostly failed physically; higher slew more often exposed old overstride. Therefore final climb target slew is6rad/s, while step length/spread/speed are separately constrained; down remains1.2rad/s. Do not confuse target slew with base speed or proven small strides.
+
+Final-source 2048-world/two-update smoke reports are stored alongside preflights. They demonstrate finite PPO updates, changed leg actor parameters and zero arm target changes; they are not skill-qualification results. Source hashes bind final preflight/smoke/deployments. Production training uses separate new run directories and read-only v1 actor checkpoints; original robot/checkpoint/old experiments are preserved. No hardware actuation, camera perception or shared-world skill-chain validation is claimed.
+
+Full differences, chosen physical/style thresholds, domain limits, initialization, budgets and reproducibility: `docs/SMALL_STEP_V2.md`. Generated weights/videos/private assets and server paths are intentionally outside Git.

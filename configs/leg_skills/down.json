@@ -1,18 +1,31 @@
 {
-  "schema": "leg-skills/v1",
+  "schema": "leg-skills/small-step-v2",
   "task": "down",
   "seeds": [
-    700,
-    701
+    900,
+    901
   ],
   "gpu": 1,
   "envs_per_seed": 2048,
   "aggregate_steps_per_seed": 200000000,
-  "horizon": 32,
+  "horizon": 64,
   "epochs": 4,
   "batch_size": 8192,
   "action": "12 leg joint targets, full actor fine-tuning from original; six arm targets fixed",
   "training_geometry": "physical horizontal rail plus posts; clearance varies relative to locked-arm robot top, opening 95-130cm, thickness 7-16cm",
   "qualification": "crouch >=4cm, witnessed passage BELOW rail inside posts, whole robot clears, recover normal height and stable >=1s, no rail collision",
-  "scope": "privileged geometry simulation; down means crawl/crouch under rail, NOT platform descent, hardware, vision, or shared-world chain"
+  "scope": "privileged geometry simulation; down means crawl/crouch under rail, NOT platform descent, hardware, vision, or shared-world chain",
+  "gamma": 0.997,
+  "gae_lambda": 0.97,
+  "warm_start": "read-only v1 down seed701 actor; new critic/optimizer/noise",
+  "warm_start_sha256": "56371e65cd3587badfcf957bd4b74a5c5f67eda8eeb355d43c74a6ef9b1c6417",
+  "style": "crouch physically for .30s before crawl, small slow steps, recover only after whole robot clears",
+  "command_speed_range_m_s": [
+    0.065,
+    0.1
+  ],
+  "target_rate_limit_rad_s": 1.2,
+  "episode_timeout_s": 45,
+  "observation_dim": 360,
+  "success_includes_style_limits": true
 }
