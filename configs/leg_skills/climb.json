@@ -1,38 +1,39 @@
 {
-  "schema": "leg-skills/protected-curriculum-v3",
+  "schema": "leg-skills/shallow-upright-v4",
   "task": "climb",
-  "seeds": [
-    1020,
-    1021
-  ],
   "gpu": 0,
+  "seeds": [
+    1200,
+    1201
+  ],
   "envs_per_seed": 2048,
   "aggregate_steps_per_seed": 150000000,
   "horizon": 64,
   "epochs": 4,
   "batch_size": 8192,
-  "action": "12 bounded LEG JOINT residuals, NOT full actor fine-tuning or 6D high-level residual; frozen v1 ascent plus explicit model-based settle",
-  "training_geometry": "mixed difficulty: 3.5-24cm free support boxes, 85-125 x 70-105cm, 25-60kg",
-  "qualification": "all four feet on actual box top and supporting, upright and slow, box stable, dwell >=2s",
-  "scope": "privileged geometry simulation; not original small 2kg push box, vision, hardware, or shared-world chain",
   "gamma": 0.995,
   "gae_lambda": 0.95,
-  "warm_start": "v1 seed600 actor frozen, not copied into new residual actor",
-  "warm_start_sha256": "0e1bb0f6bfd41db0f6d9a542a60d100c288dd8258117bc065f59fe48f860fe09",
-  "style": "preserve ascent baseline; separately learn compact on-box stabilization and progressively shape strides",
-  "episode_timeout_s": 35,
-  "observation_dim": 384,
-  "success_includes_style_limits": true,
-  "initialization": "zero residual actor; v1 actor read-only reference, new critic/optimizer",
+  "observation_dim": 392,
+  "action_dim": 12,
+  "action": "continued bounded leg-joint residual, frozen v1 task reference, explicit normal-stance controller; arm targets fixed",
   "stages": [
     "settle",
     "full"
   ],
-  "partial_stage_max_steps": 12000000,
-  "full_zero_success_watchdog_steps": 30000000,
-  "stage_gate": "minimum1M steps and at least75% of32 heldout partial-goal episodes; partial success is NOT full skill success",
-  "legacy_ascent_command_range_m_s": [
-    0.12,
-    0.25
-  ]
+  "normal_height_above_support_m": 0.3,
+  "height_tolerance_m": 0.02,
+  "max_abs_roll_pitch_deg": 3.0,
+  "partial_stage_cap_steps": 24000000,
+  "full_zero_progress_watchdog_steps": 60000000,
+  "gate_every_steps": 4000000,
+  "gate_count": 32,
+  "partial_gate_rate": 0.75,
+  "full_style_and_normal_goal_results_separate": true,
+  "continue_actor_sha256_by_seed": {
+    "1200": "2573df7a31a85cde3caff3488e71ba18a01d9bcd7910b5872fbc9ec5e11751e1",
+    "1201": "f638cd15c4546d5e7b2955825fdc746bec9429662fbfaa0df91722c7eb6ca840"
+  },
+  "continued_source": "v3 paired passed-settle actor snapshots at2,097,152 steps; fresh critic/optimizer/noise",
+  "frozen_v1_reference_sha256": "0e1bb0f6bfd41db0f6d9a542a60d100c288dd8258117bc065f59fe48f860fe09",
+  "scope": "privileged geometry simulation, larger free load-bearing box; no visual/hardware/shared-world qualification"
 }

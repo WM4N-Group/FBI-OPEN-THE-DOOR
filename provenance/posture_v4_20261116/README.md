@@ -1,0 +1,9 @@
+# V4 shallow/upright continuation: engineering evidence
+
+2026-11-16. Final preflights fingerprint the **actual final source** and trusted reference/continued-stage checkpoint. They test384→392 actor transfer parity, v1 ascent target preservation, continuing-world teacher history consistency, independent CPU/GPU fixed-action integration, actuator/residual bounds, arm target preservation and forbidden-contact negative detection. Forced collisions are explicit negative-test resets, never task successes.
+
+Final smoke reports use2048 worlds and two PPO updates/262144 aggregate new environment steps each. `actor_parameter_max_change_vs_initial` compares saved initial/final actor tensors, so a nonzero inherited actor weight is not misrepresented as proof of a new optimizer update. Both critics/optimizers/noise are reset while the verified v3 passed-stage actor is continued. These are **not complete skill success rates**.
+
+Development zero-residual model baselines demonstrated near30cm, level on-box poses and less-deep crouches in easier domains. They do not establish RL gains or full generic-task reliability. Initial full-gait amplitude variants could advance but fall at handoff; the retained speed-adaptive reference and latched target handoffs must still be learned/validated. Final full floor-start regressions are saved separately from on-box/crouched preparatory goals; negative outcomes must not be hidden or called convergence.
+
+The normal-height/roll/pitch requirement is stricter than earlier task-only completion. A passing on-box recovery stage is not ascent success; low25cm motion with2cm goal tolerance is not under-rail passage. Full physical and old style gates remain; neither the arm nor robot envelope is removed to allow a shallower squat. Models/recordings/private server paths and assets are intentionally excluded from Git. See `docs/POSTURE_V4.md`.

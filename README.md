@@ -76,3 +76,7 @@ PYTHONPATH=src python3 scripts/demo_navigation_contract.py
 ## Protected curriculum v3（2026-11-15）
 
 V2四组完整测试均0/64，不能当作成功技能。新一轮保留冻结v1运动基线＋显式静力姿态参考，训练有界12维腿关节残差，并对箱上站稳/下蹲/短距离低姿态移动设置阶段门禁和停滞上限。它不再是全量actor微调；阶段reset成功不算完整登箱/穿杆。详见[分阶段修订](docs/CURRICULUM_V3.md)。
+
+## Shallow/upright v4（2026-11-16）
+
+按新视频反馈继续训练：down按整机净空只蹲必要高度并恢复有效行走步态；climb先停稳，再恢复约30cm支撑相对高度、roll/pitch各≤3°的正常站姿。从v3已过子阶段的残差actor继续，保留原模型、独立运行目录；不宣称完整技能已学成。详见[姿态修订](docs/POSTURE_V4.md)。
