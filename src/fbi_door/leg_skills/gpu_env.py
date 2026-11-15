@@ -484,13 +484,14 @@ class LegSkillEnv:
             neginf=-100.0,
         ).clamp(-100.0, 100.0)
 
-    def step(self, action, auto_reset=True):
-        old_position = self.q[:, :2].clone()
+    def leg_targets(self, action):
         filtered = 0.8 * action.clamp(-6, 6) + 0.2 * self.last
         targets = self.home[7:19] + 0.5 * filtered[:, POLICY_TO_MJ]
-        self.target[:, :12] = torch.maximum(
-            torch.minimum(targets, self.upper), self.lower
-        )
+        return torch.maximum(torch.minimum(targets, self.upper), self.lower)
+
+    def step(self, action, auto_reset=True):
+        old_position = self.q[:, :2].clone()
+        self.target[:, :12] = self.leg_targets(action)
         # All six arm targets stay at the original home for the entire episode.
         self.audit.zero_()
         self.torque.zero_()

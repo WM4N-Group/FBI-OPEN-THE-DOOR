@@ -1,0 +1,50 @@
+{
+  "schema": "leg-skills/small-step-v2",
+  "task": "climb",
+  "observation_dim": 360,
+  "warm_start": {
+    "sha256": "0e1bb0f6bfd41db0f6d9a542a60d100c288dd8258117bc065f59fe48f860fe09",
+    "source_steps": 200015872,
+    "schema": "leg-skills/v1",
+    "source_input_dim": 320,
+    "critic_optimizer_noise": "reset for new reward and transformed dynamics"
+  },
+  "actor_transfer_max_error": 3.814697265625e-06,
+  "cpu_gpu_qpos_max_errors_rad_or_m": [
+    2.8453526812534033e-05,
+    3.324439438874994e-05,
+    3.365592189248038e-05,
+    3.3475984165102536e-05,
+    3.334729315470058e-05
+  ],
+  "physics_flags": [
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "foot_ground_contact_detected": true,
+  "negative_collision_detected": true,
+  "negative_premature_crawl_detected": null,
+  "arm_target_max_change_rad": 0.0,
+  "observed_target_rate_rad_s": 6.0,
+  "target_rate_limit_rad_s": 6.0,
+  "scope": "engineering preflight only; forced poses are explicit negative-test resets, never successful episodes; no hardware",
+  "source_sha256": {
+    "__init__.py": "5dcbd1bac29a58fa11d10a147e0c826cfa28efd958b02f5031660bf14a86e270",
+    "style_policy.py": "eab0165f1a3681e1b8a4c6160ad89497cb2c92a82b63a1bae192b8923f879737",
+    "kernels.py": "269c9f1301d01953d74c9c0616576cd3ab62794bcb4d15548e210f7befce0c96",
+    "build_scene.py": "aa6644f87aa8e613d80fc29103d3b6e0780c4787c27b50eb57197c1c88fbcb5e",
+    "contracts.py": "ab374add4273998efe45d479badd0e76ddcabc39703fef3da111db89e38b6ae5",
+    "gpu_env.py": "0e3de4e3f48fff7fd22a51c48eaa0736e63ef20a4f88777411aec9367dd4b9b3",
+    "validate_style.py": "46321dff0863d22c57a20092e89a6c2dfebb01e0fb35b94b4df40a398a3af50a",
+    "style_kernels.py": "0ff3eec7ef768cf3537a0eaedaa6739f718ce746ed5191f0e8765730fec6fdbc",
+    "validate.py": "626e84002338a5d174b08d2c109c8abd3adef26fa2f0b584b24efd4afbe74f96",
+    "train.py": "99651d2aabc25258b2b827c21a6ed5b00336482b3195b6026642e32238385ed1",
+    "policy.py": "88aa8da5ba1c1bbbf2801c9e03ba368006dbf9f11f277f23a1d41806b445cb14",
+    "style_contracts.py": "53d0b0d3ee7284c275f06b9b1d663336872ada2322a942cce465c4629b3f41d8",
+    "train_style.py": "ca9a5a03eb46130c7f8ece9b018c0dfe3f6d8604333b0854c39efb9c225a748a",
+    "style_env.py": "aee99efa2e75a90f91259afe0ee8468abb41c1634dc7b50b30f6b8c87a1026b5"
+  }
+}

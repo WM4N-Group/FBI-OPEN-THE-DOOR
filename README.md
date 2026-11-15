@@ -68,3 +68,7 @@ PYTHONPATH=src python3 scripts/demo_navigation_contract.py
 ```
 
 此demo为显式合成协议测试，不是导航或物理技能链演示。
+
+## Small-step v2（2026-11-15）
+
+按视频反馈新增小步、紧凑站姿与下蹲先行训练约束；从对应首轮actor开始重新微调，不覆盖旧模型。当前是重训开发，不宣布新技能已验收。范围、风格指标和复现见[小步修订](docs/SMALL_STEP_V2.md)。

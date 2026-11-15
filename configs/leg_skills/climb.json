@@ -1,15 +1,31 @@
 {
-  "schema": "leg-skills/v1",
+  "schema": "leg-skills/small-step-v2",
   "task": "climb",
-  "seeds": [600, 601],
+  "seeds": [
+    800,
+    801
+  ],
   "gpu": 0,
   "envs_per_seed": 2048,
   "aggregate_steps_per_seed": 200000000,
-  "horizon": 32,
+  "horizon": 64,
   "epochs": 4,
   "batch_size": 8192,
   "action": "12 leg joint targets, full actor fine-tuning from original; six arm targets fixed",
   "training_geometry": "mixed difficulty: 3.5-24cm free support boxes, 85-125 x 70-105cm, 25-60kg",
   "qualification": "all four feet on actual box top and supporting, upright and slow, box stable, dwell >=2s",
-  "scope": "privileged geometry simulation; not original small 2kg push box, vision, hardware, or shared-world chain"
+  "scope": "privileged geometry simulation; not original small 2kg push box, vision, hardware, or shared-world chain",
+  "gamma": 0.997,
+  "gae_lambda": 0.97,
+  "warm_start": "read-only v1 climb seed600 actor; new critic/optimizer/noise",
+  "warm_start_sha256": "0e1bb0f6bfd41db0f6d9a542a60d100c288dd8258117bc065f59fe48f860fe09",
+  "style": "small steps, compact on-box stance, command slew, touchdown/overspread penalties",
+  "command_speed_range_m_s": [
+    0.09,
+    0.15
+  ],
+  "target_rate_limit_rad_s": 6.0,
+  "episode_timeout_s": 35,
+  "observation_dim": 360,
+  "success_includes_style_limits": true
 }
