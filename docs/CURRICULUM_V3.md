@@ -69,3 +69,5 @@ CUDA_VISIBLE_DEVICES=0 python -m fbi_door.leg_skills.train_curriculum \
 ```
 
 Outputs refuse overwriting. Local training buffers continuously mirror to shared storage; reference assets/weights/videos/private server paths are not committed. `final_stage_heldout.json` and `final_full_heldout.json` are deliberately separate even when a partial stage fails. **A budget or gate-run completion is never itself skill qualification.**
+
+Stage/watchdog ceilings are checked at the next evaluation gate, and aggregate budgets are vector-rollout rounded. Small overshoot is expected; the ceilings are not exact per-physics-step cutoffs.

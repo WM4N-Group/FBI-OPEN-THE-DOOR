@@ -1,0 +1,126 @@
+{
+  "observed_at": "2026-11-15T22:54:51+0800",
+  "schema": "leg-skills/protected-curriculum-v3",
+  "scope": "launch and stage health ONLY; partial successes are NOT full skill success",
+  "unit_tests_passed": 114,
+  "tasks": {
+    "climb": {
+      "training_code_commit": "d4529222eb89a13cd1032ba393ab86feb6ca426c",
+      "preflight_source_matches_deployment": true,
+      "initial_model_shared_sha256_verified": true,
+      "v1_reference_unchanged": true,
+      "runs": [
+        {
+          "task": "climb",
+          "seed": 1020,
+          "state": "training",
+          "stage": "full",
+          "partial_goal": false,
+          "steps": 2883584,
+          "budget": 150000000,
+          "aggregate_sps": 22135.798484486535,
+          "actor_output_weight_max_abs": 0.012670770287513733,
+          "arm_target_max_change_rad": 0.0,
+          "gates": [
+            {
+              "stage": "settle",
+              "partial_goal": true,
+              "successes": 32,
+              "count": 32,
+              "steps": 2097152
+            }
+          ]
+        },
+        {
+          "task": "climb",
+          "seed": 1021,
+          "state": "training",
+          "stage": "full",
+          "partial_goal": false,
+          "steps": 2883584,
+          "budget": 150000000,
+          "aggregate_sps": 22145.266947855715,
+          "actor_output_weight_max_abs": 0.01047096960246563,
+          "arm_target_max_change_rad": 0.0,
+          "gates": [
+            {
+              "stage": "settle",
+              "partial_goal": true,
+              "successes": 32,
+              "count": 32,
+              "steps": 2097152
+            }
+          ]
+        }
+      ],
+      "mirror": {
+        "copied": 14,
+        "pending": 0,
+        "errors": [],
+        "observed_at": "2026-11-15 22:54:30 +0800",
+        "all_current_artifacts_replicated": true
+      }
+    },
+    "down": {
+      "training_code_commit": "5c6aa029437ccd026e0c3ced844afdef5d5b98d3",
+      "preflight_source_matches_deployment": true,
+      "initial_model_shared_sha256_verified": true,
+      "v1_reference_unchanged": true,
+      "runs": [
+        {
+          "task": "down",
+          "seed": 1120,
+          "state": "training",
+          "stage": "crawl",
+          "partial_goal": true,
+          "steps": 2883584,
+          "budget": 150000000,
+          "aggregate_sps": 21935.344086751473,
+          "actor_output_weight_max_abs": 0.016856200993061066,
+          "arm_target_max_change_rad": 0.0,
+          "gates": [
+            {
+              "stage": "crouch",
+              "partial_goal": true,
+              "successes": 32,
+              "count": 32,
+              "steps": 2097152
+            }
+          ]
+        },
+        {
+          "task": "down",
+          "seed": 1121,
+          "state": "training",
+          "stage": "crawl",
+          "partial_goal": true,
+          "steps": 2883584,
+          "budget": 150000000,
+          "aggregate_sps": 21935.024036782335,
+          "actor_output_weight_max_abs": 0.015272755175828934,
+          "arm_target_max_change_rad": 0.0,
+          "gates": [
+            {
+              "stage": "crouch",
+              "partial_goal": true,
+              "successes": 32,
+              "count": 32,
+              "steps": 2097152
+            }
+          ]
+        }
+      ],
+      "mirror": {
+        "copied": 14,
+        "pending": 0,
+        "errors": [],
+        "observed_at": "2026-11-15 22:54:30 +0800",
+        "all_current_artifacts_replicated": true
+      }
+    }
+  },
+  "gpu_snapshot": [
+    "0, 100 %, 2311 MiB",
+    "1, 100 %, 2307 MiB"
+  ]
+}
