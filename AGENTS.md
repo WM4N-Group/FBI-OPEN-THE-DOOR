@@ -1,5 +1,7 @@
 # Contribution and robot safety rules
 
+- `stair` is the independent staircase research branch. Keep stair changes here; do not modify other skill branches. No stair checkpoint is currently qualified for hardware or the 17 cm target.
+
 - Read `docs/REAL_ROBOT_MIGRATION.md` and `docs/STATUS.md` first.
 - Simulation defaults to privileged teacher geometry. Never present teacher rollouts or camera overlays as visual/RL task success.
 - Keep original leg policy hashes, observation ordering/history, actuator mapping and provenance. Do not silently replace Piper L assets with standard PiPER.

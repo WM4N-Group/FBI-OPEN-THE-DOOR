@@ -1,0 +1,1617 @@
+{
+  "weights": "3872ca9e274324db0d5d1a5c6be434a40540fe94b22c378794a4415ea82a819c",
+  "cases": [
+    [
+      -0.7565911189044539,
+      0.16400130785382055,
+      0.12978720412780495,
+      0.6401989728213281,
+      2.6745347447221226
+    ],
+    [
+      -0.6738776704846531,
+      0.09831169448062693,
+      0.12729104743681594,
+      0.7079661224845611,
+      2.6757342121227135
+    ],
+    [
+      -0.49237576520605875,
+      -0.08848542966977906,
+      -0.06544204112991824,
+      0.6518059100298099,
+      2.675677813608419
+    ],
+    [
+      -0.6213252402927514,
+      -0.0437262237247755,
+      -0.06508791868671357,
+      0.8201913585428497,
+      2.7375229888081365
+    ],
+    [
+      -0.5631349459548113,
+      -0.17013596857176294,
+      -0.005893295463050202,
+      0.6168426370297341,
+      2.7485450937196374
+    ],
+    [
+      -0.560499391527354,
+      0.1551341428375983,
+      0.08495183102385465,
+      0.6823244763626043,
+      2.7286160128609507
+    ],
+    [
+      -0.6305084614788132,
+      0.08524574316176187,
+      0.11645905750114618,
+      0.606399602540083,
+      2.6580389607580743
+    ],
+    [
+      -0.45206360885682745,
+      -0.1469335058638938,
+      0.12386438832811816,
+      0.6802958198785902,
+      2.7828318816779656
+    ],
+    [
+      -0.6694948805341172,
+      0.10766448491186242,
+      -0.1344041886271827,
+      0.8365759696656784,
+      2.753355173932497
+    ],
+    [
+      -0.779542458156025,
+      0.07863510576856142,
+      -0.11048202364514358,
+      0.8632825598695233,
+      2.7403639928914494
+    ],
+    [
+      -0.5364973466365802,
+      0.06099504817064719,
+      0.11226960410658601,
+      0.6301860856576668,
+      2.660028031669331
+    ],
+    [
+      -0.5996643931252905,
+      0.05627661820508251,
+      0.017871799770486113,
+      0.8030207683105944,
+      2.806676936761516
+    ],
+    [
+      -0.5449056657636538,
+      -0.12390135413494172,
+      -0.05398119355399841,
+      0.6284834279734507,
+      2.6835388685964667
+    ],
+    [
+      -0.6082643136713666,
+      0.02118544191549057,
+      -0.11688479854307787,
+      0.6812416781078504,
+      2.761956737582086
+    ],
+    [
+      -0.5209952384540899,
+      -0.022313240455476252,
+      -0.03785039320365646,
+      0.8952677800258486,
+      2.79794566484362
+    ],
+    [
+      -0.7362719139479978,
+      -0.09066456843813071,
+      0.010739781876543092,
+      0.7385678958853248,
+      2.7028904898999366
+    ],
+    [
+      -0.6809130975386197,
+      0.0481263616113049,
+      0.03762417743038024,
+      0.8092071395253502,
+      2.7383244474254744
+    ],
+    [
+      -0.5678518821710496,
+      -0.024763706551511666,
+      0.1076228545015219,
+      0.6009562221337926,
+      2.7801949144227267
+    ],
+    [
+      -0.6873055478513148,
+      0.06668645445833482,
+      0.10977664513581589,
+      0.8513577164736099,
+      2.747830383821651
+    ],
+    [
+      -0.5671521655328802,
+      -0.060141815789452976,
+      0.018691063559173104,
+      0.7589444399987035,
+      2.720523501902619
+    ],
+    [
+      -0.6715837328356307,
+      0.16709025186143872,
+      0.038457006676934746,
+      0.6259616217809202,
+      2.715274973909953
+    ],
+    [
+      -0.6709490850914235,
+      -0.09355987486236209,
+      -0.0070049714868700985,
+      0.8943666266120773,
+      2.665066766789368
+    ],
+    [
+      -0.6896814827679836,
+      -0.15668480010744779,
+      -0.011030208998810964,
+      0.7584769616749791,
+      2.7479016055551884
+    ],
+    [
+      -0.7193834991346961,
+      0.1040754948883355,
+      -0.08916806869747074,
+      0.7825662819081622,
+      2.714090693891007
+    ]
+  ],
+  "results": {
+    "1": {
+      "terminal": "PROTECTION",
+      "sim_s": 6.49999475479126,
+      "foot_max_levels": [
+        4,
+        3,
+        3,
+        3
+      ],
+      "last_levels": [
+        4,
+        3,
+        3,
+        3
+      ],
+      "visited_treads": [
+        true,
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "top_four": false,
+      "hold_s": 0.0,
+      "bad_force": 28.054046630859375,
+      "arm_error_rad": 0.0024736199993640184,
+      "overflow": 0,
+      "original_goal": false,
+      "clean": false,
+      "first_hit_tick": 84,
+      "peak_n_by_foot_and_nonfoot": [
+        128.58700561523438,
+        93.37220001220703,
+        53.097328186035156,
+        69.0211181640625,
+        28.054046630859375
+      ],
+      "impulse_ns_by_foot_and_nonfoot": [
+        44.217498779296875,
+        43.515113830566406,
+        0.4251033663749695,
+        3.4919612407684326,
+        0.3876975178718567
+      ],
+      "hit_contact_substep_samples": [
+        514,
+        805,
+        6,
+        56,
+        9
+      ],
+      "interval_hit_peak_n": [
+        0.0,
+        22.41377067565918,
+        0.0,
+        0.0,
+        28.054046630859375
+      ]
+    },
+    "19": {
+      "terminal": "PROTECTION",
+      "sim_s": 7.219994068145752,
+      "foot_max_levels": [
+        5,
+        4,
+        4,
+        4
+      ],
+      "last_levels": [
+        5,
+        4,
+        4,
+        4
+      ],
+      "visited_treads": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        false
+      ],
+      "top_four": false,
+      "hold_s": 0.0,
+      "bad_force": 22.118484497070312,
+      "arm_error_rad": 0.0030585278291255236,
+      "overflow": 0,
+      "original_goal": false,
+      "clean": false,
+      "first_hit_tick": 69,
+      "peak_n_by_foot_and_nonfoot": [
+        116.17955017089844,
+        80.35054016113281,
+        54.95941925048828,
+        65.8414077758789,
+        22.118484497070312
+      ],
+      "impulse_ns_by_foot_and_nonfoot": [
+        27.480424880981445,
+        38.02573776245117,
+        0.4744826555252075,
+        4.204260349273682,
+        0.0858781486749649
+      ],
+      "hit_contact_substep_samples": [
+        388,
+        677,
+        5,
+        70,
+        2
+      ],
+      "interval_hit_peak_n": [
+        0.0,
+        23.564502716064453,
+        0.0,
+        0.0,
+        22.118484497070312
+      ]
+    },
+    "13": {
+      "terminal": "PROTECTION",
+      "sim_s": 8.680008888244629,
+      "foot_max_levels": [
+        6,
+        5,
+        5,
+        5
+      ],
+      "last_levels": [
+        6,
+        0,
+        5,
+        5
+      ],
+      "visited_treads": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "top_four": false,
+      "hold_s": 0.0,
+      "bad_force": 16.403165817260742,
+      "arm_error_rad": 0.005779967177659273,
+      "overflow": 0,
+      "original_goal": false,
+      "clean": false,
+      "first_hit_tick": 69,
+      "peak_n_by_foot_and_nonfoot": [
+        227.1195831298828,
+        76.71125793457031,
+        116.77470397949219,
+        59.59206771850586,
+        16.403165817260742
+      ],
+      "impulse_ns_by_foot_and_nonfoot": [
+        42.97825241088867,
+        60.5830078125,
+        2.098076105117798,
+        4.986913204193115,
+        0.032806333154439926
+      ],
+      "hit_contact_substep_samples": [
+        528,
+        811,
+        20,
+        79,
+        1
+      ],
+      "interval_hit_peak_n": [
+        0.0,
+        35.33110427856445,
+        0.0,
+        0.0,
+        16.403165817260742
+      ]
+    },
+    "6": {
+      "terminal": "ASCENT_WITH_COLLISION",
+      "sim_s": 15.460164070129395,
+      "foot_max_levels": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "last_levels": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "visited_treads": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "top_four": true,
+      "hold_s": 1.019999623298645,
+      "bad_force": 0.0,
+      "arm_error_rad": 0.0007922949735075235,
+      "overflow": 0,
+      "original_goal": true,
+      "clean": false,
+      "first_hit_tick": 82,
+      "peak_n_by_foot_and_nonfoot": [
+        175.01805114746094,
+        80.12212371826172,
+        98.64230346679688,
+        70.99163818359375,
+        0.0
+      ],
+      "impulse_ns_by_foot_and_nonfoot": [
+        36.05812454223633,
+        30.75811767578125,
+        3.62597918510437,
+        7.660764694213867,
+        0.0
+      ],
+      "hit_contact_substep_samples": [
+        435,
+        558,
+        73,
+        124,
+        0
+      ],
+      "interval_hit_peak_n": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "2": {
+      "terminal": "ASCENT_WITH_COLLISION",
+      "sim_s": 15.600167274475098,
+      "foot_max_levels": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "last_levels": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "visited_treads": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "top_four": true,
+      "hold_s": 1.019999623298645,
+      "bad_force": 0.0,
+      "arm_error_rad": 0.0008555855019949377,
+      "overflow": 0,
+      "original_goal": true,
+      "clean": false,
+      "first_hit_tick": 50,
+      "peak_n_by_foot_and_nonfoot": [
+        153.89292907714844,
+        107.31753540039062,
+        92.67800903320312,
+        65.720947265625,
+        0.0
+      ],
+      "impulse_ns_by_foot_and_nonfoot": [
+        59.46269226074219,
+        68.1393814086914,
+        4.416471004486084,
+        10.607065200805664,
+        0.0
+      ],
+      "hit_contact_substep_samples": [
+        752,
+        1212,
+        42,
+        171,
+        0
+      ],
+      "interval_hit_peak_n": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "12": {
+      "terminal": "ASCENT_WITH_COLLISION",
+      "sim_s": 15.600167274475098,
+      "foot_max_levels": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "last_levels": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "visited_treads": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "top_four": true,
+      "hold_s": 1.019999623298645,
+      "bad_force": 0.0,
+      "arm_error_rad": 0.0009720220696181059,
+      "overflow": 0,
+      "original_goal": true,
+      "clean": false,
+      "first_hit_tick": 67,
+      "peak_n_by_foot_and_nonfoot": [
+        137.4810333251953,
+        130.49368286132812,
+        90.78340911865234,
+        72.96473693847656,
+        0.0
+      ],
+      "impulse_ns_by_foot_and_nonfoot": [
+        51.992862701416016,
+        68.4632339477539,
+        2.7214157581329346,
+        9.81148910522461,
+        0.0
+      ],
+      "hit_contact_substep_samples": [
+        712,
+        1114,
+        29,
+        163,
+        0
+      ],
+      "interval_hit_peak_n": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "5": {
+      "terminal": "ASCENT_WITH_COLLISION",
+      "sim_s": 15.680169105529785,
+      "foot_max_levels": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "last_levels": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "visited_treads": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "top_four": true,
+      "hold_s": 1.019999623298645,
+      "bad_force": 0.0,
+      "arm_error_rad": 0.001561553799547255,
+      "overflow": 0,
+      "original_goal": true,
+      "clean": false,
+      "first_hit_tick": 69,
+      "peak_n_by_foot_and_nonfoot": [
+        145.6714630126953,
+        91.21088409423828,
+        58.21430969238281,
+        117.94563293457031,
+        0.0
+      ],
+      "impulse_ns_by_foot_and_nonfoot": [
+        44.237884521484375,
+        42.15896987915039,
+        3.3595900535583496,
+        7.086835861206055,
+        0.0
+      ],
+      "hit_contact_substep_samples": [
+        608,
+        681,
+        90,
+        101,
+        0
+      ],
+      "interval_hit_peak_n": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "17": {
+      "terminal": "ASCENT_WITH_COLLISION",
+      "sim_s": 15.800171852111816,
+      "foot_max_levels": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "last_levels": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "visited_treads": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "top_four": true,
+      "hold_s": 1.019999623298645,
+      "bad_force": 0.0,
+      "arm_error_rad": 0.0006975764408707619,
+      "overflow": 0,
+      "original_goal": true,
+      "clean": false,
+      "first_hit_tick": 69,
+      "peak_n_by_foot_and_nonfoot": [
+        108.83052062988281,
+        83.98090362548828,
+        116.05158233642578,
+        76.05029296875,
+        0.0
+      ],
+      "impulse_ns_by_foot_and_nonfoot": [
+        47.56230545043945,
+        61.986053466796875,
+        3.0352277755737305,
+        9.31256103515625,
+        0.0
+      ],
+      "hit_contact_substep_samples": [
+        647,
+        1119,
+        24,
+        154,
+        0
+      ],
+      "interval_hit_peak_n": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "14": {
+      "terminal": "ASCENT_WITH_COLLISION",
+      "sim_s": 15.800171852111816,
+      "foot_max_levels": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "last_levels": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "visited_treads": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "top_four": true,
+      "hold_s": 1.019999623298645,
+      "bad_force": 0.0,
+      "arm_error_rad": 0.0007209451287053525,
+      "overflow": 0,
+      "original_goal": true,
+      "clean": false,
+      "first_hit_tick": 56,
+      "peak_n_by_foot_and_nonfoot": [
+        113.72100067138672,
+        109.06278991699219,
+        97.16793823242188,
+        73.42414093017578,
+        0.0
+      ],
+      "impulse_ns_by_foot_and_nonfoot": [
+        70.88011169433594,
+        80.66320037841797,
+        4.294726848602295,
+        9.563957214355469,
+        0.0
+      ],
+      "hit_contact_substep_samples": [
+        807,
+        1265,
+        38,
+        160,
+        0
+      ],
+      "interval_hit_peak_n": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "4": {
+      "terminal": "ASCENT_WITH_COLLISION",
+      "sim_s": 15.900174140930176,
+      "foot_max_levels": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "last_levels": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "visited_treads": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "top_four": true,
+      "hold_s": 1.019999623298645,
+      "bad_force": 0.0,
+      "arm_error_rad": 0.0012602421920746565,
+      "overflow": 0,
+      "original_goal": true,
+      "clean": false,
+      "first_hit_tick": 68,
+      "peak_n_by_foot_and_nonfoot": [
+        170.3091278076172,
+        85.46517181396484,
+        112.08540344238281,
+        74.9088134765625,
+        0.0
+      ],
+      "impulse_ns_by_foot_and_nonfoot": [
+        45.66413879394531,
+        53.112518310546875,
+        6.329692840576172,
+        10.696736335754395,
+        0.0
+      ],
+      "hit_contact_substep_samples": [
+        603,
+        900,
+        52,
+        178,
+        0
+      ],
+      "interval_hit_peak_n": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "0": {
+      "terminal": "ASCENT_WITH_COLLISION",
+      "sim_s": 16.100177764892578,
+      "foot_max_levels": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "last_levels": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "visited_treads": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "top_four": true,
+      "hold_s": 1.019999623298645,
+      "bad_force": 0.0,
+      "arm_error_rad": 0.0009844353189691901,
+      "overflow": 0,
+      "original_goal": true,
+      "clean": false,
+      "first_hit_tick": 104,
+      "peak_n_by_foot_and_nonfoot": [
+        215.3634796142578,
+        90.59751892089844,
+        121.64459228515625,
+        82.87145233154297,
+        0.0
+      ],
+      "impulse_ns_by_foot_and_nonfoot": [
+        35.841026306152344,
+        65.8760986328125,
+        8.462149620056152,
+        7.089984893798828,
+        0.0
+      ],
+      "hit_contact_substep_samples": [
+        452,
+        986,
+        110,
+        108,
+        0
+      ],
+      "interval_hit_peak_n": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "18": {
+      "terminal": "ASCENT_WITH_COLLISION",
+      "sim_s": 16.140178680419922,
+      "foot_max_levels": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "last_levels": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "visited_treads": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "top_four": true,
+      "hold_s": 1.019999623298645,
+      "bad_force": 0.0,
+      "arm_error_rad": 0.00042892267811112106,
+      "overflow": 0,
+      "original_goal": true,
+      "clean": false,
+      "first_hit_tick": 85,
+      "peak_n_by_foot_and_nonfoot": [
+        232.1820526123047,
+        109.58511352539062,
+        67.21483612060547,
+        67.26979064941406,
+        0.0
+      ],
+      "impulse_ns_by_foot_and_nonfoot": [
+        42.83589172363281,
+        70.67967987060547,
+        1.3967629671096802,
+        5.041640281677246,
+        0.0
+      ],
+      "hit_contact_substep_samples": [
+        501,
+        987,
+        16,
+        83,
+        0
+      ],
+      "interval_hit_peak_n": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "21": {
+      "terminal": "ASCENT_WITH_COLLISION",
+      "sim_s": 16.32018280029297,
+      "foot_max_levels": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "last_levels": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "visited_treads": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "top_four": true,
+      "hold_s": 1.019999623298645,
+      "bad_force": 0.0,
+      "arm_error_rad": 0.0013971002772450447,
+      "overflow": 0,
+      "original_goal": true,
+      "clean": false,
+      "first_hit_tick": 84,
+      "peak_n_by_foot_and_nonfoot": [
+        198.42922973632812,
+        111.58167266845703,
+        86.53640747070312,
+        63.99903869628906,
+        0.0
+      ],
+      "impulse_ns_by_foot_and_nonfoot": [
+        57.64734649658203,
+        106.38824462890625,
+        3.845179319381714,
+        8.623028755187988,
+        0.0
+      ],
+      "hit_contact_substep_samples": [
+        755,
+        1252,
+        37,
+        166,
+        0
+      ],
+      "interval_hit_peak_n": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "16": {
+      "terminal": "ASCENT_WITH_COLLISION",
+      "sim_s": 16.420185089111328,
+      "foot_max_levels": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "last_levels": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "visited_treads": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "top_four": true,
+      "hold_s": 1.019999623298645,
+      "bad_force": 0.0,
+      "arm_error_rad": 0.00090755958808586,
+      "overflow": 0,
+      "original_goal": true,
+      "clean": false,
+      "first_hit_tick": 85,
+      "peak_n_by_foot_and_nonfoot": [
+        148.925537109375,
+        112.7137680053711,
+        111.49069213867188,
+        71.62750244140625,
+        0.0
+      ],
+      "impulse_ns_by_foot_and_nonfoot": [
+        77.06553649902344,
+        103.47600555419922,
+        9.548664093017578,
+        9.966484069824219,
+        0.0
+      ],
+      "hit_contact_substep_samples": [
+        947,
+        1406,
+        142,
+        171,
+        0
+      ],
+      "interval_hit_peak_n": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "20": {
+      "terminal": "ASCENT_WITH_COLLISION",
+      "sim_s": 16.420185089111328,
+      "foot_max_levels": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "last_levels": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "visited_treads": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "top_four": true,
+      "hold_s": 1.019999623298645,
+      "bad_force": 0.0,
+      "arm_error_rad": 0.0007244542357511818,
+      "overflow": 0,
+      "original_goal": true,
+      "clean": false,
+      "first_hit_tick": 84,
+      "peak_n_by_foot_and_nonfoot": [
+        139.61114501953125,
+        139.94403076171875,
+        94.72159576416016,
+        74.64259338378906,
+        0.0
+      ],
+      "impulse_ns_by_foot_and_nonfoot": [
+        52.31247329711914,
+        88.97688293457031,
+        6.949497699737549,
+        11.31023120880127,
+        0.0
+      ],
+      "hit_contact_substep_samples": [
+        676,
+        1274,
+        94,
+        177,
+        0
+      ],
+      "interval_hit_peak_n": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "8": {
+      "terminal": "ASCENT_WITH_COLLISION",
+      "sim_s": 16.600189208984375,
+      "foot_max_levels": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "last_levels": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "visited_treads": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "top_four": true,
+      "hold_s": 1.019999623298645,
+      "bad_force": 0.0,
+      "arm_error_rad": 0.0006892108358442783,
+      "overflow": 0,
+      "original_goal": true,
+      "clean": false,
+      "first_hit_tick": 84,
+      "peak_n_by_foot_and_nonfoot": [
+        247.2703399658203,
+        88.33203887939453,
+        112.40235137939453,
+        76.37996673583984,
+        0.0
+      ],
+      "impulse_ns_by_foot_and_nonfoot": [
+        70.27296447753906,
+        67.9505386352539,
+        8.886035919189453,
+        8.598881721496582,
+        0.0
+      ],
+      "hit_contact_substep_samples": [
+        762,
+        1076,
+        78,
+        154,
+        0
+      ],
+      "interval_hit_peak_n": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "11": {
+      "terminal": "ASCENT_WITH_COLLISION",
+      "sim_s": 16.840194702148438,
+      "foot_max_levels": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "last_levels": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "visited_treads": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "top_four": true,
+      "hold_s": 1.019999623298645,
+      "bad_force": 0.0,
+      "arm_error_rad": 0.00038198093534447253,
+      "overflow": 0,
+      "original_goal": true,
+      "clean": false,
+      "first_hit_tick": 71,
+      "peak_n_by_foot_and_nonfoot": [
+        138.8643341064453,
+        124.02836608886719,
+        92.82206726074219,
+        103.92623138427734,
+        0.0
+      ],
+      "impulse_ns_by_foot_and_nonfoot": [
+        48.734657287597656,
+        63.136024475097656,
+        3.510709285736084,
+        11.179692268371582,
+        0.0
+      ],
+      "hit_contact_substep_samples": [
+        644,
+        865,
+        58,
+        165,
+        0
+      ],
+      "interval_hit_peak_n": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "23": {
+      "terminal": "ASCENT_WITH_COLLISION",
+      "sim_s": 16.840194702148438,
+      "foot_max_levels": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "last_levels": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "visited_treads": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "top_four": true,
+      "hold_s": 1.019999623298645,
+      "bad_force": 0.0,
+      "arm_error_rad": 0.00037535690353251994,
+      "overflow": 0,
+      "original_goal": true,
+      "clean": false,
+      "first_hit_tick": 88,
+      "peak_n_by_foot_and_nonfoot": [
+        151.10418701171875,
+        87.83468627929688,
+        102.80290985107422,
+        125.77777862548828,
+        0.0
+      ],
+      "impulse_ns_by_foot_and_nonfoot": [
+        84.34445190429688,
+        70.03113555908203,
+        8.80907154083252,
+        12.52966594696045,
+        0.0
+      ],
+      "hit_contact_substep_samples": [
+        771,
+        1233,
+        78,
+        193,
+        0
+      ],
+      "interval_hit_peak_n": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "3": {
+      "terminal": "ASCENT_WITH_COLLISION",
+      "sim_s": 17.60021209716797,
+      "foot_max_levels": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "last_levels": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "visited_treads": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "top_four": true,
+      "hold_s": 1.019999623298645,
+      "bad_force": 0.0,
+      "arm_error_rad": 0.0012818308314308524,
+      "overflow": 0,
+      "original_goal": true,
+      "clean": false,
+      "first_hit_tick": 70,
+      "peak_n_by_foot_and_nonfoot": [
+        119.23078155517578,
+        98.70497131347656,
+        61.21650695800781,
+        72.3104248046875,
+        0.0
+      ],
+      "impulse_ns_by_foot_and_nonfoot": [
+        61.62094497680664,
+        74.5250015258789,
+        0.3237544596195221,
+        9.946040153503418,
+        0.0
+      ],
+      "hit_contact_substep_samples": [
+        745,
+        1016,
+        3,
+        155,
+        0
+      ],
+      "interval_hit_peak_n": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "9": {
+      "terminal": "ASCENT_WITH_COLLISION",
+      "sim_s": 19.060245513916016,
+      "foot_max_levels": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "last_levels": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "visited_treads": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "top_four": true,
+      "hold_s": 1.019999623298645,
+      "bad_force": 0.0,
+      "arm_error_rad": 0.0013739116257056594,
+      "overflow": 0,
+      "original_goal": true,
+      "clean": false,
+      "first_hit_tick": 103,
+      "peak_n_by_foot_and_nonfoot": [
+        181.3762969970703,
+        101.39447021484375,
+        90.91827392578125,
+        83.39401245117188,
+        0.0
+      ],
+      "impulse_ns_by_foot_and_nonfoot": [
+        35.75719451904297,
+        77.18634033203125,
+        3.6449005603790283,
+        6.693881034851074,
+        0.0
+      ],
+      "hit_contact_substep_samples": [
+        477,
+        1152,
+        35,
+        91,
+        0
+      ],
+      "interval_hit_peak_n": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "15": {
+      "terminal": "ASCENT_WITH_COLLISION",
+      "sim_s": 19.720260620117188,
+      "foot_max_levels": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "last_levels": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "visited_treads": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "top_four": true,
+      "hold_s": 1.019999623298645,
+      "bad_force": 0.0,
+      "arm_error_rad": 0.0020328217651695013,
+      "overflow": 0,
+      "original_goal": true,
+      "clean": false,
+      "first_hit_tick": 97,
+      "peak_n_by_foot_and_nonfoot": [
+        190.00311279296875,
+        152.307861328125,
+        146.40538024902344,
+        67.20582580566406,
+        0.0
+      ],
+      "impulse_ns_by_foot_and_nonfoot": [
+        52.34049606323242,
+        84.08033752441406,
+        1.4512337446212769,
+        9.25767707824707,
+        0.0
+      ],
+      "hit_contact_substep_samples": [
+        754,
+        1292,
+        13,
+        153,
+        0
+      ],
+      "interval_hit_peak_n": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "10": {
+      "terminal": "TIMEOUT",
+      "sim_s": 22.00031280517578,
+      "foot_max_levels": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "last_levels": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "visited_treads": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "top_four": true,
+      "hold_s": 0.019999999552965164,
+      "bad_force": 0.0,
+      "arm_error_rad": 0.003623813157901168,
+      "overflow": 0,
+      "original_goal": false,
+      "clean": false,
+      "first_hit_tick": 57,
+      "peak_n_by_foot_and_nonfoot": [
+        197.20803833007812,
+        75.31851196289062,
+        120.75093841552734,
+        76.12791442871094,
+        0.0
+      ],
+      "impulse_ns_by_foot_and_nonfoot": [
+        27.303552627563477,
+        32.90024948120117,
+        2.0105342864990234,
+        16.805879592895508,
+        0.0
+      ],
+      "hit_contact_substep_samples": [
+        294,
+        651,
+        18,
+        234,
+        0
+      ],
+      "interval_hit_peak_n": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "22": {
+      "terminal": "TIMEOUT",
+      "sim_s": 22.00031280517578,
+      "foot_max_levels": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "last_levels": [
+        0,
+        6,
+        6,
+        6
+      ],
+      "visited_treads": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "top_four": false,
+      "hold_s": 0.0,
+      "bad_force": 0.0,
+      "arm_error_rad": 0.0020194146782159805,
+      "overflow": 0,
+      "original_goal": false,
+      "clean": false,
+      "first_hit_tick": 85,
+      "peak_n_by_foot_and_nonfoot": [
+        133.49984741210938,
+        100.42903137207031,
+        52.88898849487305,
+        119.5678482055664,
+        0.0
+      ],
+      "impulse_ns_by_foot_and_nonfoot": [
+        40.92298889160156,
+        70.77079010009766,
+        0.2863175868988037,
+        11.877970695495605,
+        0.0
+      ],
+      "hit_contact_substep_samples": [
+        474,
+        1128,
+        3,
+        153,
+        0
+      ],
+      "interval_hit_peak_n": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "7": {
+      "terminal": "TIMEOUT",
+      "sim_s": 22.00031280517578,
+      "foot_max_levels": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "last_levels": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "visited_treads": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "top_four": true,
+      "hold_s": 0.46000006794929504,
+      "bad_force": 0.0,
+      "arm_error_rad": 0.0016123759560286999,
+      "overflow": 0,
+      "original_goal": false,
+      "clean": false,
+      "first_hit_tick": 46,
+      "peak_n_by_foot_and_nonfoot": [
+        161.24705505371094,
+        108.93960571289062,
+        104.38227081298828,
+        95.54286193847656,
+        0.0
+      ],
+      "impulse_ns_by_foot_and_nonfoot": [
+        35.006351470947266,
+        35.030784606933594,
+        6.583362579345703,
+        13.770655632019043,
+        0.0
+      ],
+      "hit_contact_substep_samples": [
+        437,
+        601,
+        84,
+        205,
+        0
+      ],
+      "interval_hit_peak_n": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "strict": 0,
+  "n": 24
+}

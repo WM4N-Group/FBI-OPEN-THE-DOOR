@@ -1,0 +1,78 @@
+{
+  "scope": "same-world FBI NAV50100 -> 10 cm stair candidate; verification only, no training/deployment",
+  "nav_sha256": "f4b874027bea26f801876936d0dbac22491dd7b0de66ab0dd4b968b580a6ad14",
+  "stairs_sha256": "2e5c3ffb59592beba4718eb72c680ff6f20f6518040a27e479a309ba837d799b",
+  "geometry_m": {
+    "rise": 0.1,
+    "tread": 0.28,
+    "width": 1.2,
+    "nav_goal_x": -0.6,
+    "stairs_goal_x": 2.73
+  },
+  "cases": [
+    [
+      -1.724947985296551,
+      0.057450131982089425,
+      -0.14827255215959453,
+      0.762694246096683,
+      2.73
+    ],
+    [
+      -1.4130684397046636,
+      -0.14390476731372479,
+      0.1530754411383326,
+      0.7528847709444731,
+      2.73
+    ],
+    [
+      -1.7091874167129346,
+      0.1316381184449609,
+      0.14954086567364067,
+      0.8319294547466416,
+      2.73
+    ],
+    [
+      -1.4211611138587057,
+      -0.026025034941678613,
+      0.024966823040165037,
+      0.7383820119054437,
+      2.73
+    ],
+    [
+      -1.47267129447086,
+      0.10668349431096183,
+      -0.005321220421532991,
+      0.7282193553530492,
+      2.73
+    ],
+    [
+      -1.5206950241900654,
+      0.12324356973643749,
+      -0.07440575962667667,
+      0.8848829766453284,
+      2.73
+    ],
+    [
+      -1.567858578713357,
+      0.047763111741438324,
+      -0.0069835375646112585,
+      0.7816799399769413,
+      2.73
+    ],
+    [
+      -1.7334791079902425,
+      0.0594259223074618,
+      -0.159105148178319,
+      0.723746308859344,
+      2.73
+    ]
+  ],
+  "original_nav_hold_s": 1.0,
+  "video_index": 0,
+  "policy_dt_s": 0.02,
+  "physics_dt_s": 0.002,
+  "release_policy": "NAV original success (without solver flags) and own measured current four feet on ground; global solver state and histories preserved. Strict no-collision stairs completion required; no TOP NAV dispatch in this diagnostic.",
+  "not_target_17cm": true,
+  "original_noriser_standalone_strict": "0/24",
+  "stairs_checkpoint_file": "stair/stair-rise10-contact-gpu1.pt"
+}

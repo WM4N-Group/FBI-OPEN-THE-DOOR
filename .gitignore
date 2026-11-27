@@ -31,3 +31,11 @@ hardware/runtime/
 
 .DS_Store
 Thumbs.db
+
+# Generated stair runtime (use fresh directories outside the repository)
+/skills/stair/fbi_nav.xml
+/skills/stair/model.json
+/skills/stair/case[0-9][0-9]/
+/skills/stair/results.json
+/skills/stair/delivery.json
+/skills/stair/resources.txt

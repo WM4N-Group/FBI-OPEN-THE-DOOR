@@ -1,0 +1,1617 @@
+{
+  "weights": "649b7c4a754291333e3b5d87265135980557b0eae50b8705fc881932f95a0200",
+  "cases": [
+    [
+      -0.7565911189044539,
+      0.16400130785382055,
+      0.12978720412780495,
+      0.6401989728213281,
+      2.6745347447221226
+    ],
+    [
+      -0.6738776704846531,
+      0.09831169448062693,
+      0.12729104743681594,
+      0.7079661224845611,
+      2.6757342121227135
+    ],
+    [
+      -0.49237576520605875,
+      -0.08848542966977906,
+      -0.06544204112991824,
+      0.6518059100298099,
+      2.675677813608419
+    ],
+    [
+      -0.6213252402927514,
+      -0.0437262237247755,
+      -0.06508791868671357,
+      0.8201913585428497,
+      2.7375229888081365
+    ],
+    [
+      -0.5631349459548113,
+      -0.17013596857176294,
+      -0.005893295463050202,
+      0.6168426370297341,
+      2.7485450937196374
+    ],
+    [
+      -0.560499391527354,
+      0.1551341428375983,
+      0.08495183102385465,
+      0.6823244763626043,
+      2.7286160128609507
+    ],
+    [
+      -0.6305084614788132,
+      0.08524574316176187,
+      0.11645905750114618,
+      0.606399602540083,
+      2.6580389607580743
+    ],
+    [
+      -0.45206360885682745,
+      -0.1469335058638938,
+      0.12386438832811816,
+      0.6802958198785902,
+      2.7828318816779656
+    ],
+    [
+      -0.6694948805341172,
+      0.10766448491186242,
+      -0.1344041886271827,
+      0.8365759696656784,
+      2.753355173932497
+    ],
+    [
+      -0.779542458156025,
+      0.07863510576856142,
+      -0.11048202364514358,
+      0.8632825598695233,
+      2.7403639928914494
+    ],
+    [
+      -0.5364973466365802,
+      0.06099504817064719,
+      0.11226960410658601,
+      0.6301860856576668,
+      2.660028031669331
+    ],
+    [
+      -0.5996643931252905,
+      0.05627661820508251,
+      0.017871799770486113,
+      0.8030207683105944,
+      2.806676936761516
+    ],
+    [
+      -0.5449056657636538,
+      -0.12390135413494172,
+      -0.05398119355399841,
+      0.6284834279734507,
+      2.6835388685964667
+    ],
+    [
+      -0.6082643136713666,
+      0.02118544191549057,
+      -0.11688479854307787,
+      0.6812416781078504,
+      2.761956737582086
+    ],
+    [
+      -0.5209952384540899,
+      -0.022313240455476252,
+      -0.03785039320365646,
+      0.8952677800258486,
+      2.79794566484362
+    ],
+    [
+      -0.7362719139479978,
+      -0.09066456843813071,
+      0.010739781876543092,
+      0.7385678958853248,
+      2.7028904898999366
+    ],
+    [
+      -0.6809130975386197,
+      0.0481263616113049,
+      0.03762417743038024,
+      0.8092071395253502,
+      2.7383244474254744
+    ],
+    [
+      -0.5678518821710496,
+      -0.024763706551511666,
+      0.1076228545015219,
+      0.6009562221337926,
+      2.7801949144227267
+    ],
+    [
+      -0.6873055478513148,
+      0.06668645445833482,
+      0.10977664513581589,
+      0.8513577164736099,
+      2.747830383821651
+    ],
+    [
+      -0.5671521655328802,
+      -0.060141815789452976,
+      0.018691063559173104,
+      0.7589444399987035,
+      2.720523501902619
+    ],
+    [
+      -0.6715837328356307,
+      0.16709025186143872,
+      0.038457006676934746,
+      0.6259616217809202,
+      2.715274973909953
+    ],
+    [
+      -0.6709490850914235,
+      -0.09355987486236209,
+      -0.0070049714868700985,
+      0.8943666266120773,
+      2.665066766789368
+    ],
+    [
+      -0.6896814827679836,
+      -0.15668480010744779,
+      -0.011030208998810964,
+      0.7584769616749791,
+      2.7479016055551884
+    ],
+    [
+      -0.7193834991346961,
+      0.1040754948883355,
+      -0.08916806869747074,
+      0.7825662819081622,
+      2.714090693891007
+    ]
+  ],
+  "results": {
+    "7": {
+      "terminal": "PROTECTION",
+      "sim_s": 1.4799991846084595,
+      "foot_max_levels": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "last_levels": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "visited_treads": [
+        true,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "top_four": false,
+      "hold_s": 0.0,
+      "bad_force": 17.564409255981445,
+      "arm_error_rad": 0.007666132878512144,
+      "overflow": 0,
+      "original_goal": false,
+      "clean": false,
+      "first_hit_tick": 47,
+      "peak_n_by_foot_and_nonfoot": [
+        107.92877197265625,
+        52.275386810302734,
+        0.0,
+        0.0,
+        17.564409255981445
+      ],
+      "impulse_ns_by_foot_and_nonfoot": [
+        4.260220527648926,
+        3.543247699737549,
+        0.0,
+        0.0,
+        0.2938999533653259
+      ],
+      "hit_contact_substep_samples": [
+        44,
+        96,
+        0,
+        0,
+        10
+      ],
+      "interval_hit_peak_n": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        17.564409255981445
+      ]
+    },
+    "11": {
+      "terminal": "PROTECTION",
+      "sim_s": 2.159998655319214,
+      "foot_max_levels": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "last_levels": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "visited_treads": [
+        true,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "top_four": false,
+      "hold_s": 0.0,
+      "bad_force": 56.064430236816406,
+      "arm_error_rad": 0.022828588262200356,
+      "overflow": 0,
+      "original_goal": false,
+      "clean": false,
+      "first_hit_tick": 71,
+      "peak_n_by_foot_and_nonfoot": [
+        62.69426345825195,
+        65.95743560791016,
+        0.0,
+        0.0,
+        56.064430236816406
+      ],
+      "impulse_ns_by_foot_and_nonfoot": [
+        2.4927375316619873,
+        5.164793968200684,
+        0.0,
+        0.0,
+        0.5533592700958252
+      ],
+      "hit_contact_substep_samples": [
+        33,
+        92,
+        0,
+        0,
+        6
+      ],
+      "interval_hit_peak_n": [
+        0.0,
+        13.741717338562012,
+        0.0,
+        0.0,
+        56.064430236816406
+      ]
+    },
+    "4": {
+      "terminal": "PROTECTION",
+      "sim_s": 2.159998655319214,
+      "foot_max_levels": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "last_levels": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "visited_treads": [
+        true,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "top_four": false,
+      "hold_s": 0.0,
+      "bad_force": 31.408803939819336,
+      "arm_error_rad": 0.015432991087436676,
+      "overflow": 0,
+      "original_goal": false,
+      "clean": false,
+      "first_hit_tick": 68,
+      "peak_n_by_foot_and_nonfoot": [
+        89.39551544189453,
+        80.17029571533203,
+        0.0,
+        0.0,
+        31.408803939819336
+      ],
+      "impulse_ns_by_foot_and_nonfoot": [
+        8.11512565612793,
+        15.492319107055664,
+        0.0,
+        0.0,
+        0.5422122478485107
+      ],
+      "hit_contact_substep_samples": [
+        87,
+        229,
+        0,
+        0,
+        9
+      ],
+      "interval_hit_peak_n": [
+        0.0,
+        27.730918884277344,
+        0.0,
+        0.0,
+        31.408803939819336
+      ]
+    },
+    "6": {
+      "terminal": "PROTECTION",
+      "sim_s": 2.219998598098755,
+      "foot_max_levels": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "last_levels": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "visited_treads": [
+        true,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "top_four": false,
+      "hold_s": 0.0,
+      "bad_force": 11.254414558410645,
+      "arm_error_rad": 0.006219861563295126,
+      "overflow": 0,
+      "original_goal": false,
+      "clean": false,
+      "first_hit_tick": 83,
+      "peak_n_by_foot_and_nonfoot": [
+        93.6517562866211,
+        52.898658752441406,
+        0.0,
+        0.0,
+        11.254414558410645
+      ],
+      "impulse_ns_by_foot_and_nonfoot": [
+        3.385922908782959,
+        3.4839093685150146,
+        0.0,
+        0.0,
+        0.0808289423584938
+      ],
+      "hit_contact_substep_samples": [
+        40,
+        107,
+        0,
+        0,
+        4
+      ],
+      "interval_hit_peak_n": [
+        0.0,
+        5.994697570800781,
+        0.0,
+        0.0,
+        11.254414558410645
+      ]
+    },
+    "9": {
+      "terminal": "PROTECTION",
+      "sim_s": 2.8999979496002197,
+      "foot_max_levels": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "last_levels": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "visited_treads": [
+        true,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "top_four": false,
+      "hold_s": 0.0,
+      "bad_force": 23.55408477783203,
+      "arm_error_rad": 0.013969057239592075,
+      "overflow": 0,
+      "original_goal": false,
+      "clean": false,
+      "first_hit_tick": 104,
+      "peak_n_by_foot_and_nonfoot": [
+        108.65968322753906,
+        43.44004821777344,
+        0.0,
+        0.0,
+        23.55408477783203
+      ],
+      "impulse_ns_by_foot_and_nonfoot": [
+        13.496940612792969,
+        3.9623870849609375,
+        0.0,
+        0.0,
+        0.18025684356689453
+      ],
+      "hit_contact_substep_samples": [
+        105,
+        64,
+        0,
+        0,
+        4
+      ],
+      "interval_hit_peak_n": [
+        0.0,
+        41.7961540222168,
+        0.0,
+        0.0,
+        23.55408477783203
+      ]
+    },
+    "13": {
+      "terminal": "PROTECTION",
+      "sim_s": 3.5999972820281982,
+      "foot_max_levels": [
+        2,
+        1,
+        1,
+        1
+      ],
+      "last_levels": [
+        0,
+        1,
+        1,
+        1
+      ],
+      "visited_treads": [
+        true,
+        true,
+        false,
+        false,
+        false,
+        false
+      ],
+      "top_four": false,
+      "hold_s": 0.0,
+      "bad_force": 9.819601058959961,
+      "arm_error_rad": 0.014500822871923447,
+      "overflow": 0,
+      "original_goal": false,
+      "clean": false,
+      "first_hit_tick": 69,
+      "peak_n_by_foot_and_nonfoot": [
+        131.76710510253906,
+        89.86665344238281,
+        0.0,
+        0.0,
+        9.819601058959961
+      ],
+      "impulse_ns_by_foot_and_nonfoot": [
+        4.485240459442139,
+        27.182382583618164,
+        0.0,
+        0.0,
+        0.03874874860048294
+      ],
+      "hit_contact_substep_samples": [
+        52,
+        427,
+        0,
+        0,
+        2
+      ],
+      "interval_hit_peak_n": [
+        0.0,
+        33.536041259765625,
+        0.0,
+        0.0,
+        9.819601058959961
+      ]
+    },
+    "5": {
+      "terminal": "PROTECTION",
+      "sim_s": 5.039996147155762,
+      "foot_max_levels": [
+        3,
+        2,
+        2,
+        2
+      ],
+      "last_levels": [
+        3,
+        2,
+        2,
+        2
+      ],
+      "visited_treads": [
+        true,
+        true,
+        true,
+        false,
+        false,
+        false
+      ],
+      "top_four": false,
+      "hold_s": 0.0,
+      "bad_force": 51.70364761352539,
+      "arm_error_rad": 0.008981580846011639,
+      "overflow": 0,
+      "original_goal": false,
+      "clean": false,
+      "first_hit_tick": 69,
+      "peak_n_by_foot_and_nonfoot": [
+        113.4739761352539,
+        76.51718139648438,
+        152.32977294921875,
+        45.39280319213867,
+        51.70364761352539
+      ],
+      "impulse_ns_by_foot_and_nonfoot": [
+        5.22509241104126,
+        3.4765329360961914,
+        1.6344372034072876,
+        0.416312575340271,
+        0.8325937390327454
+      ],
+      "hit_contact_substep_samples": [
+        78,
+        41,
+        11,
+        6,
+        10
+      ],
+      "interval_hit_peak_n": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        51.70364761352539
+      ]
+    },
+    "14": {
+      "terminal": "PROTECTION",
+      "sim_s": 5.079996109008789,
+      "foot_max_levels": [
+        3,
+        2,
+        2,
+        2
+      ],
+      "last_levels": [
+        3,
+        0,
+        2,
+        2
+      ],
+      "visited_treads": [
+        true,
+        true,
+        true,
+        false,
+        false,
+        false
+      ],
+      "top_four": false,
+      "hold_s": 0.0,
+      "bad_force": 53.81695556640625,
+      "arm_error_rad": 0.012999803759157658,
+      "overflow": 0,
+      "original_goal": false,
+      "clean": false,
+      "first_hit_tick": 65,
+      "peak_n_by_foot_and_nonfoot": [
+        120.6490707397461,
+        64.01371765136719,
+        160.17169189453125,
+        0.0,
+        53.81695556640625
+      ],
+      "impulse_ns_by_foot_and_nonfoot": [
+        3.724421739578247,
+        3.075162172317505,
+        4.184167385101318,
+        0.0,
+        0.28427770733833313
+      ],
+      "hit_contact_substep_samples": [
+        46,
+        66,
+        24,
+        0,
+        3
+      ],
+      "interval_hit_peak_n": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        53.81695556640625
+      ]
+    },
+    "23": {
+      "terminal": "PROTECTION",
+      "sim_s": 5.679995536804199,
+      "foot_max_levels": [
+        3,
+        2,
+        2,
+        2
+      ],
+      "last_levels": [
+        0,
+        2,
+        2,
+        0
+      ],
+      "visited_treads": [
+        true,
+        true,
+        true,
+        false,
+        false,
+        false
+      ],
+      "top_four": false,
+      "hold_s": 0.0,
+      "bad_force": 44.894248962402344,
+      "arm_error_rad": 0.011917089112102985,
+      "overflow": 0,
+      "original_goal": false,
+      "clean": false,
+      "first_hit_tick": 101,
+      "peak_n_by_foot_and_nonfoot": [
+        134.43763732910156,
+        46.900394439697266,
+        0.0,
+        0.0,
+        44.894248962402344
+      ],
+      "impulse_ns_by_foot_and_nonfoot": [
+        5.574967861175537,
+        5.862972736358643,
+        0.0,
+        0.0,
+        0.49481475353240967
+      ],
+      "hit_contact_substep_samples": [
+        57,
+        160,
+        0,
+        0,
+        7
+      ],
+      "interval_hit_peak_n": [
+        0.0,
+        39.74116897583008,
+        0.0,
+        0.0,
+        44.894248962402344
+      ]
+    },
+    "2": {
+      "terminal": "PROTECTION",
+      "sim_s": 6.159995079040527,
+      "foot_max_levels": [
+        4,
+        3,
+        2,
+        2
+      ],
+      "last_levels": [
+        4,
+        3,
+        0,
+        2
+      ],
+      "visited_treads": [
+        true,
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "top_four": false,
+      "hold_s": 0.0,
+      "bad_force": 96.34593963623047,
+      "arm_error_rad": 0.006429104134440422,
+      "overflow": 0,
+      "original_goal": false,
+      "clean": false,
+      "first_hit_tick": 63,
+      "peak_n_by_foot_and_nonfoot": [
+        170.36668395996094,
+        72.04132843017578,
+        0.0,
+        66.09162902832031,
+        96.34593963623047
+      ],
+      "impulse_ns_by_foot_and_nonfoot": [
+        15.161771774291992,
+        7.413804054260254,
+        0.0,
+        2.656298875808716,
+        1.0456217527389526
+      ],
+      "hit_contact_substep_samples": [
+        213,
+        157,
+        0,
+        34,
+        7
+      ],
+      "interval_hit_peak_n": [
+        0.0,
+        38.518001556396484,
+        0.0,
+        0.0,
+        96.34593963623047
+      ]
+    },
+    "10": {
+      "terminal": "PROTECTION",
+      "sim_s": 6.379994869232178,
+      "foot_max_levels": [
+        4,
+        3,
+        3,
+        3
+      ],
+      "last_levels": [
+        4,
+        3,
+        3,
+        3
+      ],
+      "visited_treads": [
+        true,
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "top_four": false,
+      "hold_s": 0.0,
+      "bad_force": 35.59552001953125,
+      "arm_error_rad": 0.012423060834407806,
+      "overflow": 0,
+      "original_goal": false,
+      "clean": false,
+      "first_hit_tick": 67,
+      "peak_n_by_foot_and_nonfoot": [
+        170.51519775390625,
+        49.28487014770508,
+        78.66539001464844,
+        54.90557861328125,
+        35.59552001953125
+      ],
+      "impulse_ns_by_foot_and_nonfoot": [
+        4.961308479309082,
+        2.9399218559265137,
+        0.8536086082458496,
+        1.2357784509658813,
+        0.1904035061597824
+      ],
+      "hit_contact_substep_samples": [
+        60,
+        66,
+        7,
+        18,
+        3
+      ],
+      "interval_hit_peak_n": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        35.59552001953125
+      ]
+    },
+    "20": {
+      "terminal": "PROTECTION",
+      "sim_s": 6.539994716644287,
+      "foot_max_levels": [
+        4,
+        3,
+        3,
+        3
+      ],
+      "last_levels": [
+        4,
+        0,
+        0,
+        3
+      ],
+      "visited_treads": [
+        true,
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "top_four": false,
+      "hold_s": 0.0,
+      "bad_force": 44.96457290649414,
+      "arm_error_rad": 0.018779505044221878,
+      "overflow": 0,
+      "original_goal": false,
+      "clean": false,
+      "first_hit_tick": 99,
+      "peak_n_by_foot_and_nonfoot": [
+        160.8761749267578,
+        68.3890151977539,
+        73.33696746826172,
+        62.187110900878906,
+        44.96457290649414
+      ],
+      "impulse_ns_by_foot_and_nonfoot": [
+        15.115832328796387,
+        19.731801986694336,
+        1.0024795532226562,
+        1.9067283868789673,
+        0.1754544973373413
+      ],
+      "hit_contact_substep_samples": [
+        125,
+        266,
+        10,
+        37,
+        2
+      ],
+      "interval_hit_peak_n": [
+        0.0,
+        56.75326156616211,
+        0.0,
+        0.0,
+        44.96457290649414
+      ]
+    },
+    "8": {
+      "terminal": "PROTECTION",
+      "sim_s": 6.859994411468506,
+      "foot_max_levels": [
+        4,
+        3,
+        3,
+        2
+      ],
+      "last_levels": [
+        4,
+        3,
+        3,
+        0
+      ],
+      "visited_treads": [
+        true,
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "top_four": false,
+      "hold_s": 0.0,
+      "bad_force": 49.63492965698242,
+      "arm_error_rad": 0.005226336419582367,
+      "overflow": 0,
+      "original_goal": false,
+      "clean": false,
+      "first_hit_tick": 98,
+      "peak_n_by_foot_and_nonfoot": [
+        188.6167755126953,
+        58.77043533325195,
+        45.85215759277344,
+        73.4869384765625,
+        49.63492965698242
+      ],
+      "impulse_ns_by_foot_and_nonfoot": [
+        12.86512279510498,
+        4.256326198577881,
+        0.1561494767665863,
+        5.212372779846191,
+        0.5466406345367432
+      ],
+      "hit_contact_substep_samples": [
+        125,
+        105,
+        2,
+        60,
+        7
+      ],
+      "interval_hit_peak_n": [
+        0.0,
+        28.403125762939453,
+        0.0,
+        0.0,
+        49.63492965698242
+      ]
+    },
+    "22": {
+      "terminal": "PROTECTION",
+      "sim_s": 7.139994144439697,
+      "foot_max_levels": [
+        4,
+        3,
+        3,
+        3
+      ],
+      "last_levels": [
+        4,
+        3,
+        3,
+        3
+      ],
+      "visited_treads": [
+        true,
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "top_four": false,
+      "hold_s": 0.0,
+      "bad_force": 19.592527389526367,
+      "arm_error_rad": 0.01068188901990652,
+      "overflow": 0,
+      "original_goal": false,
+      "clean": false,
+      "first_hit_tick": 100,
+      "peak_n_by_foot_and_nonfoot": [
+        124.96174621582031,
+        58.24831771850586,
+        72.56979370117188,
+        49.90483474731445,
+        19.592527389526367
+      ],
+      "impulse_ns_by_foot_and_nonfoot": [
+        7.235401153564453,
+        4.189925193786621,
+        1.0674865245819092,
+        1.4158862829208374,
+        0.07694028317928314
+      ],
+      "hit_contact_substep_samples": [
+        79,
+        86,
+        9,
+        22,
+        2
+      ],
+      "interval_hit_peak_n": [
+        0.0,
+        17.492412567138672,
+        0.0,
+        0.0,
+        19.592527389526367
+      ]
+    },
+    "1": {
+      "terminal": "PROTECTION",
+      "sim_s": 7.239994049072266,
+      "foot_max_levels": [
+        4,
+        3,
+        3,
+        3
+      ],
+      "last_levels": [
+        4,
+        0,
+        0,
+        3
+      ],
+      "visited_treads": [
+        true,
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "top_four": false,
+      "hold_s": 0.0,
+      "bad_force": 101.3476791381836,
+      "arm_error_rad": 0.013415844179689884,
+      "overflow": 0,
+      "original_goal": false,
+      "clean": false,
+      "first_hit_tick": 88,
+      "peak_n_by_foot_and_nonfoot": [
+        191.5534210205078,
+        68.41143798828125,
+        154.09051513671875,
+        66.92329406738281,
+        101.3476791381836
+      ],
+      "impulse_ns_by_foot_and_nonfoot": [
+        8.925642013549805,
+        20.772418975830078,
+        4.32242488861084,
+        2.053194284439087,
+        0.7259010672569275
+      ],
+      "hit_contact_substep_samples": [
+        99,
+        301,
+        33,
+        38,
+        4
+      ],
+      "interval_hit_peak_n": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        101.3476791381836
+      ]
+    },
+    "15": {
+      "terminal": "PROTECTION",
+      "sim_s": 7.239994049072266,
+      "foot_max_levels": [
+        4,
+        3,
+        3,
+        3
+      ],
+      "last_levels": [
+        4,
+        0,
+        0,
+        3
+      ],
+      "visited_treads": [
+        true,
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "top_four": false,
+      "hold_s": 0.0,
+      "bad_force": 66.1801986694336,
+      "arm_error_rad": 0.013383043929934502,
+      "overflow": 0,
+      "original_goal": false,
+      "clean": false,
+      "first_hit_tick": 103,
+      "peak_n_by_foot_and_nonfoot": [
+        223.36566162109375,
+        73.9171371459961,
+        116.74191284179688,
+        68.14641571044922,
+        66.1801986694336
+      ],
+      "impulse_ns_by_foot_and_nonfoot": [
+        10.565756797790527,
+        3.6517999172210693,
+        1.7296864986419678,
+        1.3876265287399292,
+        0.369773805141449
+      ],
+      "hit_contact_substep_samples": [
+        102,
+        63,
+        17,
+        24,
+        3
+      ],
+      "interval_hit_peak_n": [
+        0.0,
+        16.958660125732422,
+        0.0,
+        0.0,
+        66.1801986694336
+      ]
+    },
+    "12": {
+      "terminal": "PROTECTION",
+      "sim_s": 7.879993438720703,
+      "foot_max_levels": [
+        5,
+        4,
+        4,
+        4
+      ],
+      "last_levels": [
+        5,
+        4,
+        4,
+        4
+      ],
+      "visited_treads": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        false
+      ],
+      "top_four": false,
+      "hold_s": 0.0,
+      "bad_force": 29.969913482666016,
+      "arm_error_rad": 0.004195270594209433,
+      "overflow": 0,
+      "original_goal": false,
+      "clean": false,
+      "first_hit_tick": 66,
+      "peak_n_by_foot_and_nonfoot": [
+        156.7577667236328,
+        88.05432891845703,
+        76.44122314453125,
+        68.1740951538086,
+        29.969913482666016
+      ],
+      "impulse_ns_by_foot_and_nonfoot": [
+        12.52616024017334,
+        20.963726043701172,
+        1.2850687503814697,
+        0.1363482028245926,
+        0.40993231534957886
+      ],
+      "hit_contact_substep_samples": [
+        136,
+        303,
+        12,
+        1,
+        7
+      ],
+      "interval_hit_peak_n": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        29.969913482666016
+      ]
+    },
+    "16": {
+      "terminal": "PROTECTION",
+      "sim_s": 8.360001564025879,
+      "foot_max_levels": [
+        5,
+        4,
+        4,
+        3
+      ],
+      "last_levels": [
+        0,
+        4,
+        4,
+        3
+      ],
+      "visited_treads": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        false
+      ],
+      "top_four": false,
+      "hold_s": 0.0,
+      "bad_force": 46.934837341308594,
+      "arm_error_rad": 0.005981298163533211,
+      "overflow": 0,
+      "original_goal": false,
+      "clean": false,
+      "first_hit_tick": 100,
+      "peak_n_by_foot_and_nonfoot": [
+        185.85975646972656,
+        113.85050964355469,
+        117.92190551757812,
+        69.18376922607422,
+        46.934837341308594
+      ],
+      "impulse_ns_by_foot_and_nonfoot": [
+        8.490126609802246,
+        17.354076385498047,
+        1.7743663787841797,
+        2.467540979385376,
+        0.4562181830406189
+      ],
+      "hit_contact_substep_samples": [
+        91,
+        141,
+        14,
+        43,
+        6
+      ],
+      "interval_hit_peak_n": [
+        0.0,
+        106.86419677734375,
+        0.0,
+        0.0,
+        46.934837341308594
+      ]
+    },
+    "0": {
+      "terminal": "PROTECTION",
+      "sim_s": 9.060017585754395,
+      "foot_max_levels": [
+        5,
+        4,
+        4,
+        3
+      ],
+      "last_levels": [
+        0,
+        4,
+        4,
+        0
+      ],
+      "visited_treads": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        false
+      ],
+      "top_four": false,
+      "hold_s": 0.0,
+      "bad_force": 37.830814361572266,
+      "arm_error_rad": 0.008663877844810486,
+      "overflow": 0,
+      "original_goal": false,
+      "clean": false,
+      "first_hit_tick": 104,
+      "peak_n_by_foot_and_nonfoot": [
+        167.97230529785156,
+        86.20001220703125,
+        152.0775604248047,
+        60.66694259643555,
+        37.830814361572266
+      ],
+      "impulse_ns_by_foot_and_nonfoot": [
+        14.222533226013184,
+        19.937490463256836,
+        3.761962890625,
+        1.410172462463379,
+        0.42622098326683044
+      ],
+      "hit_contact_substep_samples": [
+        164,
+        293,
+        23,
+        19,
+        7
+      ],
+      "interval_hit_peak_n": [
+        0.0,
+        62.994354248046875,
+        0.0,
+        0.0,
+        37.830814361572266
+      ]
+    },
+    "3": {
+      "terminal": "ASCENT_WITH_COLLISION",
+      "sim_s": 17.0802001953125,
+      "foot_max_levels": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "last_levels": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "visited_treads": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "top_four": true,
+      "hold_s": 1.019999623298645,
+      "bad_force": 0.0,
+      "arm_error_rad": 0.0011272865813225508,
+      "overflow": 0,
+      "original_goal": true,
+      "clean": false,
+      "first_hit_tick": 84,
+      "peak_n_by_foot_and_nonfoot": [
+        272.97344970703125,
+        75.82306671142578,
+        110.61470794677734,
+        66.87647247314453,
+        0.0
+      ],
+      "impulse_ns_by_foot_and_nonfoot": [
+        28.655210494995117,
+        30.76194953918457,
+        4.443100929260254,
+        3.501095771789551,
+        0.0
+      ],
+      "hit_contact_substep_samples": [
+        303,
+        556,
+        39,
+        62,
+        0
+      ],
+      "interval_hit_peak_n": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "21": {
+      "terminal": "ASCENT_WITH_COLLISION",
+      "sim_s": 17.0802001953125,
+      "foot_max_levels": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "last_levels": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "visited_treads": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "top_four": true,
+      "hold_s": 1.019999623298645,
+      "bad_force": 0.0,
+      "arm_error_rad": 0.0011285438667982817,
+      "overflow": 0,
+      "original_goal": true,
+      "clean": false,
+      "first_hit_tick": 99,
+      "peak_n_by_foot_and_nonfoot": [
+        170.5199737548828,
+        66.52874755859375,
+        54.77838897705078,
+        77.60575103759766,
+        0.0
+      ],
+      "impulse_ns_by_foot_and_nonfoot": [
+        12.579524040222168,
+        4.6098737716674805,
+        0.36192259192466736,
+        4.621308326721191,
+        0.0
+      ],
+      "hit_contact_substep_samples": [
+        142,
+        95,
+        4,
+        77,
+        0
+      ],
+      "interval_hit_peak_n": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "17": {
+      "terminal": "ASCENT_WITH_COLLISION",
+      "sim_s": 17.140201568603516,
+      "foot_max_levels": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "last_levels": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "visited_treads": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "top_four": true,
+      "hold_s": 1.019999623298645,
+      "bad_force": 0.0,
+      "arm_error_rad": 0.0009345222497358918,
+      "overflow": 0,
+      "original_goal": true,
+      "clean": false,
+      "first_hit_tick": 70,
+      "peak_n_by_foot_and_nonfoot": [
+        136.68312072753906,
+        88.81693267822266,
+        112.31953430175781,
+        76.65013885498047,
+        0.0
+      ],
+      "impulse_ns_by_foot_and_nonfoot": [
+        20.114486694335938,
+        18.57379150390625,
+        4.768205165863037,
+        8.709861755371094,
+        0.0
+      ],
+      "hit_contact_substep_samples": [
+        304,
+        376,
+        52,
+        121,
+        0
+      ],
+      "interval_hit_peak_n": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "19": {
+      "terminal": "ASCENT_WITH_COLLISION",
+      "sim_s": 17.680213928222656,
+      "foot_max_levels": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "last_levels": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "visited_treads": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "top_four": true,
+      "hold_s": 1.019999623298645,
+      "bad_force": 0.0,
+      "arm_error_rad": 0.001290557673200965,
+      "overflow": 0,
+      "original_goal": true,
+      "clean": false,
+      "first_hit_tick": 69,
+      "peak_n_by_foot_and_nonfoot": [
+        161.54379272460938,
+        72.5728988647461,
+        146.29454040527344,
+        78.9859848022461,
+        0.0
+      ],
+      "impulse_ns_by_foot_and_nonfoot": [
+        17.130996704101562,
+        18.32861328125,
+        5.0676727294921875,
+        4.948588848114014,
+        0.0
+      ],
+      "hit_contact_substep_samples": [
+        181,
+        223,
+        30,
+        77,
+        0
+      ],
+      "interval_hit_peak_n": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "18": {
+      "terminal": "ASCENT_WITH_COLLISION",
+      "sim_s": 17.780216217041016,
+      "foot_max_levels": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "last_levels": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "visited_treads": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "top_four": true,
+      "hold_s": 1.019999623298645,
+      "bad_force": 0.0,
+      "arm_error_rad": 0.0011815043399110436,
+      "overflow": 0,
+      "original_goal": true,
+      "clean": false,
+      "first_hit_tick": 100,
+      "peak_n_by_foot_and_nonfoot": [
+        223.4159393310547,
+        60.96877670288086,
+        120.37137603759766,
+        73.49309539794922,
+        0.0
+      ],
+      "impulse_ns_by_foot_and_nonfoot": [
+        10.21961498260498,
+        4.342160701751709,
+        6.165607929229736,
+        4.057591915130615,
+        0.0
+      ],
+      "hit_contact_substep_samples": [
+        112,
+        88,
+        58,
+        66,
+        0
+      ],
+      "interval_hit_peak_n": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "strict": 0,
+  "n": 24
+}
